@@ -11,10 +11,10 @@ using MySql.Data.MySqlClient;
 
 namespace HotelManagement
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        private string cs = @"server=localhost;userid=root;password=1234;database=hotel";
-        public Form1()
+        //private string cs = @"server=localhost;userid=root;password=1234;database=hotel";
+        public Login()
         {
             InitializeComponent();
         }
@@ -23,8 +23,8 @@ namespace HotelManagement
         {
             string username = userTB.Text;
             string password = passTB.Text;
-
-            MySqlConnection con = new MySqlConnection(cs); //open connection
+            DB cs = new DB();
+            MySqlConnection con = new MySqlConnection(cs.getConnString()); //open connection
             try
             {
                 con.Open();
@@ -48,6 +48,11 @@ namespace HotelManagement
             {
                 Console.WriteLine("Gamhthikes");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }
