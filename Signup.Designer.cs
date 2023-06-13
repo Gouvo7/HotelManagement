@@ -89,6 +89,7 @@ namespace HotelManagement
             this.textBox3.Location = new System.Drawing.Point(500, 55);
             this.textBox3.MaxLength = 40;
             this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 4;
             // 
@@ -97,6 +98,7 @@ namespace HotelManagement
             this.textBox4.Location = new System.Drawing.Point(650, 55);
             this.textBox4.MaxLength = 40;
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '*';
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 5;
             // 
@@ -185,9 +187,9 @@ namespace HotelManagement
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(197, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 16;
-            this.label1.Text = "Επώνυμο";
+            this.label1.Text = "Επώνυμο:";
             // 
             // label2
             // 

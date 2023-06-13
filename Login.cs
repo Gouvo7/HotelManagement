@@ -13,7 +13,7 @@ namespace HotelManagement
 {
     public partial class Login : Form
     {
-        //private string cs = @"server=localhost;userid=root;password=1234;database=hotel";
+
         public Login()
         {
             InitializeComponent();
@@ -32,11 +32,12 @@ namespace HotelManagement
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    MessageBox.Show("Successfully Sign In!", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Επιτυχής είσοδος!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Dispose();
                 }
                 else
                 {
-                    MessageBox.Show("Username And Password Not Match!", "VINSMOKE MJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Τα στοιχεία που δώσατε δεν είναι έγκυρα.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 userTB.Text = string.Empty;
                 passTB.Text = string.Empty;
@@ -46,13 +47,23 @@ namespace HotelManagement
             }
             catch (MySqlException)
             {
-                Console.WriteLine("Gamhthikes");
+                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Signup a = new Signup();
+            this.Hide();
+            this.Close();
+            a.Show();
+            
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -104,7 +104,9 @@ namespace HotelManagement
             this.Controls.Add(this.passL);
             this.Controls.Add(this.userL);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Είσοδος";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
