@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 
 namespace HotelManagement
@@ -34,7 +35,7 @@ namespace HotelManagement
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from hot_usr where usr_username = '" + username + "' AND usr_password = '" + password + "'", con);
+                MySqlCommand cmd = new MySqlCommand("select * from hot_usr where usr_username = '" + username + "' AND usr_password = '" + pass1 + "'", con);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -58,7 +59,21 @@ namespace HotelManagement
         }
         int checkValidity(string name, string surname, string username, string email, string pass1, string pass2)
         {
-            
+            Regex real_name_reg = new Regex(@"^[A-zΑ-ζ]([Α-ζA-z])+[Α-ζA-z]$");
+            Regex email_reg = new Regex(@"(^\w|^\d)(\d|\w)*@(\d|\w)*\.(\d|\w)+");
+            if (!real_name_reg.IsMatch(name))
+            {
+                return -1;
+            }
+            if (!real_name_reg.IsMatch(surname))
+            {
+                return -2;
+            }
+            if (!email_reg.IsMatch(email))
+            {
+                return -3;
+            }
+            return 1;
         }
     }
 }

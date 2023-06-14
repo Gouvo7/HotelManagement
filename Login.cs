@@ -49,9 +49,12 @@ namespace HotelManagement
             }
             catch (MySqlException)
             {
-                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
+            this.Hide();
+            MainMenu mm = new MainMenu(userID);
+            mm.Show();
         }
 
         public int getID()
@@ -61,14 +64,29 @@ namespace HotelManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Signup a = new Signup();
-            //this.Hide();
-            a.Show();
+            Signup s = new Signup();
+            this.Hide();
+            s.Show();
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
