@@ -14,6 +14,7 @@ namespace HotelManagement
     public partial class Login : Form
     {
 
+        private int userID;
         public Login()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace HotelManagement
                 if (reader.Read())
                 {
                     MessageBox.Show("Επιτυχής είσοδος!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    userID = reader.GetInt32("usr_ID");
                     this.Dispose();
                 }
                 else
@@ -52,13 +54,16 @@ namespace HotelManagement
             }
         }
 
+        public int getID()
+        {
+            return userID;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Signup a = new Signup();
-            this.Hide();
-            this.Close();
+            //this.Hide();
             a.Show();
-            
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)

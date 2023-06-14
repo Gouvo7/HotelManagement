@@ -12,7 +12,7 @@ namespace HotelManagement
 {
     public partial class MainMenu : Form
     {
-        public MainMenu()
+        public MainMenu(int x)
         {
             InitializeComponent();
         }

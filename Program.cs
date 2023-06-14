@@ -17,8 +17,8 @@ namespace HotelManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
-            int userID = 
-            Application.Run(new MainMenu(x));
+            //int userID = login.getID();
+            //Application.Run(new MainMenu(userID));
         }
     }
 }

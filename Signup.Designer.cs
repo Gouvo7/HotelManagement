@@ -29,222 +29,203 @@ namespace HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
-            this.userL = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.userTB = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.lNameBox = new System.Windows.Forms.TextBox();
+            this.fNameBox = new System.Windows.Forms.TextBox();
+            this.surnameL = new System.Windows.Forms.Label();
+            this.nameL = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.userBox = new System.Windows.Forms.TextBox();
+            this.emailL = new System.Windows.Forms.Label();
+            this.usernameL = new System.Windows.Forms.Label();
+            this.pass2Box = new System.Windows.Forms.TextBox();
+            this.pass1Box = new System.Windows.Forms.TextBox();
+            this.pass1L = new System.Windows.Forms.Label();
+            this.pass2L = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.s = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // userL
+            // lNameBox
             // 
-            this.userL.AutoSize = true;
-            this.userL.Location = new System.Drawing.Point(52, 40);
-            this.userL.Name = "userL";
-            this.userL.Size = new System.Drawing.Size(44, 13);
-            this.userL.TabIndex = 0;
-            this.userL.Text = "Όνομα:";
+            this.lNameBox.BackColor = System.Drawing.Color.SeaShell;
+            this.lNameBox.Location = new System.Drawing.Point(288, 134);
+            this.lNameBox.MaxLength = 40;
+            this.lNameBox.Name = "lNameBox";
+            this.lNameBox.PasswordChar = '•';
+            this.lNameBox.Size = new System.Drawing.Size(160, 20);
+            this.lNameBox.TabIndex = 2;
             // 
-            // textBox1
+            // fNameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(50, 55);
-            this.textBox1.MaxLength = 40;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.fNameBox.BackColor = System.Drawing.Color.SeaShell;
+            this.fNameBox.Location = new System.Drawing.Point(68, 134);
+            this.fNameBox.MaxLength = 40;
+            this.fNameBox.Name = "fNameBox";
+            this.fNameBox.Size = new System.Drawing.Size(160, 20);
+            this.fNameBox.TabIndex = 1;
             // 
-            // userTB
+            // surnameL
             // 
-            this.userTB.Location = new System.Drawing.Point(200, 55);
-            this.userTB.MaxLength = 40;
-            this.userTB.Name = "userTB";
-            this.userTB.Size = new System.Drawing.Size(100, 20);
-            this.userTB.TabIndex = 2;
+            this.surnameL.AutoSize = true;
+            this.surnameL.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.surnameL.ForeColor = System.Drawing.Color.White;
+            this.surnameL.Location = new System.Drawing.Point(288, 103);
+            this.surnameL.Name = "surnameL";
+            this.surnameL.Size = new System.Drawing.Size(83, 23);
+            this.surnameL.TabIndex = 0;
+            this.surnameL.Text = "Επώνυμο";
             // 
-            // textBox2
+            // nameL
             // 
-            this.textBox2.Location = new System.Drawing.Point(350, 55);
-            this.textBox2.MaxLength = 40;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(500, 55);
-            this.textBox3.MaxLength = 40;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(650, 55);
-            this.textBox4.MaxLength = 40;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(50, 105);
-            this.textBox5.MaxLength = 40;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 6;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(200, 105);
-            this.textBox6.MaxLength = 40;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 7;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(350, 105);
-            this.textBox7.MaxLength = 40;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 8;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(500, 105);
-            this.textBox8.MaxLength = 40;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 9;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(650, 105);
-            this.textBox9.MaxLength = 40;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 20);
-            this.textBox9.TabIndex = 10;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(50, 155);
-            this.textBox10.MaxLength = 40;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 11;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(200, 155);
-            this.textBox11.MaxLength = 40;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 12;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(350, 155);
-            this.textBox12.MaxLength = 40;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 20);
-            this.textBox12.TabIndex = 13;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(500, 155);
-            this.textBox13.MaxLength = 40;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 20);
-            this.textBox13.TabIndex = 14;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(650, 155);
-            this.textBox14.MaxLength = 40;
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 20);
-            this.textBox14.TabIndex = 15;
+            this.nameL.AutoSize = true;
+            this.nameL.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.nameL.ForeColor = System.Drawing.Color.Transparent;
+            this.nameL.Location = new System.Drawing.Point(68, 103);
+            this.nameL.Name = "nameL";
+            this.nameL.Size = new System.Drawing.Size(64, 23);
+            this.nameL.TabIndex = 0;
+            this.nameL.Text = "Όνομα";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(197, 39);
+            this.label1.BackColor = System.Drawing.Color.Teal;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 24.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(51, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Επώνυμο:";
+            this.label1.Size = new System.Drawing.Size(433, 45);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Εγγραφή στην πλατφόρμα";
             // 
-            // label2
+            // emailBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(347, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "E-mail:";
+            this.emailBox.BackColor = System.Drawing.Color.SeaShell;
+            this.emailBox.Location = new System.Drawing.Point(288, 203);
+            this.emailBox.MaxLength = 40;
+            this.emailBox.Name = "emailBox";
+            this.emailBox.PasswordChar = '•';
+            this.emailBox.Size = new System.Drawing.Size(160, 20);
+            this.emailBox.TabIndex = 4;
             // 
-            // label3
+            // userBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(497, 40);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Κωδικός:";
+            this.userBox.BackColor = System.Drawing.Color.SeaShell;
+            this.userBox.Location = new System.Drawing.Point(67, 203);
+            this.userBox.MaxLength = 40;
+            this.userBox.Name = "userBox";
+            this.userBox.Size = new System.Drawing.Size(160, 20);
+            this.userBox.TabIndex = 3;
             // 
-            // label4
+            // emailL
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(647, 39);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 13);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Επανάληψη Κωδικού:";
+            this.emailL.AutoSize = true;
+            this.emailL.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.emailL.ForeColor = System.Drawing.Color.White;
+            this.emailL.Location = new System.Drawing.Point(288, 172);
+            this.emailL.Name = "emailL";
+            this.emailL.Size = new System.Drawing.Size(58, 23);
+            this.emailL.TabIndex = 25;
+            this.emailL.Text = "E-mail";
+            // 
+            // usernameL
+            // 
+            this.usernameL.AutoSize = true;
+            this.usernameL.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.usernameL.ForeColor = System.Drawing.Color.Transparent;
+            this.usernameL.Location = new System.Drawing.Point(68, 172);
+            this.usernameL.Name = "usernameL";
+            this.usernameL.Size = new System.Drawing.Size(87, 23);
+            this.usernameL.TabIndex = 26;
+            this.usernameL.Text = "Username";
+            // 
+            // pass2Box
+            // 
+            this.pass2Box.BackColor = System.Drawing.Color.SeaShell;
+            this.pass2Box.Location = new System.Drawing.Point(288, 273);
+            this.pass2Box.MaxLength = 40;
+            this.pass2Box.Name = "pass2Box";
+            this.pass2Box.PasswordChar = '•';
+            this.pass2Box.Size = new System.Drawing.Size(160, 20);
+            this.pass2Box.TabIndex = 6;
+            // 
+            // pass1Box
+            // 
+            this.pass1Box.BackColor = System.Drawing.Color.SeaShell;
+            this.pass1Box.Location = new System.Drawing.Point(68, 273);
+            this.pass1Box.MaxLength = 40;
+            this.pass1Box.Name = "pass1Box";
+            this.pass1Box.PasswordChar = '•';
+            this.pass1Box.Size = new System.Drawing.Size(160, 20);
+            this.pass1Box.TabIndex = 5;
+            // 
+            // pass1L
+            // 
+            this.pass1L.AutoSize = true;
+            this.pass1L.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.pass1L.ForeColor = System.Drawing.Color.Transparent;
+            this.pass1L.Location = new System.Drawing.Point(63, 242);
+            this.pass1L.Name = "pass1L";
+            this.pass1L.Size = new System.Drawing.Size(171, 23);
+            this.pass1L.TabIndex = 30;
+            this.pass1L.Text = "Κωδικός πρόσβασης";
+            // 
+            // pass2L
+            // 
+            this.pass2L.AutoSize = true;
+            this.pass2L.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.pass2L.ForeColor = System.Drawing.Color.Transparent;
+            this.pass2L.Location = new System.Drawing.Point(284, 242);
+            this.pass2L.Name = "pass2L";
+            this.pass2L.Size = new System.Drawing.Size(180, 23);
+            this.pass2L.TabIndex = 33;
+            this.pass2L.Text = "Επαλήθευση κωδικού";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(203, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 35);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Εγγραφή";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // s
+            // 
+            this.s.AutoSize = true;
+            this.s.Location = new System.Drawing.Point(39, 70);
+            this.s.Name = "s";
+            this.s.Size = new System.Drawing.Size(463, 13);
+            this.s.TabIndex = 34;
+            this.s.Text = "____________________________________________________________________________";
             // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(534, 402);
+            this.Controls.Add(this.s);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pass2L);
+            this.Controls.Add(this.pass2Box);
+            this.Controls.Add(this.pass1Box);
+            this.Controls.Add(this.pass1L);
+            this.Controls.Add(this.emailBox);
+            this.Controls.Add(this.userBox);
+            this.Controls.Add(this.emailL);
+            this.Controls.Add(this.usernameL);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.userTB);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.userL);
+            this.Controls.Add(this.lNameBox);
+            this.Controls.Add(this.fNameBox);
+            this.Controls.Add(this.surnameL);
+            this.Controls.Add(this.nameL);
             this.Name = "Signup";
-            this.Text = "Signup";
+            this.Text = "Εγγραφή";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,25 +233,20 @@ namespace HotelManagement
 
         #endregion
 
-        private System.Windows.Forms.Label userL;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox userTB;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox lNameBox;
+        private System.Windows.Forms.TextBox fNameBox;
+        private System.Windows.Forms.Label surnameL;
+        private System.Windows.Forms.Label nameL;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.TextBox userBox;
+        private System.Windows.Forms.Label emailL;
+        private System.Windows.Forms.Label usernameL;
+        private System.Windows.Forms.TextBox pass2Box;
+        private System.Windows.Forms.TextBox pass1Box;
+        private System.Windows.Forms.Label pass1L;
+        private System.Windows.Forms.Label pass2L;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label s;
     }
 }

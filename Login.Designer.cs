@@ -35,68 +35,120 @@ namespace HotelManagement
             this.passTB = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // userL
             // 
             this.userL.AutoSize = true;
-            this.userL.Location = new System.Drawing.Point(60, 59);
+            this.userL.BackColor = System.Drawing.Color.Teal;
+            this.userL.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userL.ForeColor = System.Drawing.Color.Transparent;
+            this.userL.Location = new System.Drawing.Point(68, 32);
             this.userL.Name = "userL";
-            this.userL.Size = new System.Drawing.Size(58, 13);
+            this.userL.Size = new System.Drawing.Size(103, 25);
             this.userL.TabIndex = 0;
             this.userL.Text = "Username:";
             // 
             // passL
             // 
             this.passL.AutoSize = true;
-            this.passL.Location = new System.Drawing.Point(60, 99);
+            this.passL.BackColor = System.Drawing.Color.Teal;
+            this.passL.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.passL.ForeColor = System.Drawing.Color.Transparent;
+            this.passL.Location = new System.Drawing.Point(70, 113);
             this.passL.Name = "passL";
-            this.passL.Size = new System.Drawing.Size(56, 13);
+            this.passL.Size = new System.Drawing.Size(97, 25);
             this.passL.TabIndex = 0;
             this.passL.Text = "Password:";
             // 
             // userTB
             // 
-            this.userTB.Location = new System.Drawing.Point(140, 59);
+            this.userTB.BackColor = System.Drawing.Color.SeaShell;
+            this.userTB.Location = new System.Drawing.Point(71, 63);
             this.userTB.MaxLength = 40;
             this.userTB.Name = "userTB";
-            this.userTB.Size = new System.Drawing.Size(100, 20);
+            this.userTB.Size = new System.Drawing.Size(187, 20);
             this.userTB.TabIndex = 1;
             // 
             // passTB
             // 
-            this.passTB.Location = new System.Drawing.Point(140, 99);
+            this.passTB.BackColor = System.Drawing.Color.SeaShell;
+            this.passTB.Location = new System.Drawing.Point(71, 144);
             this.passTB.MaxLength = 40;
             this.passTB.Name = "passTB";
-            this.passTB.PasswordChar = '*';
-            this.passTB.Size = new System.Drawing.Size(100, 20);
+            this.passTB.PasswordChar = '•';
+            this.passTB.Size = new System.Drawing.Size(187, 20);
             this.passTB.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(165, 165);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.button1.Location = new System.Drawing.Point(115, 215);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
+            this.button1.Size = new System.Drawing.Size(98, 28);
+            this.button1.TabIndex = 4;
             this.button1.Text = "Είσοδος";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(43, 165);
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(115, 294);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
+            this.button2.Size = new System.Drawing.Size(98, 28);
+            this.button2.TabIndex = 5;
             this.button2.Text = "Εγγραφή";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(228, 179);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Teal;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(90, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Εμφάνιση κωδικού";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Teal;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(90, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Δεν έχετε λογαριασμό;";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 211);
+            this.BackColor = System.Drawing.Color.Teal;
+            this.ClientSize = new System.Drawing.Size(334, 341);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passTB);
@@ -120,6 +172,9 @@ namespace HotelManagement
         private System.Windows.Forms.TextBox passTB;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
