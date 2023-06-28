@@ -34,27 +34,22 @@ namespace HotelManagement
                 if (reader.Read())
                 {
                     MessageBox.Show("Επιτυχής είσοδος!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult = DialogResult.OK;
                     userID = reader.GetInt32("usr_ID");
-                    this.Dispose();
+                    Close();
                 }
                 else
                 {
                     MessageBox.Show("Τα στοιχεία που δώσατε δεν είναι έγκυρα.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                userTB.Text = string.Empty;
+                //userTB.Text = string.Empty;
                 passTB.Text = string.Empty;
-                reader.Close();
-                cmd.Dispose();
-                con.Close();
             }
             catch (MySqlException)
             {
                 MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
-            this.Hide();
-            MainMenu mm = new MainMenu(userID);
-            mm.Show();
         }
 
         public int getID()
@@ -65,13 +60,12 @@ namespace HotelManagement
         private void button2_Click(object sender, EventArgs e)
         {
             Signup s = new Signup();
-            this.Hide();
-            s.Show();
+            s.ShowDialog();
         }
 
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
         }
 
         private void Login_Load(object sender, EventArgs e)

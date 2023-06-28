@@ -9,14 +9,14 @@ namespace HotelManagement
     public class DB{
 
         static string server;
-        static string userid;
+        static string dbuser;
         static string pass;
         static string database;
 
         static DB()
         {
             server = "localhost";
-            userid = "root";
+            dbuser = "root";
             pass = "1234";
             database = "hotel";
         }
@@ -24,7 +24,7 @@ namespace HotelManagement
         public string getConnString()
         {
             
-            return (@"server=" + server + ";userid=" + userid + ";password=" + pass 
+            return (@"server=" + server + ";userid=" + dbuser + ";password=" + pass 
                 +";database="+ database);
         }
     }

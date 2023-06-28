@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 
+
 namespace HotelManagement
 {
     public partial class Signup : Form
@@ -31,35 +32,47 @@ namespace HotelManagement
             DB cs = new DB();
             int error = 0;
             error = checkValidity(name,surname,username,email,pass1,pass2);
-            MySqlConnection con = new MySqlConnection(cs.getConnString()); //open connection
-            try
+            switch (error)
             {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand("select * from hot_usr where usr_username = '" + username + "' AND usr_password = '" + pass1 + "'", con);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    MessageBox.Show("Επιτυχής είσοδος!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Dispose();
-                }
-                else
-                {
-                    MessageBox.Show("Τα στοιχεία που δώσατε δεν είναι έγκυρα.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
-                reader.Close();
-                cmd.Dispose();
-                con.Close();
+                case 0:
+                    MessageBox.Show("Οι κωδικοί πρόσβασης δεν είναι οι ίδιοι!", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case -1: case -2:
+                    MessageBox.Show("Το όνομα και το επώνυμο πρέπει να αποτελούνται αποκλειστικά από χαρακτήρες του ελληνικού ή του αγγλικού" +
+                        "αλφάβητου.", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case -3:
+                    MessageBox.Show("Το email δεν βρίσκεται στον σωστό μορφότυπο.", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case 1:
+                    MySqlConnection con = new MySqlConnection(cs.getConnString());
+                    try
+                    {
+                        con.Open();
+                        MySqlCommand comm = con.CreateCommand();
+                        comm.CommandText = "INSERT INTO hot_usr (usr_FName, usr_LName, usr_username, usr_password, usr_Email) VALUES (@name, @surname, @username, @pass, @email)";
+                        comm.Parameters.AddWithValue("@name", name);
+                        comm.Parameters.AddWithValue("@surname", surname);
+                        comm.Parameters.AddWithValue("@username", username);
+                        comm.Parameters.AddWithValue("@pass", email);
+                        comm.Parameters.AddWithValue("@email", pass1);
+                        comm.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Η εγγραφή του νέου χρήστη ολοκληρώθηκε επιτυχώς!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    catch (MySqlException)
+                    {
+                        MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Application.Exit();
+                    }
+                    break;
             }
-            catch (MySqlException)
-            {
-                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
-            }
+            
         }
         int checkValidity(string name, string surname, string username, string email, string pass1, string pass2)
         {
-            Regex real_name_reg = new Regex(@"^[A-zΑ-ζ]([Α-ζA-z])+[Α-ζA-z]$");
+            Regex real_name_reg = new Regex(@"^[A-z]([A-z])+[A-z]$");
             Regex email_reg = new Regex(@"(^\w|^\d)(\d|\w)*@(\d|\w)*\.(\d|\w)+");
             if (!real_name_reg.IsMatch(name))
             {
@@ -73,7 +86,10 @@ namespace HotelManagement
             {
                 return -3;
             }
-            return 1;
+            if (pass1.Equals(pass2))
+                return 1;
+            else
+                return 0;
         }
     }
 }

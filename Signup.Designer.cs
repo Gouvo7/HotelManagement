@@ -44,17 +44,17 @@ namespace HotelManagement
             this.pass2L = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.s = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lNameBox
             // 
             this.lNameBox.BackColor = System.Drawing.Color.SeaShell;
             this.lNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lNameBox.Location = new System.Drawing.Point(460, 172);
-            this.lNameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lNameBox.Location = new System.Drawing.Point(440, 181);
+            this.lNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.lNameBox.MaxLength = 40;
             this.lNameBox.Name = "lNameBox";
-            this.lNameBox.PasswordChar = '•';
             this.lNameBox.Size = new System.Drawing.Size(186, 26);
             this.lNameBox.TabIndex = 2;
             // 
@@ -62,8 +62,8 @@ namespace HotelManagement
             // 
             this.fNameBox.BackColor = System.Drawing.Color.SeaShell;
             this.fNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.fNameBox.Location = new System.Drawing.Point(107, 172);
-            this.fNameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fNameBox.Location = new System.Drawing.Point(117, 181);
+            this.fNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.fNameBox.MaxLength = 40;
             this.fNameBox.Name = "fNameBox";
             this.fNameBox.Size = new System.Drawing.Size(186, 26);
@@ -74,7 +74,7 @@ namespace HotelManagement
             this.surnameL.AutoSize = true;
             this.surnameL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.surnameL.ForeColor = System.Drawing.Color.White;
-            this.surnameL.Location = new System.Drawing.Point(460, 131);
+            this.surnameL.Location = new System.Drawing.Point(440, 140);
             this.surnameL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.surnameL.Name = "surnameL";
             this.surnameL.Size = new System.Drawing.Size(107, 30);
@@ -86,7 +86,7 @@ namespace HotelManagement
             this.nameL.AutoSize = true;
             this.nameL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.nameL.ForeColor = System.Drawing.Color.Transparent;
-            this.nameL.Location = new System.Drawing.Point(107, 131);
+            this.nameL.Location = new System.Drawing.Point(117, 140);
             this.nameL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameL.Name = "nameL";
             this.nameL.Size = new System.Drawing.Size(83, 30);
@@ -99,7 +99,7 @@ namespace HotelManagement
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 24.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(160, 30);
+            this.label1.Location = new System.Drawing.Point(125, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(433, 45);
@@ -110,11 +110,10 @@ namespace HotelManagement
             // 
             this.emailBox.BackColor = System.Drawing.Color.SeaShell;
             this.emailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.emailBox.Location = new System.Drawing.Point(460, 277);
-            this.emailBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.emailBox.Location = new System.Drawing.Point(440, 286);
+            this.emailBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailBox.MaxLength = 40;
             this.emailBox.Name = "emailBox";
-            this.emailBox.PasswordChar = '•';
             this.emailBox.Size = new System.Drawing.Size(186, 26);
             this.emailBox.TabIndex = 4;
             // 
@@ -122,8 +121,8 @@ namespace HotelManagement
             // 
             this.userBox.BackColor = System.Drawing.Color.SeaShell;
             this.userBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.userBox.Location = new System.Drawing.Point(107, 277);
-            this.userBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.userBox.Location = new System.Drawing.Point(117, 286);
+            this.userBox.Margin = new System.Windows.Forms.Padding(4);
             this.userBox.MaxLength = 40;
             this.userBox.Name = "userBox";
             this.userBox.Size = new System.Drawing.Size(186, 26);
@@ -134,7 +133,7 @@ namespace HotelManagement
             this.emailL.AutoSize = true;
             this.emailL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.emailL.ForeColor = System.Drawing.Color.White;
-            this.emailL.Location = new System.Drawing.Point(460, 236);
+            this.emailL.Location = new System.Drawing.Point(440, 245);
             this.emailL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailL.Name = "emailL";
             this.emailL.Size = new System.Drawing.Size(75, 30);
@@ -146,7 +145,7 @@ namespace HotelManagement
             this.usernameL.AutoSize = true;
             this.usernameL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.usernameL.ForeColor = System.Drawing.Color.Transparent;
-            this.usernameL.Location = new System.Drawing.Point(107, 236);
+            this.usernameL.Location = new System.Drawing.Point(117, 245);
             this.usernameL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameL.Name = "usernameL";
             this.usernameL.Size = new System.Drawing.Size(112, 30);
@@ -157,8 +156,8 @@ namespace HotelManagement
             // 
             this.pass2Box.BackColor = System.Drawing.Color.SeaShell;
             this.pass2Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.pass2Box.Location = new System.Drawing.Point(460, 394);
-            this.pass2Box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pass2Box.Location = new System.Drawing.Point(440, 403);
+            this.pass2Box.Margin = new System.Windows.Forms.Padding(4);
             this.pass2Box.MaxLength = 40;
             this.pass2Box.Name = "pass2Box";
             this.pass2Box.PasswordChar = '•';
@@ -169,8 +168,8 @@ namespace HotelManagement
             // 
             this.pass1Box.BackColor = System.Drawing.Color.SeaShell;
             this.pass1Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.pass1Box.Location = new System.Drawing.Point(107, 394);
-            this.pass1Box.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pass1Box.Location = new System.Drawing.Point(117, 403);
+            this.pass1Box.Margin = new System.Windows.Forms.Padding(4);
             this.pass1Box.MaxLength = 40;
             this.pass1Box.Name = "pass1Box";
             this.pass1Box.PasswordChar = '•';
@@ -182,7 +181,7 @@ namespace HotelManagement
             this.pass1L.AutoSize = true;
             this.pass1L.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.pass1L.ForeColor = System.Drawing.Color.Transparent;
-            this.pass1L.Location = new System.Drawing.Point(107, 353);
+            this.pass1L.Location = new System.Drawing.Point(117, 362);
             this.pass1L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pass1L.Name = "pass1L";
             this.pass1L.Size = new System.Drawing.Size(220, 30);
@@ -194,7 +193,7 @@ namespace HotelManagement
             this.pass2L.AutoSize = true;
             this.pass2L.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.pass2L.ForeColor = System.Drawing.Color.Transparent;
-            this.pass2L.Location = new System.Drawing.Point(460, 353);
+            this.pass2L.Location = new System.Drawing.Point(440, 362);
             this.pass2L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pass2L.Name = "pass2L";
             this.pass2L.Size = new System.Drawing.Size(231, 30);
@@ -205,8 +204,8 @@ namespace HotelManagement
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(301, 483);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(290, 483);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 42);
             this.button1.TabIndex = 8;
@@ -217,19 +216,33 @@ namespace HotelManagement
             // s
             // 
             this.s.AutoSize = true;
-            this.s.Location = new System.Drawing.Point(107, 81);
+            this.s.Location = new System.Drawing.Point(71, 81);
             this.s.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(539, 16);
+            this.s.Size = new System.Drawing.Size(540, 16);
             this.s.TabIndex = 34;
             this.s.Text = "____________________________________________________________________________";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Teal;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(174, 99);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(334, 23);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Χρησιμοποιείστε Λατινικούς χαρακτήρες";
             // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(755, 570);
+            this.ClientSize = new System.Drawing.Size(686, 570);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.s);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pass2L);
@@ -246,7 +259,7 @@ namespace HotelManagement
             this.Controls.Add(this.surnameL);
             this.Controls.Add(this.nameL);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
             this.Text = "Εγγραφή";
             this.ResumeLayout(false);
@@ -271,5 +284,6 @@ namespace HotelManagement
         private System.Windows.Forms.Label pass2L;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label s;
+        private System.Windows.Forms.Label label2;
     }
 }
