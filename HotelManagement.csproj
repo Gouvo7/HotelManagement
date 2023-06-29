@@ -161,5 +161,8 @@
   <ItemGroup>
     <None Include="Resources\icon4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="hotel.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

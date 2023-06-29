@@ -15,6 +15,7 @@ namespace HotelManagement
         public MainMenu(int x)
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
     }
 }

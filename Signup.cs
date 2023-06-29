@@ -11,7 +11,6 @@ using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 
-
 namespace HotelManagement
 {
     public partial class Signup : Form
@@ -19,6 +18,7 @@ namespace HotelManagement
         public Signup()
         {
             InitializeComponent();
+            this.CenterToScreen();
         }
 
         private void button1_Click(object sender, EventArgs e)
