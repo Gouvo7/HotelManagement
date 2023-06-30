@@ -17,6 +17,7 @@ namespace HotelManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
+            
             /*
             Login loginForm = new Login();
             DialogResult loginResult = loginForm.ShowDialog();

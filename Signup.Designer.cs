@@ -99,7 +99,7 @@ namespace HotelManagement
             this.label1.BackColor = System.Drawing.Color.Teal;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 24.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(137, 24);
+            this.label1.Location = new System.Drawing.Point(127, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(433, 45);
@@ -204,7 +204,7 @@ namespace HotelManagement
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(278, 483);
+            this.button1.Location = new System.Drawing.Point(268, 483);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 42);
@@ -217,7 +217,7 @@ namespace HotelManagement
             // 
             this.s.AutoSize = true;
             this.s.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F);
-            this.s.Location = new System.Drawing.Point(83, 68);
+            this.s.Location = new System.Drawing.Point(73, 68);
             this.s.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.s.Name = "s";
             this.s.Size = new System.Drawing.Size(540, 16);
@@ -230,7 +230,7 @@ namespace HotelManagement
             this.label2.BackColor = System.Drawing.Color.Teal;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(186, 101);
+            this.label2.Location = new System.Drawing.Point(176, 101);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(334, 23);
