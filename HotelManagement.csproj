@@ -163,6 +163,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hotel.sql" />
+    <Content Include="Resources\MySQL\hotel_hot_bookings.sql" />
+    <Content Include="Resources\MySQL\hotel_hot_type.sql" />
+    <Content Include="Resources\MySQL\hotel_hot_usr.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
