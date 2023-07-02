@@ -45,13 +45,24 @@ namespace HotelManagement
             this.button1 = new System.Windows.Forms.Button();
             this.s = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addressBox = new System.Windows.Forms.TextBox();
+            this.regionBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.phoneBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.countryBox = new System.Windows.Forms.ComboBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lNameBox
             // 
             this.lNameBox.BackColor = System.Drawing.Color.SeaShell;
             this.lNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.lNameBox.Location = new System.Drawing.Point(416, 181);
+            this.lNameBox.Location = new System.Drawing.Point(321, 49);
             this.lNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.lNameBox.MaxLength = 40;
             this.lNameBox.Name = "lNameBox";
@@ -62,7 +73,7 @@ namespace HotelManagement
             // 
             this.fNameBox.BackColor = System.Drawing.Color.SeaShell;
             this.fNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.fNameBox.Location = new System.Drawing.Point(92, 181);
+            this.fNameBox.Location = new System.Drawing.Point(6, 49);
             this.fNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.fNameBox.MaxLength = 40;
             this.fNameBox.Name = "fNameBox";
@@ -74,7 +85,7 @@ namespace HotelManagement
             this.surnameL.AutoSize = true;
             this.surnameL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.surnameL.ForeColor = System.Drawing.Color.White;
-            this.surnameL.Location = new System.Drawing.Point(416, 140);
+            this.surnameL.Location = new System.Drawing.Point(321, 8);
             this.surnameL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.surnameL.Name = "surnameL";
             this.surnameL.Size = new System.Drawing.Size(107, 30);
@@ -86,7 +97,7 @@ namespace HotelManagement
             this.nameL.AutoSize = true;
             this.nameL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.nameL.ForeColor = System.Drawing.Color.Transparent;
-            this.nameL.Location = new System.Drawing.Point(92, 140);
+            this.nameL.Location = new System.Drawing.Point(6, 8);
             this.nameL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameL.Name = "nameL";
             this.nameL.Size = new System.Drawing.Size(83, 30);
@@ -110,7 +121,7 @@ namespace HotelManagement
             // 
             this.emailBox.BackColor = System.Drawing.Color.SeaShell;
             this.emailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.emailBox.Location = new System.Drawing.Point(416, 286);
+            this.emailBox.Location = new System.Drawing.Point(321, 143);
             this.emailBox.Margin = new System.Windows.Forms.Padding(4);
             this.emailBox.MaxLength = 40;
             this.emailBox.Name = "emailBox";
@@ -121,7 +132,7 @@ namespace HotelManagement
             // 
             this.userBox.BackColor = System.Drawing.Color.SeaShell;
             this.userBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.userBox.Location = new System.Drawing.Point(92, 286);
+            this.userBox.Location = new System.Drawing.Point(6, 143);
             this.userBox.Margin = new System.Windows.Forms.Padding(4);
             this.userBox.MaxLength = 40;
             this.userBox.Name = "userBox";
@@ -133,7 +144,7 @@ namespace HotelManagement
             this.emailL.AutoSize = true;
             this.emailL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.emailL.ForeColor = System.Drawing.Color.White;
-            this.emailL.Location = new System.Drawing.Point(416, 245);
+            this.emailL.Location = new System.Drawing.Point(321, 102);
             this.emailL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.emailL.Name = "emailL";
             this.emailL.Size = new System.Drawing.Size(75, 30);
@@ -145,7 +156,7 @@ namespace HotelManagement
             this.usernameL.AutoSize = true;
             this.usernameL.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
             this.usernameL.ForeColor = System.Drawing.Color.Transparent;
-            this.usernameL.Location = new System.Drawing.Point(92, 245);
+            this.usernameL.Location = new System.Drawing.Point(6, 102);
             this.usernameL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameL.Name = "usernameL";
             this.usernameL.Size = new System.Drawing.Size(112, 30);
@@ -156,7 +167,7 @@ namespace HotelManagement
             // 
             this.pass2Box.BackColor = System.Drawing.Color.SeaShell;
             this.pass2Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.pass2Box.Location = new System.Drawing.Point(416, 403);
+            this.pass2Box.Location = new System.Drawing.Point(321, 243);
             this.pass2Box.Margin = new System.Windows.Forms.Padding(4);
             this.pass2Box.MaxLength = 40;
             this.pass2Box.Name = "pass2Box";
@@ -168,7 +179,7 @@ namespace HotelManagement
             // 
             this.pass1Box.BackColor = System.Drawing.Color.SeaShell;
             this.pass1Box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.pass1Box.Location = new System.Drawing.Point(92, 403);
+            this.pass1Box.Location = new System.Drawing.Point(6, 243);
             this.pass1Box.Margin = new System.Windows.Forms.Padding(4);
             this.pass1Box.MaxLength = 40;
             this.pass1Box.Name = "pass1Box";
@@ -181,7 +192,7 @@ namespace HotelManagement
             this.pass1L.AutoSize = true;
             this.pass1L.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.pass1L.ForeColor = System.Drawing.Color.Transparent;
-            this.pass1L.Location = new System.Drawing.Point(92, 362);
+            this.pass1L.Location = new System.Drawing.Point(6, 202);
             this.pass1L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pass1L.Name = "pass1L";
             this.pass1L.Size = new System.Drawing.Size(191, 25);
@@ -193,7 +204,7 @@ namespace HotelManagement
             this.pass2L.AutoSize = true;
             this.pass2L.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.pass2L.ForeColor = System.Drawing.Color.Transparent;
-            this.pass2L.Location = new System.Drawing.Point(416, 362);
+            this.pass2L.Location = new System.Drawing.Point(321, 202);
             this.pass2L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.pass2L.Name = "pass2L";
             this.pass2L.Size = new System.Drawing.Size(200, 25);
@@ -204,11 +215,11 @@ namespace HotelManagement
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(268, 483);
+            this.button1.Location = new System.Drawing.Point(267, 413);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 42);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 11;
             this.button1.Text = "Εγγραφή";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -217,10 +228,10 @@ namespace HotelManagement
             // 
             this.s.AutoSize = true;
             this.s.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F);
-            this.s.Location = new System.Drawing.Point(73, 68);
+            this.s.Location = new System.Drawing.Point(74, 68);
             this.s.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(540, 16);
+            this.s.Size = new System.Drawing.Size(539, 16);
             this.s.TabIndex = 34;
             this.s.Text = "____________________________________________________________________________";
             // 
@@ -230,39 +241,164 @@ namespace HotelManagement
             this.label2.BackColor = System.Drawing.Color.Teal;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(176, 101);
+            this.label2.Location = new System.Drawing.Point(176, 88);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(334, 23);
             this.label2.TabIndex = 35;
             this.label2.Text = "Χρησιμοποιείστε Λατινικούς χαρακτήρες";
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.countryBox);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.phoneBox);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.regionBox);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.addressBox);
+            this.panel1.Controls.Add(this.lNameBox);
+            this.panel1.Controls.Add(this.nameL);
+            this.panel1.Controls.Add(this.surnameL);
+            this.panel1.Controls.Add(this.pass2L);
+            this.panel1.Controls.Add(this.fNameBox);
+            this.panel1.Controls.Add(this.pass2Box);
+            this.panel1.Controls.Add(this.usernameL);
+            this.panel1.Controls.Add(this.pass1Box);
+            this.panel1.Controls.Add(this.emailL);
+            this.panel1.Controls.Add(this.pass1L);
+            this.panel1.Controls.Add(this.userBox);
+            this.panel1.Controls.Add(this.emailBox);
+            this.panel1.Location = new System.Drawing.Point(76, 118);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(545, 263);
+            this.panel1.TabIndex = 37;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(11, 300);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 25);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Διεύθυνση";
+            // 
+            // addressBox
+            // 
+            this.addressBox.BackColor = System.Drawing.Color.SeaShell;
+            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.addressBox.Location = new System.Drawing.Point(11, 341);
+            this.addressBox.Margin = new System.Windows.Forms.Padding(4);
+            this.addressBox.MaxLength = 40;
+            this.addressBox.Name = "addressBox";
+            this.addressBox.PasswordChar = '•';
+            this.addressBox.Size = new System.Drawing.Size(186, 26);
+            this.addressBox.TabIndex = 7;
+            // 
+            // regionBox
+            // 
+            this.regionBox.BackColor = System.Drawing.Color.SeaShell;
+            this.regionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.regionBox.Location = new System.Drawing.Point(321, 341);
+            this.regionBox.Margin = new System.Windows.Forms.Padding(4);
+            this.regionBox.MaxLength = 40;
+            this.regionBox.Name = "regionBox";
+            this.regionBox.PasswordChar = '•';
+            this.regionBox.Size = new System.Drawing.Size(186, 26);
+            this.regionBox.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(316, 300);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 25);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Περιοχή";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 13.25F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(308, 396);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(216, 25);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Τηλέφωνο Επικοινωνίας";
+            // 
+            // phoneBox
+            // 
+            this.phoneBox.BackColor = System.Drawing.Color.SeaShell;
+            this.phoneBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.phoneBox.Location = new System.Drawing.Point(321, 432);
+            this.phoneBox.Margin = new System.Windows.Forms.Padding(4);
+            this.phoneBox.MaxLength = 40;
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.PasswordChar = '•';
+            this.phoneBox.Size = new System.Drawing.Size(186, 26);
+            this.phoneBox.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(244, 526);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 16);
+            this.label7.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(16, 396);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 25);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Χώρα";
+            // 
+            // countryBox
+            // 
+            this.countryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.countryBox.FormattingEnabled = true;
+            this.countryBox.Items.AddRange(new object[] {
+            "Ελλάδα",
+            "Κύπρος"});
+            this.countryBox.Location = new System.Drawing.Point(21, 436);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(121, 28);
+            this.countryBox.TabIndex = 9;
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(686, 570);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(686, 509);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.s);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pass2L);
-            this.Controls.Add(this.pass2Box);
-            this.Controls.Add(this.pass1Box);
-            this.Controls.Add(this.pass1L);
-            this.Controls.Add(this.emailBox);
-            this.Controls.Add(this.userBox);
-            this.Controls.Add(this.emailL);
-            this.Controls.Add(this.usernameL);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lNameBox);
-            this.Controls.Add(this.fNameBox);
-            this.Controls.Add(this.surnameL);
-            this.Controls.Add(this.nameL);
+            this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
             this.Text = "Εγγραφή";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +422,15 @@ namespace HotelManagement
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label s;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox phoneBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox regionBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox addressBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox countryBox;
+        private System.Windows.Forms.Label label4;
     }
 }
