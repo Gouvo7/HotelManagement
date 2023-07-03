@@ -163,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hotel.sql" />
+    <Content Include="Resources\MySQL\Dump20230703.sql" />
     <Content Include="Resources\MySQL\hotel_hot_bookings.sql" />
     <Content Include="Resources\MySQL\hotel_hot_type.sql" />
     <Content Include="Resources\MySQL\hotel_hot_usr.sql" />
