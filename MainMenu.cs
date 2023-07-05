@@ -33,6 +33,11 @@ namespace HotelManagement
             updateHome();
         }
 
+        void hideInfoCust()
+        {
+
+        }
+
         void updateUserPanel()
         {
             DB db = new DB();
@@ -63,7 +68,10 @@ namespace HotelManagement
                 {
                     employeePanel.Hide();
                     customerPanel.Show();
-                    
+                    searchRoomDatePanel.Hide();
+                    showRoomBtn.Hide();
+                    custHomePanel.Show();
+                    roomDetailsPanel.Hide();
                 }
                 else
                 {
@@ -402,7 +410,14 @@ namespace HotelManagement
 
         private void searchCustBtn_Click(object sender, EventArgs e)
         {
-
+            custHomePanel.Hide();
+            searchRoomDatePanel.Show();
+            dataGridView4.Rows.Clear();
+            dataGridView4.Columns.Clear();
+            dataGridView4.Hide();
+            showRoomBtn.Hide();
+            resultsLabelCust.Hide();
+            roomDetailsPanel.Hide();
         }
 
         private void bookingsCustBtn_Click(object sender, EventArgs e)
@@ -417,7 +432,9 @@ namespace HotelManagement
 
         private void homeButtonCustBtn_Click(object sender, EventArgs e)
         {
-
+            custHomePanel.Show();
+            searchRoomDatePanel.Hide();
+            roomDetailsPanel.Hide();
         }
 
         private void searchDatesBtn_Click(object sender, EventArgs e)
@@ -427,7 +444,7 @@ namespace HotelManagement
             dataGridView4.Show();
             string date1 = dateTimePicker1.Value.Date.ToString("yyyy-MM-dd");
             string date2 = dateTimePicker2.Value.Date.ToString("yyyy-MM-dd");
-            resultsLabelCust.Text = "Αποτελέσματα μεταξύ ημερομηνιών: " + dateTimePicker1.Value.Date.ToString("dd-MM-yyyy") + " και " + dateTimePicker2.Value.Date.ToSring("dd-MM-yyyy");
+            resultsLabelCust.Text = "Αποτελέσματα μεταξύ ημερομηνιών: " + dateTimePicker1.Value.Date.ToString("dd-MM-yyyy") + " και " + dateTimePicker2.Value.Date.ToString("dd-MM-yyyy");
             resultsLabelCust.Show();
             dataGridView4.Columns.Add("RoomNumber", "Room Number");
             dataGridView4.Columns.Add("RommType", "Τύπος Δωματίου");
@@ -438,7 +455,7 @@ namespace HotelManagement
                 MySqlConnection con = new MySqlConnection(db.getConnString());
                 con.Open();
                 MySqlCommand comm = con.CreateCommand();
-                comm.CommandText = "select hot_rooms.room_ID, room_TypeN, room_Price from hot_rooms left join hot_bookings on hot_rooms.room_ID = hot_bookings.room_ID " +
+                comm.CommandText = "select distinct hot_rooms.room_ID, room_TypeN, room_Price from hot_rooms left join hot_bookings on hot_rooms.room_ID = hot_bookings.room_ID " +
                 "WHERE (@wantin >= checkout_Date OR @wantout <= checkin_Date) OR (hot_rooms.room_ID not in (select distinct room_ID from hot_bookings));";
                 comm.Parameters.AddWithValue("@wantin", date1);
                 comm.Parameters.AddWithValue("@wantout", date2);
@@ -447,7 +464,7 @@ namespace HotelManagement
                 {
                     string roomNumber = reader.GetString(0); // Assuming room number is retrieved from the first column
                     string picturePath = reader.GetString(1); // Assuming picture path is retrieved from the second column
-                    string cost = reader.GetString(2); // Assuming cost is retrieved from the third column
+                    string cost = reader.GetString(2)+ " €"; // Assuming cost is retrieved from the third column
 
                     // Add a new row and populate the cells
                     dataGridView4.Rows.Add(roomNumber, picturePath, cost);
@@ -455,6 +472,7 @@ namespace HotelManagement
                 dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dataGridView4.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dataGridView4.AutoResizeColumns();
+                showRoomBtn.Show();
 
 
 
@@ -462,15 +480,35 @@ namespace HotelManagement
             }
             catch (MySqlException)
             {
-                Console.WriteLine("Είσαι ζώον");
+                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
             }
 
+        }
+
+        private void showRoomBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView4.Rows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView4.SelectedRows[0];
+                DataGridViewCell cell = selectedRow.Cells[0];
+                object value = cell.Value;
+                if (value != null)
+                {
+                    string stringValue = value.ToString();
+                    roomDetailsPanel.Show();
+                    roomInfoLabel.Text = "Πληροφορίες για το δωμάτιο " + stringValue;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Πρέπει να επιλέξεις ένα δωμάτιο!.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
 
 
-//select * from hot_rooms
+//select distinct hot_rooms.room_ID, room_TypeN, room_Price from hot_rooms
 //left join hot_bookings on hot_rooms.room_ID = hot_bookings.room_ID
-//WHERE (@wantin >= checkout_Date OR @wantout <= checkin_Date) OR(hot_rooms.room_ID not in (select distinct room_ID from hot_bookings));
-
+//WHERE (@wantin >= checkout_Date OR @wantout <= checkin_Date) OR(hot_rooms.room_ID not in (select distinct room_ID from hot_bookings))
