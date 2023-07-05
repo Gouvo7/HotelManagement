@@ -29,6 +29,9 @@ namespace HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,15 +63,6 @@ namespace HotelManagement
             this.label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.employeePanel = new System.Windows.Forms.Panel();
-            this.customerPanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.welcomeLabelCust = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.homeButtonCustBtn = new System.Windows.Forms.Button();
-            this.searchCustBtn = new System.Windows.Forms.Button();
-            this.bookingsCustBtn = new System.Windows.Forms.Button();
-            this.custAccBtn = new System.Windows.Forms.Button();
             this.roomPanel = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -87,25 +81,41 @@ namespace HotelManagement
             this.resultsPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.resultsLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
+            this.customerPanel = new System.Windows.Forms.Panel();
+            this.searchRoomDatePanel = new System.Windows.Forms.Panel();
+            this.resultsLabelCust = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.label18 = new System.Windows.Forms.Label();
+            this.searchDatesBtn = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.welcomeLabelCust = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.homeButtonCustBtn = new System.Windows.Forms.Button();
+            this.searchCustBtn = new System.Windows.Forms.Button();
+            this.bookingsCustBtn = new System.Windows.Forms.Button();
+            this.custAccBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topRightPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.employeePanel.SuspendLayout();
-            this.customerPanel.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.roomPanel.SuspendLayout();
             this.homePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.resultsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.customerPanel.SuspendLayout();
+            this.searchRoomDatePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -529,114 +539,6 @@ namespace HotelManagement
             this.employeePanel.TabIndex = 40;
             this.employeePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // customerPanel
-            // 
-            this.customerPanel.Controls.Add(this.label17);
-            this.customerPanel.Controls.Add(this.dateTimePicker2);
-            this.customerPanel.Controls.Add(this.label16);
-            this.customerPanel.Controls.Add(this.panel3);
-            this.customerPanel.Controls.Add(this.flowLayoutPanel2);
-            this.customerPanel.Controls.Add(this.dateTimePicker1);
-            this.customerPanel.Location = new System.Drawing.Point(10, 4);
-            this.customerPanel.Name = "customerPanel";
-            this.customerPanel.Size = new System.Drawing.Size(1129, 735);
-            this.customerPanel.TabIndex = 60;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.welcomeLabelCust);
-            this.panel3.Location = new System.Drawing.Point(801, 10);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(325, 38);
-            this.panel3.TabIndex = 38;
-            // 
-            // welcomeLabelCust
-            // 
-            this.welcomeLabelCust.AutoSize = true;
-            this.welcomeLabelCust.BackColor = System.Drawing.Color.Teal;
-            this.welcomeLabelCust.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.welcomeLabelCust.ForeColor = System.Drawing.Color.Transparent;
-            this.welcomeLabelCust.Location = new System.Drawing.Point(4, 2);
-            this.welcomeLabelCust.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.welcomeLabelCust.Name = "welcomeLabelCust";
-            this.welcomeLabelCust.Size = new System.Drawing.Size(144, 30);
-            this.welcomeLabelCust.TabIndex = 36;
-            this.welcomeLabelCust.Text = "Καλώς ήρθες";
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Controls.Add(this.pictureBox2);
-            this.flowLayoutPanel2.Controls.Add(this.homeButtonCustBtn);
-            this.flowLayoutPanel2.Controls.Add(this.searchCustBtn);
-            this.flowLayoutPanel2.Controls.Add(this.bookingsCustBtn);
-            this.flowLayoutPanel2.Controls.Add(this.custAccBtn);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 10);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(216, 529);
-            this.flowLayoutPanel2.TabIndex = 37;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::HotelManagement.Properties.Resources.icon4;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(197, 132);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            // 
-            // homeButtonCustBtn
-            // 
-            this.homeButtonCustBtn.BackColor = System.Drawing.Color.White;
-            this.homeButtonCustBtn.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.homeButtonCustBtn.Location = new System.Drawing.Point(9, 142);
-            this.homeButtonCustBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.homeButtonCustBtn.Name = "homeButtonCustBtn";
-            this.homeButtonCustBtn.Size = new System.Drawing.Size(196, 45);
-            this.homeButtonCustBtn.TabIndex = 9;
-            this.homeButtonCustBtn.Text = "Αρχική";
-            this.homeButtonCustBtn.UseVisualStyleBackColor = false;
-            this.homeButtonCustBtn.Click += new System.EventHandler(this.homeButtonCustBtn_Click);
-            // 
-            // searchCustBtn
-            // 
-            this.searchCustBtn.BackColor = System.Drawing.Color.White;
-            this.searchCustBtn.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.searchCustBtn.Location = new System.Drawing.Point(9, 195);
-            this.searchCustBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.searchCustBtn.Name = "searchCustBtn";
-            this.searchCustBtn.Size = new System.Drawing.Size(196, 45);
-            this.searchCustBtn.TabIndex = 14;
-            this.searchCustBtn.Text = "Αναζήτηση";
-            this.searchCustBtn.UseVisualStyleBackColor = false;
-            this.searchCustBtn.Click += new System.EventHandler(this.searchCustBtn_Click);
-            // 
-            // bookingsCustBtn
-            // 
-            this.bookingsCustBtn.BackColor = System.Drawing.Color.White;
-            this.bookingsCustBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
-            this.bookingsCustBtn.Location = new System.Drawing.Point(9, 248);
-            this.bookingsCustBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.bookingsCustBtn.Name = "bookingsCustBtn";
-            this.bookingsCustBtn.Size = new System.Drawing.Size(196, 45);
-            this.bookingsCustBtn.TabIndex = 10;
-            this.bookingsCustBtn.Text = "Οι κρατήσεις μου";
-            this.bookingsCustBtn.UseVisualStyleBackColor = false;
-            // 
-            // custAccBtn
-            // 
-            this.custAccBtn.BackColor = System.Drawing.Color.White;
-            this.custAccBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
-            this.custAccBtn.Location = new System.Drawing.Point(9, 301);
-            this.custAccBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.custAccBtn.Name = "custAccBtn";
-            this.custAccBtn.Size = new System.Drawing.Size(196, 45);
-            this.custAccBtn.TabIndex = 11;
-            this.custAccBtn.Text = "Ο λογαριασμός μου";
-            this.custAccBtn.UseVisualStyleBackColor = false;
-            // 
             // roomPanel
             // 
             this.roomPanel.Controls.Add(this.label15);
@@ -872,31 +774,114 @@ namespace HotelManagement
             this.resultsLabel.TabIndex = 37;
             this.resultsLabel.Text = "Αποτελέσματα για:";
             // 
-            // dateTimePicker1
+            // customerPanel
             // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 10.5F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(259, 127);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 15;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 7, 1, 0, 0, 0, 0);
+            this.customerPanel.Controls.Add(this.panel3);
+            this.customerPanel.Controls.Add(this.flowLayoutPanel2);
+            this.customerPanel.Controls.Add(this.searchRoomDatePanel);
+            this.customerPanel.Location = new System.Drawing.Point(10, 4);
+            this.customerPanel.Name = "customerPanel";
+            this.customerPanel.Size = new System.Drawing.Size(1129, 735);
+            this.customerPanel.TabIndex = 60;
             // 
-            // label16
+            // searchRoomDatePanel
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Teal;
-            this.label16.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.Transparent;
-            this.label16.Location = new System.Drawing.Point(254, 88);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(199, 25);
-            this.label16.TabIndex = 37;
-            this.label16.Text = "Ημερομηνία Check-in";
+            this.searchRoomDatePanel.AutoScroll = true;
+            this.searchRoomDatePanel.Controls.Add(this.resultsLabelCust);
+            this.searchRoomDatePanel.Controls.Add(this.dataGridView4);
+            this.searchRoomDatePanel.Controls.Add(this.label18);
+            this.searchRoomDatePanel.Controls.Add(this.searchDatesBtn);
+            this.searchRoomDatePanel.Controls.Add(this.label17);
+            this.searchRoomDatePanel.Controls.Add(this.label16);
+            this.searchRoomDatePanel.Controls.Add(this.dateTimePicker1);
+            this.searchRoomDatePanel.Controls.Add(this.dateTimePicker2);
+            this.searchRoomDatePanel.Location = new System.Drawing.Point(231, 55);
+            this.searchRoomDatePanel.Name = "searchRoomDatePanel";
+            this.searchRoomDatePanel.Size = new System.Drawing.Size(891, 665);
+            this.searchRoomDatePanel.TabIndex = 41;
+            // 
+            // resultsLabelCust
+            // 
+            this.resultsLabelCust.AutoSize = true;
+            this.resultsLabelCust.BackColor = System.Drawing.Color.Teal;
+            this.resultsLabelCust.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.resultsLabelCust.ForeColor = System.Drawing.Color.Transparent;
+            this.resultsLabelCust.Location = new System.Drawing.Point(65, 202);
+            this.resultsLabelCust.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.resultsLabelCust.Name = "resultsLabelCust";
+            this.resultsLabelCust.Size = new System.Drawing.Size(201, 35);
+            this.resultsLabelCust.TabIndex = 43;
+            this.resultsLabelCust.Text = "resultsLabelCust";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView4.Location = new System.Drawing.Point(151, 256);
+            this.dataGridView4.MultiSelect = false;
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.ShowCellErrors = false;
+            this.dataGridView4.ShowCellToolTips = false;
+            this.dataGridView4.ShowEditingIcon = false;
+            this.dataGridView4.ShowRowErrors = false;
+            this.dataGridView4.Size = new System.Drawing.Size(567, 293);
+            this.dataGridView4.TabIndex = 42;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Teal;
+            this.label18.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label18.ForeColor = System.Drawing.Color.Transparent;
+            this.label18.Location = new System.Drawing.Point(198, 25);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(453, 35);
+            this.label18.TabIndex = 41;
+            this.label18.Text = "Αναζήτηση Δωματίων με Ημερομηνία";
+            // 
+            // searchDatesBtn
+            // 
+            this.searchDatesBtn.BackColor = System.Drawing.Color.White;
+            this.searchDatesBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.searchDatesBtn.Location = new System.Drawing.Point(562, 137);
+            this.searchDatesBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.searchDatesBtn.Name = "searchDatesBtn";
+            this.searchDatesBtn.Size = new System.Drawing.Size(133, 26);
+            this.searchDatesBtn.TabIndex = 15;
+            this.searchDatesBtn.Text = "Αναζήτηση";
+            this.searchDatesBtn.UseVisualStyleBackColor = false;
+            this.searchDatesBtn.Click += new System.EventHandler(this.searchDatesBtn_Click);
             // 
             // label17
             // 
@@ -904,24 +889,145 @@ namespace HotelManagement
             this.label17.BackColor = System.Drawing.Color.Teal;
             this.label17.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(486, 88);
+            this.label17.Location = new System.Drawing.Point(292, 96);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(212, 25);
             this.label17.TabIndex = 40;
             this.label17.Text = "Ημερομηνία Check-out";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Teal;
+            this.label16.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label16.ForeColor = System.Drawing.Color.Transparent;
+            this.label16.Location = new System.Drawing.Point(60, 96);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(199, 25);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Ημερομηνία Check-in";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Yu Gothic UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(63, 137);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
+            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimePicker1.Value = new System.DateTime(2023, 7, 1, 0, 0, 0, 0);
+            // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Yu Gothic UI", 10.5F, System.Drawing.FontStyle.Bold);
+            this.dateTimePicker2.Font = new System.Drawing.Font("Yu Gothic UI", 9.6F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(491, 127);
+            this.dateTimePicker2.Location = new System.Drawing.Point(297, 137);
             this.dateTimePicker2.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker2.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(198, 25);
             this.dateTimePicker2.TabIndex = 39;
-            this.dateTimePicker2.Value = new System.DateTime(2023, 7, 1, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2023, 7, 20, 0, 0, 0, 0);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.welcomeLabelCust);
+            this.panel3.Location = new System.Drawing.Point(801, 10);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(325, 38);
+            this.panel3.TabIndex = 38;
+            // 
+            // welcomeLabelCust
+            // 
+            this.welcomeLabelCust.AutoSize = true;
+            this.welcomeLabelCust.BackColor = System.Drawing.Color.Teal;
+            this.welcomeLabelCust.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.welcomeLabelCust.ForeColor = System.Drawing.Color.Transparent;
+            this.welcomeLabelCust.Location = new System.Drawing.Point(4, 2);
+            this.welcomeLabelCust.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.welcomeLabelCust.Name = "welcomeLabelCust";
+            this.welcomeLabelCust.Size = new System.Drawing.Size(144, 30);
+            this.welcomeLabelCust.TabIndex = 36;
+            this.welcomeLabelCust.Text = "Καλώς ήρθες";
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.pictureBox2);
+            this.flowLayoutPanel2.Controls.Add(this.homeButtonCustBtn);
+            this.flowLayoutPanel2.Controls.Add(this.searchCustBtn);
+            this.flowLayoutPanel2.Controls.Add(this.bookingsCustBtn);
+            this.flowLayoutPanel2.Controls.Add(this.custAccBtn);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 10);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(216, 722);
+            this.flowLayoutPanel2.TabIndex = 37;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::HotelManagement.Properties.Resources.icon4;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(197, 132);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            // 
+            // homeButtonCustBtn
+            // 
+            this.homeButtonCustBtn.BackColor = System.Drawing.Color.White;
+            this.homeButtonCustBtn.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
+            this.homeButtonCustBtn.Location = new System.Drawing.Point(9, 142);
+            this.homeButtonCustBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.homeButtonCustBtn.Name = "homeButtonCustBtn";
+            this.homeButtonCustBtn.Size = new System.Drawing.Size(196, 45);
+            this.homeButtonCustBtn.TabIndex = 9;
+            this.homeButtonCustBtn.Text = "Αρχική";
+            this.homeButtonCustBtn.UseVisualStyleBackColor = false;
+            this.homeButtonCustBtn.Click += new System.EventHandler(this.homeButtonCustBtn_Click);
+            // 
+            // searchCustBtn
+            // 
+            this.searchCustBtn.BackColor = System.Drawing.Color.White;
+            this.searchCustBtn.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
+            this.searchCustBtn.Location = new System.Drawing.Point(9, 195);
+            this.searchCustBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.searchCustBtn.Name = "searchCustBtn";
+            this.searchCustBtn.Size = new System.Drawing.Size(196, 45);
+            this.searchCustBtn.TabIndex = 14;
+            this.searchCustBtn.Text = "Αναζήτηση";
+            this.searchCustBtn.UseVisualStyleBackColor = false;
+            this.searchCustBtn.Click += new System.EventHandler(this.searchCustBtn_Click);
+            // 
+            // bookingsCustBtn
+            // 
+            this.bookingsCustBtn.BackColor = System.Drawing.Color.White;
+            this.bookingsCustBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.bookingsCustBtn.Location = new System.Drawing.Point(9, 248);
+            this.bookingsCustBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bookingsCustBtn.Name = "bookingsCustBtn";
+            this.bookingsCustBtn.Size = new System.Drawing.Size(196, 45);
+            this.bookingsCustBtn.TabIndex = 10;
+            this.bookingsCustBtn.Text = "Οι κρατήσεις μου";
+            this.bookingsCustBtn.UseVisualStyleBackColor = false;
+            // 
+            // custAccBtn
+            // 
+            this.custAccBtn.BackColor = System.Drawing.Color.White;
+            this.custAccBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.custAccBtn.Location = new System.Drawing.Point(9, 301);
+            this.custAccBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.custAccBtn.Name = "custAccBtn";
+            this.custAccBtn.Size = new System.Drawing.Size(196, 45);
+            this.custAccBtn.TabIndex = 11;
+            this.custAccBtn.Text = "Ο λογαριασμός μου";
+            this.custAccBtn.UseVisualStyleBackColor = false;
             // 
             // MainMenu
             // 
@@ -941,12 +1047,6 @@ namespace HotelManagement
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.employeePanel.ResumeLayout(false);
-            this.customerPanel.ResumeLayout(false);
-            this.customerPanel.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.roomPanel.ResumeLayout(false);
             this.roomPanel.PerformLayout();
             this.homePanel.ResumeLayout(false);
@@ -956,6 +1056,14 @@ namespace HotelManagement
             this.resultsPanel.ResumeLayout(false);
             this.resultsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.customerPanel.ResumeLayout(false);
+            this.searchRoomDatePanel.ResumeLayout(false);
+            this.searchRoomDatePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1023,5 +1131,10 @@ namespace HotelManagement
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button searchDatesBtn;
+        private System.Windows.Forms.Panel searchRoomDatePanel;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Label resultsLabelCust;
     }
 }
