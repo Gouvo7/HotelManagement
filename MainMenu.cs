@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Crypto.Tls;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,7 @@ namespace HotelManagement
             userID = x;
             updateUserPanel();
             updateHome();
+            
         }
 
         void hideInfoCust()
@@ -488,16 +490,73 @@ namespace HotelManagement
 
         private void showRoomBtn_Click(object sender, EventArgs e)
         {
+            resetText();
+            MyList.list.Clear();
             if (dataGridView4.Rows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView4.SelectedRows[0];
                 DataGridViewCell cell = selectedRow.Cells[0];
                 object value = cell.Value;
+                string room_ID;
                 if (value != null)
                 {
-                    string stringValue = value.ToString();
+                    room_ID = value.ToString();
                     roomDetailsPanel.Show();
-                    roomInfoLabel.Text = "Πληροφορίες για το δωμάτιο " + stringValue;
+                    roomInfoLabel.Text = "Πληροφορίες για το δωμάτιο " + room_ID;
+                    DB db = new DB();
+                    List<string> pic_path = new List<string>();
+                    try
+                    {
+                        MySqlConnection con = new MySqlConnection(db.getConnString());
+                        con.Open();
+                        MySqlCommand comm1 = con.CreateCommand();
+                        comm1.CommandText = "select * from hot_rooms_pics where room_ID = @roomID ";
+                        comm1.Parameters.AddWithValue("@roomID", room_ID);
+                        MySqlDataReader reader1 = comm1.ExecuteReader();
+                        bool has_img = false;
+                        while (reader1.Read())
+                        {
+                            MyList.list.Add(reader1.GetString(2));
+                            has_img = true;
+                        }
+                        reader1.Close();
+                        MySqlCommand comm2 = con.CreateCommand();
+                        comm2.CommandText = "select * from hot_rooms where room_ID = @roomID1";
+                        comm2.Parameters.AddWithValue("@roomID1", room_ID);
+                        MySqlDataReader reader2 = comm2.ExecuteReader();
+                        while (reader2.Read())
+                        {
+                            int hasAC = (reader2.GetInt32(3));
+                            int canSmoke = (reader2.GetInt32(4));
+                            int hasHeater = (reader2.GetInt32(5));
+                            int forFamily = (reader2.GetInt32(6));
+                            int forAmea = (reader2.GetInt32(7));
+                            int hasBalcony = (reader2.GetInt32(8));
+                            int hasView = (reader2.GetInt32(9));
+                            int hasWIFI = (reader2.GetInt32(10));
+                            if (hasAC == 0) { acLabel.Text = acLabel.Text + " Όχι"; } else { acLabel.Text = acLabel.Text + " Ναι"; }
+                            if (canSmoke == 0) { smokersLabel.Text = smokersLabel.Text + " Όχι"; } else { smokersLabel.Text = smokersLabel.Text + " Ναι"; }
+                            if (hasHeater == 0) { heaterLabel.Text = heaterLabel.Text + " Όχι"; } else { heaterLabel.Text = heaterLabel.Text + " Ναι"; }
+                            if (forFamily == 0) { familyLabel.Text = familyLabel.Text + " Όχι"; } else { familyLabel.Text = familyLabel.Text + " Ναι"; }
+                            if (forAmea == 0) { ameaLabel.Text = ameaLabel.Text + " Όχι"; } else { ameaLabel.Text = ameaLabel.Text + " Ναι"; }
+                            if (hasBalcony == 0) { balconyLabel.Text = balconyLabel.Text + " Όχι"; } else { balconyLabel.Text = balconyLabel.Text + " Ναι"; }
+                            if (hasView == 0) { seaViewLabel.Text = seaViewLabel.Text + " Όχι"; } else { seaViewLabel.Text = seaViewLabel.Text + " Ναι"; }
+                            if (hasWIFI == 0) { wifiLabel.Text = wifiLabel.Text + " Όχι"; } else { wifiLabel.Text = wifiLabel.Text + " Ναι"; }
+                        }
+                        reader2.Close();
+                        con.Close();
+                        MyList.index = -1;
+                        if (has_img) { 
+                            roomPicBox.ImageLocation = "/Rerources/Rooms/" + MyList.list[0].ToString();
+                            MyList.index = 0;
+                        }
+                    }
+                    catch (MySqlException z)
+                    {
+                        MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Console.WriteLine(z);
+                    }
+                    
                 }
             }
             else
@@ -506,10 +565,59 @@ namespace HotelManagement
             }
         }
 
+        private void resetText()
+        {
+            this.acLabel.Text = "Κλιματισμός:";
+            this.smokersLabel.Text = "Χώρος Καπνιστών:";
+            this.balconyLabel.Text = "Μπαλκόνι:";
+            this.heaterLabel.Text = "Θέρμανση:";
+            this.familyLabel.Text = "Οικογενειακό:";
+            this.ameaLabel.Text = "Κατάλληλο για ΑμεΑ:";
+            this.seaViewLabel.Text = "Θέα στην θάλασσα:";
+            this.wifiLabel.Text = "Δωρεάν Wi-Fi:";
+        }
+
         private void backBtn_Click(object sender, EventArgs e)
         {
             roomDetailsPanel.Hide();
             searchRoomDatePanel.Show();
+            roomPicBox.Image = null;
+        }
+
+        private void prevImage_Click(object sender, EventArgs e)
+        {
+            string workingDirectory = Environment.CurrentDirectory;
+            workingDirectory = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\Rooms\\";
+            
+            if (MyList.index == 0)
+            {
+                Console.WriteLine("Μάγκα δεν πάει");
+            }
+            else if (MyList.index == -1) { }
+            else
+            {
+
+                roomPicBox.ImageLocation = workingDirectory + MyList.list[MyList.index - 1];
+                MyList.index = MyList.index - 1;
+            }
+
+        }
+
+        private void nextImage_Click(object sender, EventArgs e)
+        {
+            string workingDirectory = Environment.CurrentDirectory;
+            workingDirectory = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\Rooms\\";
+            if (MyList.index == MyList.list.Count() - 1)
+            {
+                Console.WriteLine("Μάγκα δεν πάει");
+            }
+            else if (MyList.index == -1) { }
+            else
+            {
+                roomPicBox.ImageLocation = workingDirectory + MyList.list[MyList.index + 1];
+                MyList.index = MyList.index + 1;
+                Console.WriteLine("Πάει: " + MyList.index);
+            }
         }
     }
 }
