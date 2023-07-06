@@ -29,9 +29,9 @@ namespace HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -116,6 +116,8 @@ namespace HotelManagement
             this.label16 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.costLabel = new System.Windows.Forms.Label();
+            this.bookBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topRightPanel.SuspendLayout();
@@ -903,6 +905,9 @@ namespace HotelManagement
             // roomDetailsPanel
             // 
             this.roomDetailsPanel.AutoScroll = true;
+            this.roomDetailsPanel.AutoScrollMinSize = new System.Drawing.Size(20, 20);
+            this.roomDetailsPanel.Controls.Add(this.bookBtn);
+            this.roomDetailsPanel.Controls.Add(this.costLabel);
             this.roomDetailsPanel.Controls.Add(this.wifiLabel);
             this.roomDetailsPanel.Controls.Add(this.seaViewLabel);
             this.roomDetailsPanel.Controls.Add(this.ameaLabel);
@@ -1054,7 +1059,7 @@ namespace HotelManagement
             // 
             // roomPicBox
             // 
-            this.roomPicBox.Location = new System.Drawing.Point(144, 94);
+            this.roomPicBox.Location = new System.Drawing.Point(137, 94);
             this.roomPicBox.Name = "roomPicBox";
             this.roomPicBox.Size = new System.Drawing.Size(619, 285);
             this.roomPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -1158,35 +1163,35 @@ namespace HotelManagement
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridView4.Location = new System.Drawing.Point(151, 256);
             this.dataGridView4.MultiSelect = false;
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.ShowCellErrors = false;
             this.dataGridView4.ShowCellToolTips = false;
@@ -1259,6 +1264,7 @@ namespace HotelManagement
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 24);
             this.dateTimePicker1.TabIndex = 15;
             this.dateTimePicker1.Value = new System.DateTime(2023, 7, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
@@ -1271,6 +1277,33 @@ namespace HotelManagement
             this.dateTimePicker2.Size = new System.Drawing.Size(198, 25);
             this.dateTimePicker2.TabIndex = 39;
             this.dateTimePicker2.Value = new System.DateTime(2023, 7, 20, 0, 0, 0, 0);
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // costLabel
+            // 
+            this.costLabel.AutoSize = true;
+            this.costLabel.BackColor = System.Drawing.Color.Teal;
+            this.costLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.costLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.costLabel.Location = new System.Drawing.Point(15, 966);
+            this.costLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.costLabel.Name = "costLabel";
+            this.costLabel.Size = new System.Drawing.Size(283, 37);
+            this.costLabel.TabIndex = 49;
+            this.costLabel.Text = "Συνολικό κόστος για ";
+            // 
+            // bookBtn
+            // 
+            this.bookBtn.BackColor = System.Drawing.Color.White;
+            this.bookBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.bookBtn.Location = new System.Drawing.Point(578, 967);
+            this.bookBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.bookBtn.Name = "bookBtn";
+            this.bookBtn.Size = new System.Drawing.Size(159, 39);
+            this.bookBtn.TabIndex = 50;
+            this.bookBtn.Text = "Κράτηση Δωματίου";
+            this.bookBtn.UseVisualStyleBackColor = false;
+            this.bookBtn.Click += new System.EventHandler(this.bookBtn_Click);
             // 
             // MainMenu
             // 
@@ -1399,5 +1432,7 @@ namespace HotelManagement
         private System.Windows.Forms.Label acLabel;
         private System.Windows.Forms.Label wifiLabel;
         private System.Windows.Forms.Label seaViewLabel;
+        private System.Windows.Forms.Button bookBtn;
+        private System.Windows.Forms.Label costLabel;
     }
 }

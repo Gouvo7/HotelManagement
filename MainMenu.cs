@@ -441,6 +441,17 @@ namespace HotelManagement
 
         private void searchDatesBtn_Click(object sender, EventArgs e)
         {
+            
+            if (dateTimePicker1.Value > dateTimePicker2.Value)
+            {
+                MessageBox.Show("Η ημερομηνία Check-out πρέπει να είναι μεταγενέστερη από την ημερομηνία Check-in.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (dateTimePicker1.Value == dateTimePicker2.Value)
+            {
+                MessageBox.Show("Πρέπει να κάνεις αναζήτηση για τουλάχιστον μια διανυκτέρευση.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             dataGridView4.Rows.Clear();
             dataGridView4.Columns.Clear();
             dataGridView4.Show();
@@ -491,6 +502,11 @@ namespace HotelManagement
         private void showRoomBtn_Click(object sender, EventArgs e)
         {
             resetText();
+            DateTime date1 = dateTimePicker1.Value; // Get the value from the first DateTimePicker
+            DateTime date2 = dateTimePicker2.Value; // Get the value from the second DateTimePicker
+
+            TimeSpan difference =  date2 - date1; // Subtract the dates
+            int nights = (int)difference.Days;
             MyList.list.Clear();
             if (dataGridView4.Rows.Count > 0)
             {
@@ -502,6 +518,7 @@ namespace HotelManagement
                 {
                     room_ID = value.ToString();
                     roomDetailsPanel.Show();
+                    searchRoomDatePanel.Hide();
                     roomInfoLabel.Text = "Πληροφορίες για το δωμάτιο " + room_ID;
                     DB db = new DB();
                     List<string> pic_path = new List<string>();
@@ -513,11 +530,28 @@ namespace HotelManagement
                         comm1.CommandText = "select * from hot_rooms_pics where room_ID = @roomID ";
                         comm1.Parameters.AddWithValue("@roomID", room_ID);
                         MySqlDataReader reader1 = comm1.ExecuteReader();
-                        bool has_img = false;
                         while (reader1.Read())
                         {
-                            MyList.list.Add(reader1.GetString(2));
-                            has_img = true;
+                            string workingDirectory = Environment.CurrentDirectory;
+                            string path = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\Rooms\\" + reader1.GetString(2);
+                            Console.WriteLine(path);
+                            if (File.Exists(path))
+                            {
+                                MyList.list.Add(path);
+                            }
+                        }
+                        if (MyList.list.Count > 0)
+                        {
+                            MyList.index = 0;
+                            roomPicBox.ImageLocation = MyList.list[0];
+                        }
+                        else
+                        {
+                            MyList.index = -1;
+                            string workingDirectory = Environment.CurrentDirectory;
+                            string path = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\error.png";
+                            roomPicBox.ImageLocation = path;
+                            //roomPicBox.Size = new System.Drawing.Size(400,150)
                         }
                         reader1.Close();
                         MySqlCommand comm2 = con.CreateCommand();
@@ -534,6 +568,8 @@ namespace HotelManagement
                             int hasBalcony = (reader2.GetInt32(8));
                             int hasView = (reader2.GetInt32(9));
                             int hasWIFI = (reader2.GetInt32(10));
+                            float cost = (reader2.GetFloat(11));
+                            cost = cost * nights;
                             if (hasAC == 0) { acLabel.Text = acLabel.Text + " Όχι"; } else { acLabel.Text = acLabel.Text + " Ναι"; }
                             if (canSmoke == 0) { smokersLabel.Text = smokersLabel.Text + " Όχι"; } else { smokersLabel.Text = smokersLabel.Text + " Ναι"; }
                             if (hasHeater == 0) { heaterLabel.Text = heaterLabel.Text + " Όχι"; } else { heaterLabel.Text = heaterLabel.Text + " Ναι"; }
@@ -542,14 +578,10 @@ namespace HotelManagement
                             if (hasBalcony == 0) { balconyLabel.Text = balconyLabel.Text + " Όχι"; } else { balconyLabel.Text = balconyLabel.Text + " Ναι"; }
                             if (hasView == 0) { seaViewLabel.Text = seaViewLabel.Text + " Όχι"; } else { seaViewLabel.Text = seaViewLabel.Text + " Ναι"; }
                             if (hasWIFI == 0) { wifiLabel.Text = wifiLabel.Text + " Όχι"; } else { wifiLabel.Text = wifiLabel.Text + " Ναι"; }
+                            if (nights == 1) { costLabel.Text = costLabel.Text + nights + " βράδυ: " + cost.ToString() + " €";  } else { costLabel.Text = costLabel.Text + nights + " βράδια: " + cost.ToString() +" €"; }
                         }
                         reader2.Close();
                         con.Close();
-                        MyList.index = -1;
-                        if (has_img) { 
-                            roomPicBox.ImageLocation = "/Rerources/Rooms/" + MyList.list[0].ToString();
-                            MyList.index = 0;
-                        }
                     }
                     catch (MySqlException z)
                     {
@@ -567,14 +599,15 @@ namespace HotelManagement
 
         private void resetText()
         {
-            this.acLabel.Text = "Κλιματισμός:";
-            this.smokersLabel.Text = "Χώρος Καπνιστών:";
-            this.balconyLabel.Text = "Μπαλκόνι:";
-            this.heaterLabel.Text = "Θέρμανση:";
-            this.familyLabel.Text = "Οικογενειακό:";
-            this.ameaLabel.Text = "Κατάλληλο για ΑμεΑ:";
-            this.seaViewLabel.Text = "Θέα στην θάλασσα:";
-            this.wifiLabel.Text = "Δωρεάν Wi-Fi:";
+            acLabel.Text = "Κλιματισμός:";
+            smokersLabel.Text = "Χώρος Καπνιστών:";
+            balconyLabel.Text = "Μπαλκόνι:";
+            heaterLabel.Text = "Θέρμανση:";
+            familyLabel.Text = "Οικογενειακό:";
+            ameaLabel.Text = "Κατάλληλο για ΑμεΑ:";
+            seaViewLabel.Text = "Θέα στην θάλασσα:";
+            wifiLabel.Text = "Δωρεάν Wi-Fi:";
+            costLabel.Text = "Συνολικό κόστος για ";
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -591,13 +624,12 @@ namespace HotelManagement
             
             if (MyList.index == 0)
             {
-                Console.WriteLine("Μάγκα δεν πάει");
             }
             else if (MyList.index == -1) { }
             else
             {
 
-                roomPicBox.ImageLocation = workingDirectory + MyList.list[MyList.index - 1];
+                roomPicBox.ImageLocation = MyList.list[MyList.index - 1];
                 MyList.index = MyList.index - 1;
             }
 
@@ -609,15 +641,37 @@ namespace HotelManagement
             workingDirectory = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\Rooms\\";
             if (MyList.index == MyList.list.Count() - 1)
             {
-                Console.WriteLine("Μάγκα δεν πάει");
             }
             else if (MyList.index == -1) { }
             else
             {
-                roomPicBox.ImageLocation = workingDirectory + MyList.list[MyList.index + 1];
+                roomPicBox.ImageLocation = MyList.list[MyList.index + 1];
                 MyList.index = MyList.index + 1;
-                Console.WriteLine("Πάει: " + MyList.index);
             }
+        }
+
+        private void bookBtn_Click(object sender, EventArgs e)
+        {
+            DialogResult loginResult = MessageBox.Show("Είσαι σίγουρος ότι θέλεις να πραγματοποιήσεις την κράτηση με ημερομηνία Check-in:" + dateTimePicker1.Value.Date.ToString() + " και ημερομηνία Check-out: " +
+                dateTimePicker1.Value.Date.ToString() + ";", "Επιβεβαίωση Κράτησης", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
+            if (loginResult == DialogResult.Yes)
+            {
+                Console.WriteLine("Congrats!");
+            }
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            showRoomBtn.Hide();
+            resultsLabelCust.Hide();
+            dataGridView4.Hide();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            showRoomBtn.Hide();
+            resultsLabelCust.Hide();
+            dataGridView4.Hide();
         }
     }
 }
