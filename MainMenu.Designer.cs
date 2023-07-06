@@ -82,6 +82,11 @@ namespace HotelManagement
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.resultsLabel = new System.Windows.Forms.Label();
             this.customerPanel = new System.Windows.Forms.Panel();
+            this.roomDetailsPanel = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.roomPicBox = new System.Windows.Forms.PictureBox();
+            this.roomInfoLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.welcomeLabelCust = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -90,7 +95,9 @@ namespace HotelManagement
             this.searchCustBtn = new System.Windows.Forms.Button();
             this.bookingsCustBtn = new System.Windows.Forms.Button();
             this.custAccBtn = new System.Windows.Forms.Button();
+            this.custHomePanel = new System.Windows.Forms.Panel();
             this.searchRoomDatePanel = new System.Windows.Forms.Panel();
+            this.showRoomBtn = new System.Windows.Forms.Button();
             this.resultsLabelCust = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.label18 = new System.Windows.Forms.Label();
@@ -99,13 +106,7 @@ namespace HotelManagement
             this.label16 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.showRoomBtn = new System.Windows.Forms.Button();
-            this.custHomePanel = new System.Windows.Forms.Panel();
-            this.roomDetailsPanel = new System.Windows.Forms.Panel();
-            this.roomInfoLabel = new System.Windows.Forms.Label();
-            this.roomPicBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.backBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topRightPanel.SuspendLayout();
@@ -118,13 +119,13 @@ namespace HotelManagement
             this.resultsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.customerPanel.SuspendLayout();
+            this.roomDetailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).BeginInit();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.searchRoomDatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.roomDetailsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -785,15 +786,73 @@ namespace HotelManagement
             // 
             // customerPanel
             // 
-            this.customerPanel.Controls.Add(this.roomDetailsPanel);
             this.customerPanel.Controls.Add(this.panel3);
             this.customerPanel.Controls.Add(this.flowLayoutPanel2);
+            this.customerPanel.Controls.Add(this.roomDetailsPanel);
             this.customerPanel.Controls.Add(this.custHomePanel);
             this.customerPanel.Controls.Add(this.searchRoomDatePanel);
             this.customerPanel.Location = new System.Drawing.Point(10, 4);
             this.customerPanel.Name = "customerPanel";
             this.customerPanel.Size = new System.Drawing.Size(1129, 735);
             this.customerPanel.TabIndex = 60;
+            // 
+            // roomDetailsPanel
+            // 
+            this.roomDetailsPanel.AutoScroll = true;
+            this.roomDetailsPanel.Controls.Add(this.button2);
+            this.roomDetailsPanel.Controls.Add(this.roomPicBox);
+            this.roomDetailsPanel.Controls.Add(this.roomInfoLabel);
+            this.roomDetailsPanel.Controls.Add(this.button1);
+            this.roomDetailsPanel.Controls.Add(this.backBtn);
+            this.roomDetailsPanel.Location = new System.Drawing.Point(232, 53);
+            this.roomDetailsPanel.Name = "roomDetailsPanel";
+            this.roomDetailsPanel.Size = new System.Drawing.Size(891, 665);
+            this.roomDetailsPanel.TabIndex = 46;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 30.2F, System.Drawing.FontStyle.Bold);
+            this.button2.Location = new System.Drawing.Point(456, 404);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 66);
+            this.button2.TabIndex = 39;
+            this.button2.Text = ">";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // roomPicBox
+            // 
+            this.roomPicBox.Location = new System.Drawing.Point(144, 98);
+            this.roomPicBox.Name = "roomPicBox";
+            this.roomPicBox.Size = new System.Drawing.Size(619, 285);
+            this.roomPicBox.TabIndex = 38;
+            this.roomPicBox.TabStop = false;
+            // 
+            // roomInfoLabel
+            // 
+            this.roomInfoLabel.AutoSize = true;
+            this.roomInfoLabel.BackColor = System.Drawing.Color.Teal;
+            this.roomInfoLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.roomInfoLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.roomInfoLabel.Location = new System.Drawing.Point(242, 22);
+            this.roomInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.roomInfoLabel.Name = "roomInfoLabel";
+            this.roomInfoLabel.Size = new System.Drawing.Size(196, 37);
+            this.roomInfoLabel.TabIndex = 37;
+            this.roomInfoLabel.Text = "roomInfoLabel";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 30.2F, System.Drawing.FontStyle.Bold);
+            this.button1.Location = new System.Drawing.Point(376, 404);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 66);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "<";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -890,6 +949,14 @@ namespace HotelManagement
             this.custAccBtn.Text = "Ο λογαριασμός μου";
             this.custAccBtn.UseVisualStyleBackColor = false;
             // 
+            // custHomePanel
+            // 
+            this.custHomePanel.AutoScroll = true;
+            this.custHomePanel.Location = new System.Drawing.Point(231, 54);
+            this.custHomePanel.Name = "custHomePanel";
+            this.custHomePanel.Size = new System.Drawing.Size(891, 665);
+            this.custHomePanel.TabIndex = 45;
+            // 
             // searchRoomDatePanel
             // 
             this.searchRoomDatePanel.AutoScroll = true;
@@ -906,6 +973,19 @@ namespace HotelManagement
             this.searchRoomDatePanel.Name = "searchRoomDatePanel";
             this.searchRoomDatePanel.Size = new System.Drawing.Size(891, 665);
             this.searchRoomDatePanel.TabIndex = 41;
+            // 
+            // showRoomBtn
+            // 
+            this.showRoomBtn.BackColor = System.Drawing.Color.White;
+            this.showRoomBtn.Font = new System.Drawing.Font("Yu Gothic UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.showRoomBtn.Location = new System.Drawing.Point(562, 573);
+            this.showRoomBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.showRoomBtn.Name = "showRoomBtn";
+            this.showRoomBtn.Size = new System.Drawing.Size(169, 43);
+            this.showRoomBtn.TabIndex = 44;
+            this.showRoomBtn.Text = "Εμφάνιση Πληροφοριών Δωματίου";
+            this.showRoomBtn.UseVisualStyleBackColor = false;
+            this.showRoomBtn.Click += new System.EventHandler(this.showRoomBtn_Click);
             // 
             // resultsLabelCust
             // 
@@ -1041,83 +1121,18 @@ namespace HotelManagement
             this.dateTimePicker2.TabIndex = 39;
             this.dateTimePicker2.Value = new System.DateTime(2023, 7, 20, 0, 0, 0, 0);
             // 
-            // showRoomBtn
+            // backBtn
             // 
-            this.showRoomBtn.BackColor = System.Drawing.Color.White;
-            this.showRoomBtn.Font = new System.Drawing.Font("Yu Gothic UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.showRoomBtn.Location = new System.Drawing.Point(562, 573);
-            this.showRoomBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.showRoomBtn.Name = "showRoomBtn";
-            this.showRoomBtn.Size = new System.Drawing.Size(169, 43);
-            this.showRoomBtn.TabIndex = 44;
-            this.showRoomBtn.Text = "Εμφάνιση Πληροφοριών Δωματίου";
-            this.showRoomBtn.UseVisualStyleBackColor = false;
-            this.showRoomBtn.Click += new System.EventHandler(this.showRoomBtn_Click);
-            // 
-            // custHomePanel
-            // 
-            this.custHomePanel.AutoScroll = true;
-            this.custHomePanel.Location = new System.Drawing.Point(231, 54);
-            this.custHomePanel.Name = "custHomePanel";
-            this.custHomePanel.Size = new System.Drawing.Size(891, 665);
-            this.custHomePanel.TabIndex = 45;
-            // 
-            // roomDetailsPanel
-            // 
-            this.roomDetailsPanel.AutoScroll = true;
-            this.roomDetailsPanel.Controls.Add(this.button2);
-            this.roomDetailsPanel.Controls.Add(this.roomPicBox);
-            this.roomDetailsPanel.Controls.Add(this.roomInfoLabel);
-            this.roomDetailsPanel.Controls.Add(this.button1);
-            this.roomDetailsPanel.Location = new System.Drawing.Point(232, 53);
-            this.roomDetailsPanel.Name = "roomDetailsPanel";
-            this.roomDetailsPanel.Size = new System.Drawing.Size(891, 665);
-            this.roomDetailsPanel.TabIndex = 46;
-            // 
-            // roomInfoLabel
-            // 
-            this.roomInfoLabel.AutoSize = true;
-            this.roomInfoLabel.BackColor = System.Drawing.Color.Teal;
-            this.roomInfoLabel.Font = new System.Drawing.Font("Yu Gothic UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.roomInfoLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.roomInfoLabel.Location = new System.Drawing.Point(242, 22);
-            this.roomInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.roomInfoLabel.Name = "roomInfoLabel";
-            this.roomInfoLabel.Size = new System.Drawing.Size(196, 37);
-            this.roomInfoLabel.TabIndex = 37;
-            this.roomInfoLabel.Text = "roomInfoLabel";
-            // 
-            // roomPicBox
-            // 
-            this.roomPicBox.Location = new System.Drawing.Point(144, 98);
-            this.roomPicBox.Name = "roomPicBox";
-            this.roomPicBox.Size = new System.Drawing.Size(619, 285);
-            this.roomPicBox.TabIndex = 38;
-            this.roomPicBox.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 30.2F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(376, 404);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 66);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "<";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Yu Gothic UI", 30.2F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(456, 404);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 66);
-            this.button2.TabIndex = 39;
-            this.button2.Text = ">";
-            this.button2.UseVisualStyleBackColor = false;
+            this.backBtn.BackColor = System.Drawing.Color.White;
+            this.backBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.backBtn.Location = new System.Drawing.Point(71, 404);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(123, 66);
+            this.backBtn.TabIndex = 15;
+            this.backBtn.Text = "Πίσω στην Αναζήτηση";
+            this.backBtn.UseVisualStyleBackColor = false;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // MainMenu
             // 
@@ -1147,6 +1162,9 @@ namespace HotelManagement
             this.resultsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.customerPanel.ResumeLayout(false);
+            this.roomDetailsPanel.ResumeLayout(false);
+            this.roomDetailsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -1154,9 +1172,6 @@ namespace HotelManagement
             this.searchRoomDatePanel.ResumeLayout(false);
             this.searchRoomDatePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.roomDetailsPanel.ResumeLayout(false);
-            this.roomDetailsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1236,5 +1251,6 @@ namespace HotelManagement
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox roomPicBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button backBtn;
     }
 }

@@ -505,6 +505,12 @@ namespace HotelManagement
                 MessageBox.Show("Πρέπει να επιλέξεις ένα δωμάτιο!.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            roomDetailsPanel.Hide();
+            searchRoomDatePanel.Show();
+        }
     }
 }
 
