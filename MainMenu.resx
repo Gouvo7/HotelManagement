@@ -120,4 +120,18 @@
   <metadata name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label23.Text" xml:space="preserve">
+    <value>• Σε όλους μας τους πελάτες προσφέρουμε δωρεάν πρωϊνό
+στην αίθουσα του ξενοδοχείου.
+
+• Μπορείτε να προσέλθετε στην Reception του ξενοδοχείου
+προκειμένου να πραγματοποιήσετε το Check-in από τη 1:00 και μετά.
+ 
+• Σας παρακαλούμε πολύ να φροντίσετε να έχετε πραγματοποιήσετε
+το Check-out μέχρι και τις 11:30 π.μ.
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
 </root>
