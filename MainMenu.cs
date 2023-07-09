@@ -12,6 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Google.Protobuf;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace HotelManagement
 {
@@ -29,6 +31,7 @@ namespace HotelManagement
             roomPanel.Hide();
             resultsLabelCust.Hide();
             dataGridView4.Hide();
+            custDetailsPanel.Hide();
             userID = x;
             updateUserPanel();
             updateHome();
@@ -73,6 +76,7 @@ namespace HotelManagement
                     showRoomBtn.Hide();
                     custHomePanel.Show();
                     roomDetailsPanel.Hide();
+                    custBookingsPanel.Hide();
                 }
                 else
                 {
@@ -97,7 +101,7 @@ namespace HotelManagement
                 con.Open();
                 MySqlCommand comm1 = con.CreateCommand();
                 string currDate = DateTime.Now.ToString("yyyy-MM-dd");
-                comm1.CommandText = "SELECT booking_ID , concat(usr_FName,' ',usr_LName) as 'Name', "+
+                comm1.CommandText = "SELECT booking_ID , concat(usr_FName,' ',usr_LName) as 'Name', " +
                     "checkout_Date,hot_bookings.room_ID,room_TypeN,booking_Comments,usr_Email,usrID_Phone FROM hot_bookings " +
                     "INNER JOIN hot_usr ON hot_usr.usr_ID = hot_bookings.usr_ID " +
                     "INNER JOIN hot_usr_det ON hot_usr_det.usr_ID = hot_bookings.usr_ID " +
@@ -115,10 +119,10 @@ namespace HotelManagement
                     dataTable1.Columns["room_ID"].ColumnName = "Αρ. Δωματίου";
                     dataTable1.Columns["room_TypeN"].ColumnName = "Τύπος Δωματίου";
                     dataTable1.Columns["checkout_Date"].ColumnName = "Ημ/νία Check-out";
-                    dataTable1.Columns["booking_Comments"].ColumnName = "Σχόλια Κράτησης"; 
+                    dataTable1.Columns["booking_Comments"].ColumnName = "Σχόλια Κράτησης";
                     dataTable1.Columns["usrID_Phone"].ColumnName = "Τηλέφωνο Επικοινωνίας";
                     dataTable1.Columns["usr_Email"].ColumnName = "Email Επικοινωνίας";
-                    
+
                     hasResults1 = dataTable1.Rows.Count > 0;
                 }
                 if (hasResults1)
@@ -191,7 +195,7 @@ namespace HotelManagement
                 string input = monthBox.Text;
                 string monthNumber = input.Substring(0, 2);
                 string checkinDate = yearBox.Text + "-" + monthNumber + "-" + dateBox.Text;
-                string grFormatDate = dateBox.Text + "-" + monthNumber + "-" +  yearBox.Text;
+                string grFormatDate = dateBox.Text + "-" + monthNumber + "-" + yearBox.Text;
                 comm.CommandText = "SELECT booking_ID,concat(usr_fname,' ',usr_lname) as usr_ID,room_ID," +
                     "booking_Date, checkin_Date, usrID_Phone FROM hot_bookings " +
                     "INNER JOIN hot_usr ON hot_bookings.usr_ID = hot_usr.usr_ID " +
@@ -213,7 +217,7 @@ namespace HotelManagement
                 }
                 searchPanel.Hide();
                 resultsPanel.Show();
-                resultsLabel.Text = "Αποτελέσματα για " + typeCombo.SelectedText + " : " + grFormatDate ;
+                resultsLabel.Text = "Αποτελέσματα για " + typeCombo.SelectedText + " : " + grFormatDate;
                 con.Close();
 
             }
@@ -236,7 +240,8 @@ namespace HotelManagement
                     "INNER JOIN hot_usr ON hot_bookings.usr_ID = hot_usr.usr_ID " +
                     "INNER JOIN hot_usr_det on hot_usr.usr_ID = hot_usr_det.usr_ID " +
                     "WHERE 1=1 ";
-                if (!nameField.Text.Equals("")) {
+                if (!nameField.Text.Equals(""))
+                {
                     comm.CommandText = comm.CommandText + "AND usr_FName LIKE CONCAT('%', @fname, '%') ";
                     comm.Parameters.AddWithValue("@fname", nameField.Text);
                 }
@@ -255,7 +260,7 @@ namespace HotelManagement
                     comm.CommandText = comm.CommandText + "AND usr_Email LIKE CONCAT('%', @email, '%') ";
                     comm.Parameters.AddWithValue("@email", emailField.Text);
                 }
-                
+
                 Console.WriteLine(comm.CommandText);
                 using (MySqlDataReader reader = comm.ExecuteReader())
                 {
@@ -274,7 +279,7 @@ namespace HotelManagement
                 resultsLabel.Text = "Αποτελέσματα για αναζήτηση με στοιχεία:";
                 con.Close();
             }
-            else 
+            else
             {
                 MessageBox.Show("Πρέπει να συμπληρώσεις τουλάχιστον ένα από τα πεδία!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -419,30 +424,78 @@ namespace HotelManagement
             showRoomBtn.Hide();
             resultsLabelCust.Hide();
             roomDetailsPanel.Hide();
+            custBookingsPanel.Hide();
+            custDetailsPanel.Hide();
             dateTimePicker1.Value = DateTime.Today.AddDays(1);
             dateTimePicker2.Value = DateTime.Today.AddDays(3);
         }
 
         private void bookingsCustBtn_Click(object sender, EventArgs e)
         {
-
+            custHomePanel.Hide();
+            searchRoomDatePanel.Hide();
+            roomDetailsPanel.Hide();
+            custBookingsPanel.Hide();
+            custDetailsPanel.Show();
         }
 
         private void custAccBtn_Click(object sender, EventArgs e)
         {
-
+            custHomePanel.Hide();
+            searchRoomDatePanel.Hide();
+            roomDetailsPanel.Hide();
+            custBookingsPanel.Hide();
+            custDetailsPanel.Show();
+            DB db = new DB();
+            try
+            {
+                MySqlConnection con = new MySqlConnection(db.getConnString());
+                con.Open();
+                MySqlCommand comm = con.CreateCommand();
+                comm.CommandText = "SELECT * FROM hot_usr\r\nINNER JOIN hot_usr_det ON hot_usr_det.usr_ID = hot_usr.usr_ID\r\nWHERE hot_usr.usr_ID = @usr_ID";
+                comm.Parameters.AddWithValue("@usr_ID", userID);
+                using (MySqlDataReader reader = comm.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read()) { 
+                            nameBox.Text = reader.GetString(1);
+                            surnameBox.Text = reader.GetString(2);
+                            usernameBox.Text = reader.GetString(3);
+                            emailBox.Text = reader.GetString(5);
+                            passBox.Text = reader.GetString(4);
+                            addressBox.Text = reader.GetString(9);
+                            numberBox.Text = reader.GetString(10);
+                            regionBox.Text = reader.GetString(11);
+                            countryBox.Text = reader.GetString(12);
+                            phoneBox.Text = reader.GetString(13);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Πρόβλημα στην ανάκτηση των δεδομένων.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                con.Close();
+            }catch (MySqlException w)
+            {
+                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων." + w, "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+    
 
         private void homeButtonCustBtn_Click(object sender, EventArgs e)
         {
             custHomePanel.Show();
             searchRoomDatePanel.Hide();
             roomDetailsPanel.Hide();
+            custBookingsPanel.Hide();
+            custDetailsPanel.Hide();
         }
 
         private void searchDatesBtn_Click(object sender, EventArgs e)
         {
-            
+
             if (dateTimePicker1.Value > dateTimePicker2.Value)
             {
                 MessageBox.Show("Η ημερομηνία Check-out πρέπει να είναι μεταγενέστερη από την ημερομηνία Check-in.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -478,7 +531,7 @@ namespace HotelManagement
                 {
                     string roomNumber = reader.GetString(0); // Assuming room number is retrieved from the first column
                     string picturePath = reader.GetString(1); // Assuming picture path is retrieved from the second column
-                    string cost = reader.GetString(2)+ " €"; // Assuming cost is retrieved from the third column
+                    string cost = reader.GetString(2) + " €"; // Assuming cost is retrieved from the third column
 
                     // Add a new row and populate the cells
                     dataGridView4.Rows.Add(roomNumber, picturePath, cost);
@@ -487,9 +540,6 @@ namespace HotelManagement
                 dataGridView4.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dataGridView4.AutoResizeColumns();
                 showRoomBtn.Show();
-
-
-
                 con.Close();
             }
             catch (MySqlException)
@@ -506,7 +556,7 @@ namespace HotelManagement
             DateTime date1 = dateTimePicker1.Value; // Get the value from the first DateTimePicker
             DateTime date2 = dateTimePicker2.Value; // Get the value from the second DateTimePicker
 
-            TimeSpan difference =  date2 - date1; // Subtract the dates
+            TimeSpan difference = date2 - date1; // Subtract the dates
             int nights = (int)difference.Days;
             MyList.list.Clear();
             if (dataGridView4.Rows.Count > 0)
@@ -579,7 +629,7 @@ namespace HotelManagement
                             if (hasBalcony == 0) { balconyLabel.Text = balconyLabel.Text + " Όχι"; } else { balconyLabel.Text = balconyLabel.Text + " Ναι"; }
                             if (hasView == 0) { seaViewLabel.Text = seaViewLabel.Text + " Όχι"; } else { seaViewLabel.Text = seaViewLabel.Text + " Ναι"; }
                             if (hasWIFI == 0) { wifiLabel.Text = wifiLabel.Text + " Όχι"; } else { wifiLabel.Text = wifiLabel.Text + " Ναι"; }
-                            if (nights == 1) { costLabel.Text = costLabel.Text + nights + " βράδυ: " + cost.ToString() + " €";  } else { costLabel.Text = costLabel.Text + nights + " βράδια: " + cost.ToString() +" €"; }
+                            if (nights == 1) { costLabel.Text = costLabel.Text + nights + " βράδυ: " + cost.ToString() + " €"; } else { costLabel.Text = costLabel.Text + nights + " βράδια: " + cost.ToString() + " €"; }
                         }
                         reader2.Close();
                         con.Close();
@@ -621,7 +671,7 @@ namespace HotelManagement
         {
             string workingDirectory = Environment.CurrentDirectory;
             workingDirectory = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\Rooms\\";
-            
+
             if (MyList.index == 0)
             {
             }
@@ -652,7 +702,7 @@ namespace HotelManagement
 
         private void bookBtn_Click(object sender, EventArgs e)
         {
-            
+
             DateTime selectedDate1 = dateTimePicker1.Value.Date;
             DateTime selectedDate2 = dateTimePicker2.Value.Date;
             DialogResult loginResult = MessageBox.Show("Είσαι σίγουρος ότι θέλεις να πραγματοποιήσεις την κράτηση με ημερομηνία Check-in:" + selectedDate1.ToShortDateString() + " και ημερομηνία Check-out: " +
@@ -696,7 +746,8 @@ namespace HotelManagement
                         Console.WriteLine(nights);
                         reader.Close();
                         MySqlCommand comm = con.CreateCommand();
-                        if (string.IsNullOrEmpty(commentTextBox.Text)) {
+                        if (string.IsNullOrEmpty(commentTextBox.Text))
+                        {
                             comm.CommandText = "INSERT INTO hot_bookings (usr_ID, room_ID, booking_Date, checkin_Date, checkout_Date, booking_cost) VALUES " +
                             "(@userID, @roomID, @bookingDate,@checkIn,@checkOut,@bookingCost)";
                             comm.Parameters.AddWithValue("@userID", userID);
@@ -704,7 +755,7 @@ namespace HotelManagement
                             comm.Parameters.AddWithValue("@bookingDate", currentDate);
                             comm.Parameters.AddWithValue("@checkIn", checkInDate);
                             comm.Parameters.AddWithValue("@checkOut", checkOutDate);
-                            comm.Parameters.AddWithValue("@bookingCost", nights*nightCost);
+                            comm.Parameters.AddWithValue("@bookingCost", nights * nightCost);
                             comm.ExecuteNonQuery();
                         }
                         else
@@ -723,10 +774,11 @@ namespace HotelManagement
                         MessageBox.Show("Καταχωρήθηκε επιτυχώς η κράτησή σας!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         roomDetailsPanel.Hide();
                         custHomePanel.Show();
+                        con.Close();
                     }
-                    catch (MySqlException io)
+                    catch (MySqlException)
                     {
-                        MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων!" + io, "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -748,9 +800,117 @@ namespace HotelManagement
 
         private void bookingsCustBtn_Click_1(object sender, EventArgs e)
         {
+            custHomePanel.Hide();
+            searchRoomDatePanel.Hide();
+            roomDetailsPanel.Hide();
+            custBookingsPanel.Show();
+            custDetailsPanel.Hide();
+            DB db = new DB();
+            try
+            {
+                MySqlConnection con = new MySqlConnection(db.getConnString());
+                con.Open();
 
+                MySqlCommand comm1 = con.CreateCommand();
+                comm1.CommandText = "SELECT booking_ID as \"Αριθμός Κράτησης\",room_ID AS \"Αριθμός Δωματίου\", CAST(booking_Date AS DATE) AS \"Ημ/νία Κράτησης\", CAST(checkin_Date AS DATE) AS " +
+                    "\"Ημ/νία Check-in\"\r\n,cast(checkout_Date AS DATE) AS \"Ημ/νία Check-out\", ifnull(booking_Comments,'') AS \"Σχόλια Κράτησης\",\r\nCONCAT(booking_cost,'€') " +
+                    "AS \"Συνολικό κόστος\", \r\nCASE\r\n    WHEN booking_hasPaid = 0 THEN \"Όχι\"\r\n    WHEN booking_hasPaid = 1 THEN \"Ναι\"\r\n" +
+                    "END\r\n    AS \"Πληρωμένο\"\r\nfrom hot_bookings where usr_ID = @userID AND hasArrived = 0";
+                comm1.Parameters.AddWithValue("@userID", userID);
+                DataTable dataTable1 = new DataTable();
+                using (MySqlDataReader reader1 = comm1.ExecuteReader())
+                {
+                    if (reader1.HasRows)
+                    {
+                        noCurrResvLabel.Hide();
+                        dataGridView5.Show();
+                        dataTable1.Load(reader1);
+                        dataGridView5.DataSource = dataTable1;
+                    }
+                    else
+                    {
+                        dataGridView5.Hide();
+                        noCurrResvLabel.Show();
+                    }
+                }
+
+                MySqlCommand comm2 = con.CreateCommand();
+                comm2.CommandText = "SELECT booking_ID as \"Αριθμός Κράτησης\",room_ID AS \"Αριθμός Δωματίου\", CAST(booking_Date AS DATE) AS \"Ημ/νία Κράτησης\", CAST(checkin_Date AS DATE) AS " +
+                    "\"Ημ/νία Check-in\"\r\n,CAST(checkout_Date AS DATE) AS \"Ημ/νία Check-out\", ifnull(booking_Comments,'') AS \"Σχόλια Κράτησης\",\r\nCONCAT(booking_cost,'€') " +
+                    "AS \"Συνολικό κόστος\", \r\nCASE\r\n    WHEN booking_hasPaid = 0 THEN \"Όχι\"\r\n    WHEN booking_hasPaid = 1 THEN \"Ναι\"\r\n" +
+                    "END\r\n    AS \"Πληρωμένο\"\r\nfrom hot_bookings where usr_ID = @userID AND hasDeparted = 1";
+                comm2.Parameters.AddWithValue("@userID", userID);
+                DataTable dataTable2 = new DataTable();
+                using (MySqlDataReader reader2 = comm2.ExecuteReader())
+                {
+                    if (reader2.HasRows)
+                    {
+                        noPrevResvLabel.Hide();
+                        dataGridView6.Show();
+                        dataTable2.Load(reader2);
+                        dataGridView6.DataSource = dataTable2;
+                    }
+                    else
+                    {
+                        dataGridView6.Hide();
+                        noPrevResvLabel.Show();
+                    }
+                }
+                con.Close();
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-    }
+
+        private void cancelBooking_Click(object sender, EventArgs e)
+        {
+            if (dataGridView5.Rows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView5.CurrentRow;
+                DataGridViewCell cell1 = selectedRow.Cells[0];
+                object value1 = cell1.Value;
+                DataGridViewCell cell2 = selectedRow.Cells[3];
+                object value2 = cell2.Value;
+                string booking_ID,dateValue;
+                if (value1 != null && value2 != null)
+                {
+                    booking_ID = value1.ToString();
+                    dateValue = value2.ToString();
+                    DateTime checkinDate = Convert.ToDateTime(dateValue);
+                    DateTime currentDate = DateTime.Today;
+                    TimeSpan difference = checkinDate  - currentDate;
+                    int daysDifference = difference.Days;
+                    Console.WriteLine(daysDifference);
+                    if (daysDifference <= 3) 
+                    {
+                        MessageBox.Show("Δεν μπορεί να γίνει ακύρωση κράτησης για κρατήσεις που το Check-in είναι σε λιγότερο από 3 μέρες ή έχει περάσει.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        DB db = new DB();
+                        try
+                        {
+                            MySqlConnection con = new MySqlConnection(db.getConnString());
+                            con.Open();
+                            MySqlCommand comm = con.CreateCommand();
+                            comm.CommandText = "DELETE FROM hot_bookings WHERE booking_ID = @bookingID";
+                            comm.Parameters.AddWithValue("bookingID", booking_ID);
+                            comm.ExecuteNonQuery();
+                            MessageBox.Show("Η κράτησή σας ακυρώθηκε επιτυχώς!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            bookingsCustBtn_Click_1(this, EventArgs.Empty);
+                            con.Close();
+                        }
+                        catch (MySqlException)
+                        {
+                            MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
 
 
