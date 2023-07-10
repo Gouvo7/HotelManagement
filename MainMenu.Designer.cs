@@ -29,15 +29,15 @@ namespace HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -89,6 +89,28 @@ namespace HotelManagement
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.resultsLabel = new System.Windows.Forms.Label();
             this.customerPanel = new System.Windows.Forms.Panel();
+            this.custDetailsPanel = new System.Windows.Forms.Panel();
+            this.surnameBox = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
+            this.regionBox = new System.Windows.Forms.TextBox();
+            this.phoneBox = new System.Windows.Forms.TextBox();
+            this.countryBox = new System.Windows.Forms.TextBox();
+            this.numberBox = new System.Windows.Forms.TextBox();
+            this.passBox = new System.Windows.Forms.TextBox();
+            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.surnameLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.passLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.numberLabel = new System.Windows.Forms.Label();
+            this.regionLabel = new System.Windows.Forms.Label();
+            this.countryLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.saveChanges = new System.Windows.Forms.Button();
             this.custBookingsPanel = new System.Windows.Forms.Panel();
             this.noPrevResvLabel = new System.Windows.Forms.Label();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
@@ -140,28 +162,7 @@ namespace HotelManagement
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.custDetailsPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.countryLabel = new System.Windows.Forms.Label();
-            this.regionLabel = new System.Windows.Forms.Label();
-            this.numberLabel = new System.Windows.Forms.Label();
-            this.phoneLabel = new System.Windows.Forms.Label();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.passLabel = new System.Windows.Forms.Label();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.surnameLabel = new System.Windows.Forms.Label();
-            this.nameBox = new System.Windows.Forms.TextBox();
-            this.usernameBox = new System.Windows.Forms.TextBox();
-            this.passBox = new System.Windows.Forms.TextBox();
-            this.numberBox = new System.Windows.Forms.TextBox();
-            this.countryBox = new System.Windows.Forms.TextBox();
-            this.phoneBox = new System.Windows.Forms.TextBox();
-            this.regionBox = new System.Windows.Forms.TextBox();
-            this.addressBox = new System.Windows.Forms.TextBox();
-            this.emailBox = new System.Windows.Forms.TextBox();
-            this.surnameBox = new System.Windows.Forms.TextBox();
+            this.logoutBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topRightPanel.SuspendLayout();
@@ -174,6 +175,7 @@ namespace HotelManagement
             this.resultsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.customerPanel.SuspendLayout();
+            this.custDetailsPanel.SuspendLayout();
             this.custBookingsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
@@ -185,7 +187,6 @@ namespace HotelManagement
             this.roomDetailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).BeginInit();
             this.custHomePanel.SuspendLayout();
-            this.custDetailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -858,6 +859,260 @@ namespace HotelManagement
             this.customerPanel.Size = new System.Drawing.Size(1129, 735);
             this.customerPanel.TabIndex = 60;
             // 
+            // custDetailsPanel
+            // 
+            this.custDetailsPanel.AutoScroll = true;
+            this.custDetailsPanel.Controls.Add(this.surnameBox);
+            this.custDetailsPanel.Controls.Add(this.emailBox);
+            this.custDetailsPanel.Controls.Add(this.addressBox);
+            this.custDetailsPanel.Controls.Add(this.regionBox);
+            this.custDetailsPanel.Controls.Add(this.phoneBox);
+            this.custDetailsPanel.Controls.Add(this.countryBox);
+            this.custDetailsPanel.Controls.Add(this.numberBox);
+            this.custDetailsPanel.Controls.Add(this.passBox);
+            this.custDetailsPanel.Controls.Add(this.usernameBox);
+            this.custDetailsPanel.Controls.Add(this.nameBox);
+            this.custDetailsPanel.Controls.Add(this.surnameLabel);
+            this.custDetailsPanel.Controls.Add(this.usernameLabel);
+            this.custDetailsPanel.Controls.Add(this.emailLabel);
+            this.custDetailsPanel.Controls.Add(this.passLabel);
+            this.custDetailsPanel.Controls.Add(this.addressLabel);
+            this.custDetailsPanel.Controls.Add(this.phoneLabel);
+            this.custDetailsPanel.Controls.Add(this.numberLabel);
+            this.custDetailsPanel.Controls.Add(this.regionLabel);
+            this.custDetailsPanel.Controls.Add(this.countryLabel);
+            this.custDetailsPanel.Controls.Add(this.nameLabel);
+            this.custDetailsPanel.Controls.Add(this.saveChanges);
+            this.custDetailsPanel.Location = new System.Drawing.Point(231, 54);
+            this.custDetailsPanel.Name = "custDetailsPanel";
+            this.custDetailsPanel.Size = new System.Drawing.Size(891, 665);
+            this.custDetailsPanel.TabIndex = 47;
+            // 
+            // surnameBox
+            // 
+            this.surnameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.surnameBox.Location = new System.Drawing.Point(643, 61);
+            this.surnameBox.Name = "surnameBox";
+            this.surnameBox.Size = new System.Drawing.Size(124, 25);
+            this.surnameBox.TabIndex = 57;
+            // 
+            // emailBox
+            // 
+            this.emailBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.emailBox.Location = new System.Drawing.Point(643, 133);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(124, 25);
+            this.emailBox.TabIndex = 56;
+            // 
+            // addressBox
+            // 
+            this.addressBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.addressBox.Location = new System.Drawing.Point(643, 219);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(124, 25);
+            this.addressBox.TabIndex = 55;
+            // 
+            // regionBox
+            // 
+            this.regionBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.regionBox.Location = new System.Drawing.Point(643, 297);
+            this.regionBox.Name = "regionBox";
+            this.regionBox.Size = new System.Drawing.Size(124, 25);
+            this.regionBox.TabIndex = 54;
+            // 
+            // phoneBox
+            // 
+            this.phoneBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.phoneBox.Location = new System.Drawing.Point(643, 373);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(124, 25);
+            this.phoneBox.TabIndex = 53;
+            // 
+            // countryBox
+            // 
+            this.countryBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.countryBox.Location = new System.Drawing.Point(218, 373);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(124, 25);
+            this.countryBox.TabIndex = 52;
+            // 
+            // numberBox
+            // 
+            this.numberBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.numberBox.Location = new System.Drawing.Point(218, 294);
+            this.numberBox.Name = "numberBox";
+            this.numberBox.Size = new System.Drawing.Size(124, 25);
+            this.numberBox.TabIndex = 51;
+            // 
+            // passBox
+            // 
+            this.passBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.passBox.Location = new System.Drawing.Point(218, 217);
+            this.passBox.Name = "passBox";
+            this.passBox.PasswordChar = '•';
+            this.passBox.ReadOnly = true;
+            this.passBox.Size = new System.Drawing.Size(124, 25);
+            this.passBox.TabIndex = 50;
+            // 
+            // usernameBox
+            // 
+            this.usernameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.usernameBox.Location = new System.Drawing.Point(218, 139);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(124, 25);
+            this.usernameBox.TabIndex = 49;
+            // 
+            // nameBox
+            // 
+            this.nameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.nameBox.Location = new System.Drawing.Point(218, 61);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(124, 25);
+            this.nameBox.TabIndex = 48;
+            // 
+            // surnameLabel
+            // 
+            this.surnameLabel.AutoSize = true;
+            this.surnameLabel.BackColor = System.Drawing.Color.Teal;
+            this.surnameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.surnameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.surnameLabel.Location = new System.Drawing.Point(423, 54);
+            this.surnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.surnameLabel.Name = "surnameLabel";
+            this.surnameLabel.Size = new System.Drawing.Size(112, 30);
+            this.surnameLabel.TabIndex = 47;
+            this.surnameLabel.Text = "Επώνυμο:";
+            // 
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.BackColor = System.Drawing.Color.Teal;
+            this.usernameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.usernameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.usernameLabel.Location = new System.Drawing.Point(73, 132);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(117, 30);
+            this.usernameLabel.TabIndex = 46;
+            this.usernameLabel.Text = "Username:";
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Teal;
+            this.emailLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.emailLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Location = new System.Drawing.Point(423, 133);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(71, 30);
+            this.emailLabel.TabIndex = 45;
+            this.emailLabel.Text = "Email:";
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.BackColor = System.Drawing.Color.Teal;
+            this.passLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.passLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.passLabel.Location = new System.Drawing.Point(73, 212);
+            this.passLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(103, 30);
+            this.passLabel.TabIndex = 44;
+            this.passLabel.Text = "Κωδικός:";
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.BackColor = System.Drawing.Color.Teal;
+            this.addressLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.addressLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.addressLabel.Location = new System.Drawing.Point(423, 212);
+            this.addressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(126, 30);
+            this.addressLabel.TabIndex = 42;
+            this.addressLabel.Text = "Διεύθυνση:";
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.BackColor = System.Drawing.Color.Teal;
+            this.phoneLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.phoneLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.phoneLabel.Location = new System.Drawing.Point(423, 370);
+            this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(199, 30);
+            this.phoneLabel.TabIndex = 41;
+            this.phoneLabel.Text = "Τηλ. Επικοινωνίας:";
+            // 
+            // numberLabel
+            // 
+            this.numberLabel.AutoSize = true;
+            this.numberLabel.BackColor = System.Drawing.Color.Teal;
+            this.numberLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.numberLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.numberLabel.Location = new System.Drawing.Point(73, 290);
+            this.numberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.numberLabel.Name = "numberLabel";
+            this.numberLabel.Size = new System.Drawing.Size(101, 30);
+            this.numberLabel.TabIndex = 40;
+            this.numberLabel.Text = "Αριθμός:";
+            // 
+            // regionLabel
+            // 
+            this.regionLabel.AutoSize = true;
+            this.regionLabel.BackColor = System.Drawing.Color.Teal;
+            this.regionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.regionLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.regionLabel.Location = new System.Drawing.Point(423, 291);
+            this.regionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.regionLabel.Name = "regionLabel";
+            this.regionLabel.Size = new System.Drawing.Size(101, 30);
+            this.regionLabel.TabIndex = 39;
+            this.regionLabel.Text = "Περιοχή:";
+            // 
+            // countryLabel
+            // 
+            this.countryLabel.AutoSize = true;
+            this.countryLabel.BackColor = System.Drawing.Color.Teal;
+            this.countryLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.countryLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.countryLabel.Location = new System.Drawing.Point(73, 370);
+            this.countryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.countryLabel.Name = "countryLabel";
+            this.countryLabel.Size = new System.Drawing.Size(77, 30);
+            this.countryLabel.TabIndex = 38;
+            this.countryLabel.Text = "Χώρα:";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.Teal;
+            this.nameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.nameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Location = new System.Drawing.Point(73, 54);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(88, 30);
+            this.nameLabel.TabIndex = 37;
+            this.nameLabel.Text = "Όνομα:";
+            // 
+            // saveChanges
+            // 
+            this.saveChanges.BackColor = System.Drawing.Color.White;
+            this.saveChanges.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
+            this.saveChanges.Location = new System.Drawing.Point(315, 471);
+            this.saveChanges.Margin = new System.Windows.Forms.Padding(4);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Size = new System.Drawing.Size(247, 45);
+            this.saveChanges.TabIndex = 15;
+            this.saveChanges.Text = "Αποθήκευση Αλλαγών";
+            this.saveChanges.UseVisualStyleBackColor = false;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
+            // 
             // custBookingsPanel
             // 
             this.custBookingsPanel.AutoScroll = true;
@@ -893,35 +1148,35 @@ namespace HotelManagement
             this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView6.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView6.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle46.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle47.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle47;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView6.Location = new System.Drawing.Point(23, 438);
             this.dataGridView6.MultiSelect = false;
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
-            dataGridViewCellStyle48.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle48.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle48.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle48.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView6.ShowCellErrors = false;
             this.dataGridView6.ShowCellToolTips = false;
@@ -963,35 +1218,35 @@ namespace HotelManagement
             this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView5.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle49.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle50.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle50;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView5.Location = new System.Drawing.Point(23, 79);
             this.dataGridView5.MultiSelect = false;
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
-            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle51.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView5.ShowCellErrors = false;
             this.dataGridView5.ShowCellToolTips = false;
@@ -1054,6 +1309,7 @@ namespace HotelManagement
             this.flowLayoutPanel2.Controls.Add(this.searchCustBtn);
             this.flowLayoutPanel2.Controls.Add(this.bookingsCustBtn);
             this.flowLayoutPanel2.Controls.Add(this.custAccBtn);
+            this.flowLayoutPanel2.Controls.Add(this.logoutBtn);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 10);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -1173,35 +1429,35 @@ namespace HotelManagement
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle52.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle52.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle52.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle52;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle53.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle53.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle53.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle53;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView4.Location = new System.Drawing.Point(151, 256);
             this.dataGridView4.MultiSelect = false;
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle54.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle54.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle54.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle54;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.ShowCellErrors = false;
             this.dataGridView4.ShowCellToolTips = false;
@@ -1623,258 +1879,18 @@ namespace HotelManagement
             this.label21.TabIndex = 42;
             this.label21.Text = "Καλωσορίσατε στην πλατφόρμα κρατήσεων του Aqua Suites";
             // 
-            // custDetailsPanel
+            // logoutBtn
             // 
-            this.custDetailsPanel.AutoScroll = true;
-            this.custDetailsPanel.Controls.Add(this.surnameBox);
-            this.custDetailsPanel.Controls.Add(this.emailBox);
-            this.custDetailsPanel.Controls.Add(this.addressBox);
-            this.custDetailsPanel.Controls.Add(this.regionBox);
-            this.custDetailsPanel.Controls.Add(this.phoneBox);
-            this.custDetailsPanel.Controls.Add(this.countryBox);
-            this.custDetailsPanel.Controls.Add(this.numberBox);
-            this.custDetailsPanel.Controls.Add(this.passBox);
-            this.custDetailsPanel.Controls.Add(this.usernameBox);
-            this.custDetailsPanel.Controls.Add(this.nameBox);
-            this.custDetailsPanel.Controls.Add(this.surnameLabel);
-            this.custDetailsPanel.Controls.Add(this.usernameLabel);
-            this.custDetailsPanel.Controls.Add(this.emailLabel);
-            this.custDetailsPanel.Controls.Add(this.passLabel);
-            this.custDetailsPanel.Controls.Add(this.addressLabel);
-            this.custDetailsPanel.Controls.Add(this.phoneLabel);
-            this.custDetailsPanel.Controls.Add(this.numberLabel);
-            this.custDetailsPanel.Controls.Add(this.regionLabel);
-            this.custDetailsPanel.Controls.Add(this.countryLabel);
-            this.custDetailsPanel.Controls.Add(this.nameLabel);
-            this.custDetailsPanel.Controls.Add(this.button1);
-            this.custDetailsPanel.Location = new System.Drawing.Point(231, 54);
-            this.custDetailsPanel.Name = "custDetailsPanel";
-            this.custDetailsPanel.Size = new System.Drawing.Size(891, 665);
-            this.custDetailsPanel.TabIndex = 47;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(315, 471);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(247, 45);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Αποθήκευση Αλλαγών";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.Color.Teal;
-            this.nameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.nameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Location = new System.Drawing.Point(73, 54);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(88, 30);
-            this.nameLabel.TabIndex = 37;
-            this.nameLabel.Text = "Όνομα:";
-            // 
-            // countryLabel
-            // 
-            this.countryLabel.AutoSize = true;
-            this.countryLabel.BackColor = System.Drawing.Color.Teal;
-            this.countryLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.countryLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.countryLabel.Location = new System.Drawing.Point(73, 370);
-            this.countryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.countryLabel.Name = "countryLabel";
-            this.countryLabel.Size = new System.Drawing.Size(77, 30);
-            this.countryLabel.TabIndex = 38;
-            this.countryLabel.Text = "Χώρα:";
-            // 
-            // regionLabel
-            // 
-            this.regionLabel.AutoSize = true;
-            this.regionLabel.BackColor = System.Drawing.Color.Teal;
-            this.regionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.regionLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.regionLabel.Location = new System.Drawing.Point(423, 291);
-            this.regionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.regionLabel.Name = "regionLabel";
-            this.regionLabel.Size = new System.Drawing.Size(101, 30);
-            this.regionLabel.TabIndex = 39;
-            this.regionLabel.Text = "Περιοχή:";
-            // 
-            // numberLabel
-            // 
-            this.numberLabel.AutoSize = true;
-            this.numberLabel.BackColor = System.Drawing.Color.Teal;
-            this.numberLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.numberLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.numberLabel.Location = new System.Drawing.Point(73, 290);
-            this.numberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(101, 30);
-            this.numberLabel.TabIndex = 40;
-            this.numberLabel.Text = "Αριθμός:";
-            // 
-            // phoneLabel
-            // 
-            this.phoneLabel.AutoSize = true;
-            this.phoneLabel.BackColor = System.Drawing.Color.Teal;
-            this.phoneLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.phoneLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.phoneLabel.Location = new System.Drawing.Point(423, 370);
-            this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(199, 30);
-            this.phoneLabel.TabIndex = 41;
-            this.phoneLabel.Text = "Τηλ. Επικοινωνίας:";
-            // 
-            // addressLabel
-            // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.BackColor = System.Drawing.Color.Teal;
-            this.addressLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.addressLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.addressLabel.Location = new System.Drawing.Point(423, 212);
-            this.addressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(126, 30);
-            this.addressLabel.TabIndex = 42;
-            this.addressLabel.Text = "Διεύθυνση:";
-            // 
-            // passLabel
-            // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.BackColor = System.Drawing.Color.Teal;
-            this.passLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.passLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.passLabel.Location = new System.Drawing.Point(73, 212);
-            this.passLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(103, 30);
-            this.passLabel.TabIndex = 44;
-            this.passLabel.Text = "Κωδικός:";
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.BackColor = System.Drawing.Color.Teal;
-            this.emailLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.emailLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Location = new System.Drawing.Point(423, 133);
-            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(71, 30);
-            this.emailLabel.TabIndex = 45;
-            this.emailLabel.Text = "Email:";
-            // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.BackColor = System.Drawing.Color.Teal;
-            this.usernameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.usernameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.usernameLabel.Location = new System.Drawing.Point(73, 132);
-            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(117, 30);
-            this.usernameLabel.TabIndex = 46;
-            this.usernameLabel.Text = "Username:";
-            // 
-            // surnameLabel
-            // 
-            this.surnameLabel.AutoSize = true;
-            this.surnameLabel.BackColor = System.Drawing.Color.Teal;
-            this.surnameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.surnameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.surnameLabel.Location = new System.Drawing.Point(423, 54);
-            this.surnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(112, 30);
-            this.surnameLabel.TabIndex = 47;
-            this.surnameLabel.Text = "Επώνυμο:";
-            // 
-            // nameBox
-            // 
-            this.nameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.nameBox.Location = new System.Drawing.Point(218, 61);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(124, 25);
-            this.nameBox.TabIndex = 48;
-            // 
-            // usernameBox
-            // 
-            this.usernameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.usernameBox.Location = new System.Drawing.Point(218, 139);
-            this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(124, 25);
-            this.usernameBox.TabIndex = 49;
-            // 
-            // passBox
-            // 
-            this.passBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.passBox.Location = new System.Drawing.Point(218, 217);
-            this.passBox.Name = "passBox";
-            this.passBox.PasswordChar = '•';
-            this.passBox.ReadOnly = true;
-            this.passBox.Size = new System.Drawing.Size(124, 25);
-            this.passBox.TabIndex = 50;
-            // 
-            // numberBox
-            // 
-            this.numberBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.numberBox.Location = new System.Drawing.Point(218, 294);
-            this.numberBox.Name = "numberBox";
-            this.numberBox.Size = new System.Drawing.Size(124, 25);
-            this.numberBox.TabIndex = 51;
-            // 
-            // countryBox
-            // 
-            this.countryBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.countryBox.Location = new System.Drawing.Point(218, 373);
-            this.countryBox.Name = "countryBox";
-            this.countryBox.Size = new System.Drawing.Size(124, 25);
-            this.countryBox.TabIndex = 52;
-            // 
-            // phoneBox
-            // 
-            this.phoneBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.phoneBox.Location = new System.Drawing.Point(643, 373);
-            this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(124, 25);
-            this.phoneBox.TabIndex = 53;
-            // 
-            // regionBox
-            // 
-            this.regionBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.regionBox.Location = new System.Drawing.Point(643, 297);
-            this.regionBox.Name = "regionBox";
-            this.regionBox.Size = new System.Drawing.Size(124, 25);
-            this.regionBox.TabIndex = 54;
-            // 
-            // addressBox
-            // 
-            this.addressBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.addressBox.Location = new System.Drawing.Point(643, 219);
-            this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(124, 25);
-            this.addressBox.TabIndex = 55;
-            // 
-            // emailBox
-            // 
-            this.emailBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.emailBox.Location = new System.Drawing.Point(643, 133);
-            this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(124, 25);
-            this.emailBox.TabIndex = 56;
-            // 
-            // surnameBox
-            // 
-            this.surnameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.surnameBox.Location = new System.Drawing.Point(643, 61);
-            this.surnameBox.Name = "surnameBox";
-            this.surnameBox.Size = new System.Drawing.Size(124, 25);
-            this.surnameBox.TabIndex = 57;
+            this.logoutBtn.BackColor = System.Drawing.Color.White;
+            this.logoutBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.logoutBtn.Location = new System.Drawing.Point(9, 354);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(196, 45);
+            this.logoutBtn.TabIndex = 15;
+            this.logoutBtn.Text = "Αποσύνδεση";
+            this.logoutBtn.UseVisualStyleBackColor = false;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // MainMenu
             // 
@@ -1904,6 +1920,8 @@ namespace HotelManagement
             this.resultsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.customerPanel.ResumeLayout(false);
+            this.custDetailsPanel.ResumeLayout(false);
+            this.custDetailsPanel.PerformLayout();
             this.custBookingsPanel.ResumeLayout(false);
             this.custBookingsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
@@ -1920,8 +1938,6 @@ namespace HotelManagement
             ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).EndInit();
             this.custHomePanel.ResumeLayout(false);
             this.custHomePanel.PerformLayout();
-            this.custDetailsPanel.ResumeLayout(false);
-            this.custDetailsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2029,7 +2045,7 @@ namespace HotelManagement
         private System.Windows.Forms.Label noCurrResvLabel;
         private System.Windows.Forms.Label noPrevResvLabel;
         private System.Windows.Forms.Panel custDetailsPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saveChanges;
         private System.Windows.Forms.Label surnameLabel;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label emailLabel;
@@ -2050,5 +2066,6 @@ namespace HotelManagement
         private System.Windows.Forms.TextBox numberBox;
         private System.Windows.Forms.TextBox passBox;
         private System.Windows.Forms.TextBox usernameBox;
+        private System.Windows.Forms.Button logoutBtn;
     }
 }

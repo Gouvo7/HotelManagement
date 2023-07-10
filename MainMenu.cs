@@ -513,7 +513,7 @@ namespace HotelManagement
             string date2 = dateTimePicker2.Value.Date.ToString("yyyy-MM-dd");
             resultsLabelCust.Text = "Αποτελέσματα μεταξύ ημερομηνιών: " + dateTimePicker1.Value.Date.ToString("dd-MM-yyyy") + " και " + dateTimePicker2.Value.Date.ToString("dd-MM-yyyy");
             resultsLabelCust.Show();
-            dataGridView4.Columns.Add("RoomNumber", "Room Number");
+            dataGridView4.Columns.Add("RoomNumber", "Αρ. Δωματίου");
             dataGridView4.Columns.Add("RommType", "Τύπος Δωματίου");
             dataGridView4.Columns.Add("Cost", "Κόστος ανά βραδιά");
             DB db = new DB();
@@ -558,7 +558,7 @@ namespace HotelManagement
 
             TimeSpan difference = date2 - date1; // Subtract the dates
             int nights = (int)difference.Days;
-            MyList.list.Clear();
+            PhotoList.list.Clear();
             if (dataGridView4.Rows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView4.SelectedRows[0];
@@ -588,17 +588,17 @@ namespace HotelManagement
                             Console.WriteLine(path);
                             if (File.Exists(path))
                             {
-                                MyList.list.Add(path);
+                                PhotoList.list.Add(path);
                             }
                         }
-                        if (MyList.list.Count > 0)
+                        if (PhotoList.list.Count > 0)
                         {
-                            MyList.index = 0;
-                            roomPicBox.ImageLocation = MyList.list[0];
+                            PhotoList.index = 0;
+                            roomPicBox.ImageLocation = PhotoList.list[0];
                         }
                         else
                         {
-                            MyList.index = -1;
+                            PhotoList.index = -1;
                             string workingDirectory = Environment.CurrentDirectory;
                             string path = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\error.png";
                             roomPicBox.ImageLocation = path;
@@ -672,15 +672,15 @@ namespace HotelManagement
             string workingDirectory = Environment.CurrentDirectory;
             workingDirectory = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\Rooms\\";
 
-            if (MyList.index == 0)
+            if (PhotoList.index == 0)
             {
             }
-            else if (MyList.index == -1) { }
+            else if (PhotoList.index == -1) { }
             else
             {
 
-                roomPicBox.ImageLocation = MyList.list[MyList.index - 1];
-                MyList.index = MyList.index - 1;
+                roomPicBox.ImageLocation = PhotoList.list[PhotoList.index - 1];
+                PhotoList.index = PhotoList.index - 1;
             }
 
         }
@@ -689,14 +689,14 @@ namespace HotelManagement
         {
             string workingDirectory = Environment.CurrentDirectory;
             workingDirectory = Directory.GetParent(workingDirectory).Parent.FullName + "\\Resources\\Rooms\\";
-            if (MyList.index == MyList.list.Count() - 1)
+            if (PhotoList.index == PhotoList.list.Count() - 1)
             {
             }
-            else if (MyList.index == -1) { }
+            else if (PhotoList.index == -1) { }
             else
             {
-                roomPicBox.ImageLocation = MyList.list[MyList.index + 1];
-                MyList.index = MyList.index + 1;
+                roomPicBox.ImageLocation = PhotoList.list[PhotoList.index + 1];
+                PhotoList.index = PhotoList.index + 1;
             }
         }
 
@@ -909,6 +909,45 @@ namespace HotelManagement
                     }
                 }
             }
+        }
+
+        private void saveChanges_Click(object sender, EventArgs e)
+        {
+            DB db = new DB();
+            try
+            {
+                MySqlConnection con = new MySqlConnection(db.getConnString());
+                con.Open();
+                MySqlCommand comm = con.CreateCommand();
+                comm.CommandText = "UPDATE hot_usr INNER JOIN hot_usr_det ON hot_usr.usr_ID = hot_usr_det.usr_ID SET hot_usr.usr_ID = @user_ID" +
+                    ", usr_FName = @fname, usr_LName = @lname, usr_username = @username, usr_Email = @email, usrID_Street = @street, " +
+                    "usrID_StreetNum = @streetNum, usrID_Region = @region, usrID_Country = @country, usrID_Phone = @phone where hot_usr.usr_ID = @user_ID";
+
+
+                comm.Parameters.AddWithValue("@user_ID", userID);
+                comm.Parameters.AddWithValue("@fname", nameBox.Text);
+                comm.Parameters.AddWithValue("@lname", surnameBox.Text);
+                comm.Parameters.AddWithValue("@username", usernameBox.Text);
+                comm.Parameters.AddWithValue("@email", emailBox.Text);
+                comm.Parameters.AddWithValue("@street", addressBox.Text);
+                comm.Parameters.AddWithValue("@streetNum", numberBox.Text);
+                comm.Parameters.AddWithValue("@region", regionBox.Text);
+                comm.Parameters.AddWithValue("@country", countryBox.Text);
+                comm.Parameters.AddWithValue("@phone", phoneBox.Text);
+                comm.ExecuteNonQuery();
+                MessageBox.Show("Οι αλλαγές σας πραγματοποιήθηκαν.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                con.Close();
+            }catch (MySqlException zz)
+            {
+                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων." + zz, "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            this.Close();
+
         }
     } 
 }

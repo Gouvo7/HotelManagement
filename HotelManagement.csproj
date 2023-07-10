@@ -92,7 +92,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyList.cs" />
+    <Compile Include="UserDet.cs" />
+    <Compile Include="PhotoList.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>

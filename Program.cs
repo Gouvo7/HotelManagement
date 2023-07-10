@@ -17,8 +17,11 @@ namespace HotelManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
+
+            while (true)
+            {
+
             
-            /*
             Login loginForm = new Login();
             DialogResult loginResult = loginForm.ShowDialog();
             if (loginResult == DialogResult.OK)
@@ -27,16 +30,11 @@ namespace HotelManagement
                 int userID = loginForm.getID();
                 MainMenu anotherForm = new MainMenu(userID);
                 Application.Run(anotherForm);
-                
-
             }
-            else
-            {
             }
-            */
 
-            MainMenu anotherForm = new MainMenu(2);
-            Application.Run(anotherForm);
+            //MainMenu anotherForm = new MainMenu(2);
+            //Application.Run(anotherForm);
 
         }
     }
