@@ -972,6 +972,7 @@ namespace HotelManagement
                 else
                 {
                     bookingPaymentLabel.Text = bookingPaymentLabel.Text + booking_ID;
+
                 }
             }
         }
