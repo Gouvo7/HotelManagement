@@ -949,6 +949,32 @@ namespace HotelManagement
             this.Close();
 
         }
+
+        private void payBookingBtn_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridView5.CurrentRow;
+            DataGridViewCell cell1 = selectedRow.Cells[0];
+            object value1 = cell1.Value;
+            DataGridViewCell cell2 = selectedRow.Cells[6];
+            object value2 = cell2.Value;
+            DataGridViewCell cell3 = selectedRow.Cells[7];
+            object value3 = cell3.Value;
+            string booking_ID, cost, hasPaid;
+            if (value1 != null && value2 != null && value3 != null)
+            {
+                booking_ID = value1.ToString();
+                cost = value2.ToString();
+                hasPaid = value3.ToString();
+                if (hasPaid.Equals("Ναι"))
+                {
+                    MessageBox.Show("Έχει ήδη πραγματοποιηθεί πληρωμή για αυτή την κράτηση!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    bookingPaymentLabel.Text = bookingPaymentLabel.Text + booking_ID;
+                }
+            }
+        }
     } 
 }
 

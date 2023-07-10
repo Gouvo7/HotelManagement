@@ -18,6 +18,8 @@ namespace HotelManagement
         public Login()
         {
             InitializeComponent();
+            userTB.Text = "kostas";
+            passTB.Text = "1234";
         }
 
         private void button1_Click(object sender, EventArgs e)
