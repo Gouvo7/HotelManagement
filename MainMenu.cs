@@ -70,13 +70,14 @@ namespace HotelManagement
                 }
                 else if (userType.Equals("2"))
                 {
+                    custHomePanel.Show();
                     employeePanel.Hide();
                     customerPanel.Show();
                     searchRoomDatePanel.Hide();
                     showRoomBtn.Hide();
-                    custHomePanel.Show();
                     roomDetailsPanel.Hide();
                     custBookingsPanel.Hide();
+                    paymentPanel.Hide();
                 }
                 else
                 {
@@ -972,9 +973,22 @@ namespace HotelManagement
                 else
                 {
                     bookingPaymentLabel.Text = bookingPaymentLabel.Text + booking_ID;
-
+                    custBookingsPanel.Hide();
+                    paymentPanel.Show();
                 }
             }
+        }
+
+        private void backBookingsBtn_Click(object sender, EventArgs e)
+        {
+            paymentPanel.Hide();
+            custBookingsPanel.Show();
+            bookingPaymentLabel.Text = "Πληρωμή για την κράτηση με αριθμό: ";
+        }
+
+        private void payBtn_Click(object sender, EventArgs e)
+        {
+
         }
     } 
 }

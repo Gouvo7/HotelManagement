@@ -29,15 +29,15 @@ namespace HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -89,36 +89,6 @@ namespace HotelManagement
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.resultsLabel = new System.Windows.Forms.Label();
             this.customerPanel = new System.Windows.Forms.Panel();
-            this.custDetailsPanel = new System.Windows.Forms.Panel();
-            this.surnameBox = new System.Windows.Forms.TextBox();
-            this.emailBox = new System.Windows.Forms.TextBox();
-            this.addressBox = new System.Windows.Forms.TextBox();
-            this.regionBox = new System.Windows.Forms.TextBox();
-            this.phoneBox = new System.Windows.Forms.TextBox();
-            this.countryBox = new System.Windows.Forms.TextBox();
-            this.numberBox = new System.Windows.Forms.TextBox();
-            this.passBox = new System.Windows.Forms.TextBox();
-            this.usernameBox = new System.Windows.Forms.TextBox();
-            this.nameBox = new System.Windows.Forms.TextBox();
-            this.surnameLabel = new System.Windows.Forms.Label();
-            this.usernameLabel = new System.Windows.Forms.Label();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.passLabel = new System.Windows.Forms.Label();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.phoneLabel = new System.Windows.Forms.Label();
-            this.numberLabel = new System.Windows.Forms.Label();
-            this.regionLabel = new System.Windows.Forms.Label();
-            this.countryLabel = new System.Windows.Forms.Label();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.saveChanges = new System.Windows.Forms.Button();
-            this.custBookingsPanel = new System.Windows.Forms.Panel();
-            this.noPrevResvLabel = new System.Windows.Forms.Label();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.prevResvLabel = new System.Windows.Forms.Label();
-            this.noCurrResvLabel = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.currResvLabel = new System.Windows.Forms.Label();
-            this.cancelBooking = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.welcomeLabelCust = new System.Windows.Forms.Label();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -128,6 +98,28 @@ namespace HotelManagement
             this.bookingsCustBtn = new System.Windows.Forms.Button();
             this.custAccBtn = new System.Windows.Forms.Button();
             this.logoutBtn = new System.Windows.Forms.Button();
+            this.paymentPanel = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.payBtn = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bookingPaymentLabel = new System.Windows.Forms.Label();
+            this.paymentLabel = new System.Windows.Forms.Label();
+            this.custBookingsPanel = new System.Windows.Forms.Panel();
+            this.payBookingBtn = new System.Windows.Forms.Button();
+            this.noPrevResvLabel = new System.Windows.Forms.Label();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.prevResvLabel = new System.Windows.Forms.Label();
+            this.noCurrResvLabel = new System.Windows.Forms.Label();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.currResvLabel = new System.Windows.Forms.Label();
+            this.cancelBooking = new System.Windows.Forms.Button();
             this.searchRoomDatePanel = new System.Windows.Forms.Panel();
             this.showRoomBtn = new System.Windows.Forms.Button();
             this.resultsLabelCust = new System.Windows.Forms.Label();
@@ -163,20 +155,29 @@ namespace HotelManagement
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.payBookingBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.paymentLabel = new System.Windows.Forms.Label();
-            this.bookingPaymentLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
+            this.custDetailsPanel = new System.Windows.Forms.Panel();
+            this.surnameBox = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
+            this.regionBox = new System.Windows.Forms.TextBox();
+            this.phoneBox = new System.Windows.Forms.TextBox();
+            this.countryBox = new System.Windows.Forms.TextBox();
+            this.numberBox = new System.Windows.Forms.TextBox();
+            this.passBox = new System.Windows.Forms.TextBox();
+            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.surnameLabel = new System.Windows.Forms.Label();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.passLabel = new System.Windows.Forms.Label();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.numberLabel = new System.Windows.Forms.Label();
+            this.regionLabel = new System.Windows.Forms.Label();
+            this.countryLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.saveChanges = new System.Windows.Forms.Button();
+            this.backBookingsBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topRightPanel.SuspendLayout();
@@ -189,19 +190,19 @@ namespace HotelManagement
             this.resultsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.customerPanel.SuspendLayout();
-            this.custDetailsPanel.SuspendLayout();
-            this.custBookingsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.paymentPanel.SuspendLayout();
+            this.custBookingsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.searchRoomDatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.roomDetailsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).BeginInit();
             this.custHomePanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.custDetailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -864,7 +865,7 @@ namespace HotelManagement
             // 
             this.customerPanel.Controls.Add(this.panel3);
             this.customerPanel.Controls.Add(this.flowLayoutPanel2);
-            this.customerPanel.Controls.Add(this.panel1);
+            this.customerPanel.Controls.Add(this.paymentPanel);
             this.customerPanel.Controls.Add(this.custBookingsPanel);
             this.customerPanel.Controls.Add(this.searchRoomDatePanel);
             this.customerPanel.Controls.Add(this.roomDetailsPanel);
@@ -874,429 +875,6 @@ namespace HotelManagement
             this.customerPanel.Name = "customerPanel";
             this.customerPanel.Size = new System.Drawing.Size(1129, 735);
             this.customerPanel.TabIndex = 60;
-            // 
-            // custDetailsPanel
-            // 
-            this.custDetailsPanel.AutoScroll = true;
-            this.custDetailsPanel.Controls.Add(this.surnameBox);
-            this.custDetailsPanel.Controls.Add(this.emailBox);
-            this.custDetailsPanel.Controls.Add(this.addressBox);
-            this.custDetailsPanel.Controls.Add(this.regionBox);
-            this.custDetailsPanel.Controls.Add(this.phoneBox);
-            this.custDetailsPanel.Controls.Add(this.countryBox);
-            this.custDetailsPanel.Controls.Add(this.numberBox);
-            this.custDetailsPanel.Controls.Add(this.passBox);
-            this.custDetailsPanel.Controls.Add(this.usernameBox);
-            this.custDetailsPanel.Controls.Add(this.nameBox);
-            this.custDetailsPanel.Controls.Add(this.surnameLabel);
-            this.custDetailsPanel.Controls.Add(this.usernameLabel);
-            this.custDetailsPanel.Controls.Add(this.emailLabel);
-            this.custDetailsPanel.Controls.Add(this.passLabel);
-            this.custDetailsPanel.Controls.Add(this.addressLabel);
-            this.custDetailsPanel.Controls.Add(this.phoneLabel);
-            this.custDetailsPanel.Controls.Add(this.numberLabel);
-            this.custDetailsPanel.Controls.Add(this.regionLabel);
-            this.custDetailsPanel.Controls.Add(this.countryLabel);
-            this.custDetailsPanel.Controls.Add(this.nameLabel);
-            this.custDetailsPanel.Controls.Add(this.saveChanges);
-            this.custDetailsPanel.Location = new System.Drawing.Point(231, 54);
-            this.custDetailsPanel.Name = "custDetailsPanel";
-            this.custDetailsPanel.Size = new System.Drawing.Size(891, 665);
-            this.custDetailsPanel.TabIndex = 47;
-            // 
-            // surnameBox
-            // 
-            this.surnameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.surnameBox.Location = new System.Drawing.Point(643, 61);
-            this.surnameBox.Name = "surnameBox";
-            this.surnameBox.Size = new System.Drawing.Size(124, 25);
-            this.surnameBox.TabIndex = 57;
-            // 
-            // emailBox
-            // 
-            this.emailBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.emailBox.Location = new System.Drawing.Point(643, 133);
-            this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(124, 25);
-            this.emailBox.TabIndex = 56;
-            // 
-            // addressBox
-            // 
-            this.addressBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.addressBox.Location = new System.Drawing.Point(643, 219);
-            this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(124, 25);
-            this.addressBox.TabIndex = 55;
-            // 
-            // regionBox
-            // 
-            this.regionBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.regionBox.Location = new System.Drawing.Point(643, 297);
-            this.regionBox.Name = "regionBox";
-            this.regionBox.Size = new System.Drawing.Size(124, 25);
-            this.regionBox.TabIndex = 54;
-            // 
-            // phoneBox
-            // 
-            this.phoneBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.phoneBox.Location = new System.Drawing.Point(643, 373);
-            this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(124, 25);
-            this.phoneBox.TabIndex = 53;
-            // 
-            // countryBox
-            // 
-            this.countryBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.countryBox.Location = new System.Drawing.Point(218, 373);
-            this.countryBox.Name = "countryBox";
-            this.countryBox.Size = new System.Drawing.Size(124, 25);
-            this.countryBox.TabIndex = 52;
-            // 
-            // numberBox
-            // 
-            this.numberBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.numberBox.Location = new System.Drawing.Point(218, 294);
-            this.numberBox.Name = "numberBox";
-            this.numberBox.Size = new System.Drawing.Size(124, 25);
-            this.numberBox.TabIndex = 51;
-            // 
-            // passBox
-            // 
-            this.passBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.passBox.Location = new System.Drawing.Point(218, 217);
-            this.passBox.Name = "passBox";
-            this.passBox.PasswordChar = '•';
-            this.passBox.ReadOnly = true;
-            this.passBox.Size = new System.Drawing.Size(124, 25);
-            this.passBox.TabIndex = 50;
-            // 
-            // usernameBox
-            // 
-            this.usernameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.usernameBox.Location = new System.Drawing.Point(218, 139);
-            this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(124, 25);
-            this.usernameBox.TabIndex = 49;
-            // 
-            // nameBox
-            // 
-            this.nameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.nameBox.Location = new System.Drawing.Point(218, 61);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(124, 25);
-            this.nameBox.TabIndex = 48;
-            // 
-            // surnameLabel
-            // 
-            this.surnameLabel.AutoSize = true;
-            this.surnameLabel.BackColor = System.Drawing.Color.Teal;
-            this.surnameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.surnameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.surnameLabel.Location = new System.Drawing.Point(423, 54);
-            this.surnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(112, 30);
-            this.surnameLabel.TabIndex = 47;
-            this.surnameLabel.Text = "Επώνυμο:";
-            // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.BackColor = System.Drawing.Color.Teal;
-            this.usernameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.usernameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.usernameLabel.Location = new System.Drawing.Point(73, 132);
-            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(117, 30);
-            this.usernameLabel.TabIndex = 46;
-            this.usernameLabel.Text = "Username:";
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.BackColor = System.Drawing.Color.Teal;
-            this.emailLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.emailLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Location = new System.Drawing.Point(423, 133);
-            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(71, 30);
-            this.emailLabel.TabIndex = 45;
-            this.emailLabel.Text = "Email:";
-            // 
-            // passLabel
-            // 
-            this.passLabel.AutoSize = true;
-            this.passLabel.BackColor = System.Drawing.Color.Teal;
-            this.passLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.passLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.passLabel.Location = new System.Drawing.Point(73, 212);
-            this.passLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.passLabel.Name = "passLabel";
-            this.passLabel.Size = new System.Drawing.Size(103, 30);
-            this.passLabel.TabIndex = 44;
-            this.passLabel.Text = "Κωδικός:";
-            // 
-            // addressLabel
-            // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.BackColor = System.Drawing.Color.Teal;
-            this.addressLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.addressLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.addressLabel.Location = new System.Drawing.Point(423, 212);
-            this.addressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(126, 30);
-            this.addressLabel.TabIndex = 42;
-            this.addressLabel.Text = "Διεύθυνση:";
-            // 
-            // phoneLabel
-            // 
-            this.phoneLabel.AutoSize = true;
-            this.phoneLabel.BackColor = System.Drawing.Color.Teal;
-            this.phoneLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.phoneLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.phoneLabel.Location = new System.Drawing.Point(423, 370);
-            this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(199, 30);
-            this.phoneLabel.TabIndex = 41;
-            this.phoneLabel.Text = "Τηλ. Επικοινωνίας:";
-            // 
-            // numberLabel
-            // 
-            this.numberLabel.AutoSize = true;
-            this.numberLabel.BackColor = System.Drawing.Color.Teal;
-            this.numberLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.numberLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.numberLabel.Location = new System.Drawing.Point(73, 290);
-            this.numberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(101, 30);
-            this.numberLabel.TabIndex = 40;
-            this.numberLabel.Text = "Αριθμός:";
-            // 
-            // regionLabel
-            // 
-            this.regionLabel.AutoSize = true;
-            this.regionLabel.BackColor = System.Drawing.Color.Teal;
-            this.regionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.regionLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.regionLabel.Location = new System.Drawing.Point(423, 291);
-            this.regionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.regionLabel.Name = "regionLabel";
-            this.regionLabel.Size = new System.Drawing.Size(101, 30);
-            this.regionLabel.TabIndex = 39;
-            this.regionLabel.Text = "Περιοχή:";
-            // 
-            // countryLabel
-            // 
-            this.countryLabel.AutoSize = true;
-            this.countryLabel.BackColor = System.Drawing.Color.Teal;
-            this.countryLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.countryLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.countryLabel.Location = new System.Drawing.Point(73, 370);
-            this.countryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.countryLabel.Name = "countryLabel";
-            this.countryLabel.Size = new System.Drawing.Size(77, 30);
-            this.countryLabel.TabIndex = 38;
-            this.countryLabel.Text = "Χώρα:";
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.Color.Teal;
-            this.nameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.nameLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.nameLabel.Location = new System.Drawing.Point(73, 54);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(88, 30);
-            this.nameLabel.TabIndex = 37;
-            this.nameLabel.Text = "Όνομα:";
-            // 
-            // saveChanges
-            // 
-            this.saveChanges.BackColor = System.Drawing.Color.White;
-            this.saveChanges.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.saveChanges.Location = new System.Drawing.Point(315, 471);
-            this.saveChanges.Margin = new System.Windows.Forms.Padding(4);
-            this.saveChanges.Name = "saveChanges";
-            this.saveChanges.Size = new System.Drawing.Size(247, 45);
-            this.saveChanges.TabIndex = 15;
-            this.saveChanges.Text = "Αποθήκευση Αλλαγών";
-            this.saveChanges.UseVisualStyleBackColor = false;
-            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
-            // 
-            // custBookingsPanel
-            // 
-            this.custBookingsPanel.AutoScroll = true;
-            this.custBookingsPanel.Controls.Add(this.payBookingBtn);
-            this.custBookingsPanel.Controls.Add(this.noPrevResvLabel);
-            this.custBookingsPanel.Controls.Add(this.dataGridView6);
-            this.custBookingsPanel.Controls.Add(this.prevResvLabel);
-            this.custBookingsPanel.Controls.Add(this.noCurrResvLabel);
-            this.custBookingsPanel.Controls.Add(this.dataGridView5);
-            this.custBookingsPanel.Controls.Add(this.currResvLabel);
-            this.custBookingsPanel.Controls.Add(this.cancelBooking);
-            this.custBookingsPanel.Location = new System.Drawing.Point(231, 55);
-            this.custBookingsPanel.Name = "custBookingsPanel";
-            this.custBookingsPanel.Size = new System.Drawing.Size(891, 665);
-            this.custBookingsPanel.TabIndex = 45;
-            // 
-            // noPrevResvLabel
-            // 
-            this.noPrevResvLabel.AutoSize = true;
-            this.noPrevResvLabel.BackColor = System.Drawing.Color.Teal;
-            this.noPrevResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.noPrevResvLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.noPrevResvLabel.Location = new System.Drawing.Point(215, 498);
-            this.noPrevResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.noPrevResvLabel.Name = "noPrevResvLabel";
-            this.noPrevResvLabel.Size = new System.Drawing.Size(460, 35);
-            this.noPrevResvLabel.TabIndex = 46;
-            this.noPrevResvLabel.Text = "Δεν βρέθηκαν κρατήσεις στο ιστορικό";
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.AllowUserToAddRows = false;
-            this.dataGridView6.AllowUserToDeleteRows = false;
-            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView6.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dataGridView6.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle82.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle82.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle82.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle82;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle83.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle83.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle83.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle83;
-            this.dataGridView6.Location = new System.Drawing.Point(23, 438);
-            this.dataGridView6.MultiSelect = false;
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.ReadOnly = true;
-            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle84.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle84.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle84;
-            this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView6.ShowCellErrors = false;
-            this.dataGridView6.ShowCellToolTips = false;
-            this.dataGridView6.ShowEditingIcon = false;
-            this.dataGridView6.ShowRowErrors = false;
-            this.dataGridView6.Size = new System.Drawing.Size(844, 174);
-            this.dataGridView6.TabIndex = 45;
-            // 
-            // prevResvLabel
-            // 
-            this.prevResvLabel.AutoSize = true;
-            this.prevResvLabel.BackColor = System.Drawing.Color.Teal;
-            this.prevResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.prevResvLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.prevResvLabel.Location = new System.Drawing.Point(237, 381);
-            this.prevResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.prevResvLabel.Name = "prevResvLabel";
-            this.prevResvLabel.Size = new System.Drawing.Size(417, 35);
-            this.prevResvLabel.TabIndex = 44;
-            this.prevResvLabel.Text = "Ιστορικό παλαιότερων κρατήσεων";
-            // 
-            // noCurrResvLabel
-            // 
-            this.noCurrResvLabel.AutoSize = true;
-            this.noCurrResvLabel.BackColor = System.Drawing.Color.Teal;
-            this.noCurrResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.noCurrResvLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.noCurrResvLabel.Location = new System.Drawing.Point(223, 154);
-            this.noCurrResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.noCurrResvLabel.Name = "noCurrResvLabel";
-            this.noCurrResvLabel.Size = new System.Drawing.Size(445, 35);
-            this.noCurrResvLabel.TabIndex = 43;
-            this.noCurrResvLabel.Text = "Δεν βρέθηκαν κρατήσεις σε αναμονή";
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.AllowUserToAddRows = false;
-            this.dataGridView5.AllowUserToDeleteRows = false;
-            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView5.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle85.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle85.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle85.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle85.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle85.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle85;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle86.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle86.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle86.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle86.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle86.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle86.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle86;
-            this.dataGridView5.Location = new System.Drawing.Point(23, 79);
-            this.dataGridView5.MultiSelect = false;
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.ReadOnly = true;
-            dataGridViewCellStyle87.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle87.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle87.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle87.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle87.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle87.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle87.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle87;
-            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.ShowCellErrors = false;
-            this.dataGridView5.ShowCellToolTips = false;
-            this.dataGridView5.ShowEditingIcon = false;
-            this.dataGridView5.ShowRowErrors = false;
-            this.dataGridView5.Size = new System.Drawing.Size(844, 174);
-            this.dataGridView5.TabIndex = 42;
-            // 
-            // currResvLabel
-            // 
-            this.currResvLabel.AutoSize = true;
-            this.currResvLabel.BackColor = System.Drawing.Color.Teal;
-            this.currResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.currResvLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.currResvLabel.Location = new System.Drawing.Point(272, 30);
-            this.currResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.currResvLabel.Name = "currResvLabel";
-            this.currResvLabel.Size = new System.Drawing.Size(346, 35);
-            this.currResvLabel.TabIndex = 41;
-            this.currResvLabel.Text = "Οι τρέχουσες κρατήσεις μου";
-            // 
-            // cancelBooking
-            // 
-            this.cancelBooking.BackColor = System.Drawing.Color.White;
-            this.cancelBooking.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.cancelBooking.Location = new System.Drawing.Point(503, 282);
-            this.cancelBooking.Margin = new System.Windows.Forms.Padding(4);
-            this.cancelBooking.Name = "cancelBooking";
-            this.cancelBooking.Size = new System.Drawing.Size(215, 45);
-            this.cancelBooking.TabIndex = 15;
-            this.cancelBooking.Text = "Ακύρωση Κράτησης";
-            this.cancelBooking.UseVisualStyleBackColor = false;
-            this.cancelBooking.Click += new System.EventHandler(this.cancelBooking_Click);
             // 
             // panel3
             // 
@@ -1409,6 +987,350 @@ namespace HotelManagement
             this.logoutBtn.UseVisualStyleBackColor = false;
             this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
+            // paymentPanel
+            // 
+            this.paymentPanel.AutoScroll = true;
+            this.paymentPanel.Controls.Add(this.backBookingsBtn);
+            this.paymentPanel.Controls.Add(this.label29);
+            this.paymentPanel.Controls.Add(this.textBox4);
+            this.paymentPanel.Controls.Add(this.label28);
+            this.paymentPanel.Controls.Add(this.textBox3);
+            this.paymentPanel.Controls.Add(this.textBox2);
+            this.paymentPanel.Controls.Add(this.label27);
+            this.paymentPanel.Controls.Add(this.label26);
+            this.paymentPanel.Controls.Add(this.payBtn);
+            this.paymentPanel.Controls.Add(this.label25);
+            this.paymentPanel.Controls.Add(this.textBox1);
+            this.paymentPanel.Controls.Add(this.bookingPaymentLabel);
+            this.paymentPanel.Controls.Add(this.paymentLabel);
+            this.paymentPanel.Location = new System.Drawing.Point(231, 53);
+            this.paymentPanel.Name = "paymentPanel";
+            this.paymentPanel.Size = new System.Drawing.Size(891, 665);
+            this.paymentPanel.TabIndex = 48;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Teal;
+            this.label29.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label29.ForeColor = System.Drawing.Color.Transparent;
+            this.label29.Location = new System.Drawing.Point(145, 494);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(323, 35);
+            this.label29.TabIndex = 59;
+            this.label29.Text = "Συνολικό ποσό πληρωμής:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.textBox4.Location = new System.Drawing.Point(532, 439);
+            this.textBox4.MaxLength = 50;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(171, 25);
+            this.textBox4.TabIndex = 58;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Teal;
+            this.label28.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label28.ForeColor = System.Drawing.Color.Transparent;
+            this.label28.Location = new System.Drawing.Point(135, 430);
+            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(359, 35);
+            this.label28.TabIndex = 57;
+            this.label28.Text = "Ονοματεπώνυμο Δικαιούχου:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.textBox3.Location = new System.Drawing.Point(532, 357);
+            this.textBox3.MaxLength = 5;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(171, 25);
+            this.textBox3.TabIndex = 56;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.textBox2.Location = new System.Drawing.Point(532, 285);
+            this.textBox2.MaxLength = 4;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 25);
+            this.textBox2.TabIndex = 55;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Teal;
+            this.label27.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label27.ForeColor = System.Drawing.Color.Transparent;
+            this.label27.Location = new System.Drawing.Point(135, 348);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(237, 35);
+            this.label27.TabIndex = 54;
+            this.label27.Text = "Ημερομηνία Λήξης:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Teal;
+            this.label26.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label26.ForeColor = System.Drawing.Color.Transparent;
+            this.label26.Location = new System.Drawing.Point(135, 268);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(289, 35);
+            this.label26.TabIndex = 53;
+            this.label26.Text = "Κωδικός Ασφαλείας CV:";
+            // 
+            // payBtn
+            // 
+            this.payBtn.BackColor = System.Drawing.Color.White;
+            this.payBtn.Font = new System.Drawing.Font("Yu Gothic UI", 12.75F, System.Drawing.FontStyle.Bold);
+            this.payBtn.Location = new System.Drawing.Point(472, 563);
+            this.payBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.payBtn.Name = "payBtn";
+            this.payBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.payBtn.Size = new System.Drawing.Size(122, 60);
+            this.payBtn.TabIndex = 16;
+            this.payBtn.Text = "Πληρωμή Κράτησης";
+            this.payBtn.UseVisualStyleBackColor = false;
+            this.payBtn.Click += new System.EventHandler(this.payBtn_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Teal;
+            this.label25.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label25.ForeColor = System.Drawing.Color.Transparent;
+            this.label25.Location = new System.Drawing.Point(135, 189);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(211, 35);
+            this.label25.TabIndex = 52;
+            this.label25.Text = "Αριθμός Κάρτας:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.textBox1.Location = new System.Drawing.Point(532, 198);
+            this.textBox1.MaxLength = 16;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 25);
+            this.textBox1.TabIndex = 51;
+            // 
+            // bookingPaymentLabel
+            // 
+            this.bookingPaymentLabel.AutoSize = true;
+            this.bookingPaymentLabel.BackColor = System.Drawing.Color.Teal;
+            this.bookingPaymentLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.bookingPaymentLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.bookingPaymentLabel.Location = new System.Drawing.Point(180, 123);
+            this.bookingPaymentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bookingPaymentLabel.Name = "bookingPaymentLabel";
+            this.bookingPaymentLabel.Size = new System.Drawing.Size(471, 35);
+            this.bookingPaymentLabel.TabIndex = 42;
+            this.bookingPaymentLabel.Text = "Πληρωμή για την κράτηση με αριθμό:  ";
+            // 
+            // paymentLabel
+            // 
+            this.paymentLabel.AutoSize = true;
+            this.paymentLabel.BackColor = System.Drawing.Color.Teal;
+            this.paymentLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.paymentLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.paymentLabel.Location = new System.Drawing.Point(321, 30);
+            this.paymentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.paymentLabel.Name = "paymentLabel";
+            this.paymentLabel.Size = new System.Drawing.Size(248, 35);
+            this.paymentLabel.TabIndex = 41;
+            this.paymentLabel.Text = "Πληρωμή κράτησης";
+            // 
+            // custBookingsPanel
+            // 
+            this.custBookingsPanel.AutoScroll = true;
+            this.custBookingsPanel.Controls.Add(this.payBookingBtn);
+            this.custBookingsPanel.Controls.Add(this.noPrevResvLabel);
+            this.custBookingsPanel.Controls.Add(this.dataGridView6);
+            this.custBookingsPanel.Controls.Add(this.prevResvLabel);
+            this.custBookingsPanel.Controls.Add(this.noCurrResvLabel);
+            this.custBookingsPanel.Controls.Add(this.dataGridView5);
+            this.custBookingsPanel.Controls.Add(this.currResvLabel);
+            this.custBookingsPanel.Controls.Add(this.cancelBooking);
+            this.custBookingsPanel.Location = new System.Drawing.Point(231, 55);
+            this.custBookingsPanel.Name = "custBookingsPanel";
+            this.custBookingsPanel.Size = new System.Drawing.Size(891, 665);
+            this.custBookingsPanel.TabIndex = 45;
+            // 
+            // payBookingBtn
+            // 
+            this.payBookingBtn.BackColor = System.Drawing.Color.White;
+            this.payBookingBtn.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
+            this.payBookingBtn.Location = new System.Drawing.Point(151, 283);
+            this.payBookingBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.payBookingBtn.Name = "payBookingBtn";
+            this.payBookingBtn.Size = new System.Drawing.Size(212, 45);
+            this.payBookingBtn.TabIndex = 47;
+            this.payBookingBtn.Text = "Πληρωμή Κράτησης";
+            this.payBookingBtn.UseVisualStyleBackColor = false;
+            this.payBookingBtn.Click += new System.EventHandler(this.payBookingBtn_Click);
+            // 
+            // noPrevResvLabel
+            // 
+            this.noPrevResvLabel.AutoSize = true;
+            this.noPrevResvLabel.BackColor = System.Drawing.Color.Teal;
+            this.noPrevResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.noPrevResvLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.noPrevResvLabel.Location = new System.Drawing.Point(215, 498);
+            this.noPrevResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noPrevResvLabel.Name = "noPrevResvLabel";
+            this.noPrevResvLabel.Size = new System.Drawing.Size(460, 35);
+            this.noPrevResvLabel.TabIndex = 46;
+            this.noPrevResvLabel.Text = "Δεν βρέθηκαν κρατήσεις στο ιστορικό";
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.AllowUserToAddRows = false;
+            this.dataGridView6.AllowUserToDeleteRows = false;
+            this.dataGridView6.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView6.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dataGridView6.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView6.Location = new System.Drawing.Point(23, 438);
+            this.dataGridView6.MultiSelect = false;
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView6.ShowCellErrors = false;
+            this.dataGridView6.ShowCellToolTips = false;
+            this.dataGridView6.ShowEditingIcon = false;
+            this.dataGridView6.ShowRowErrors = false;
+            this.dataGridView6.Size = new System.Drawing.Size(844, 174);
+            this.dataGridView6.TabIndex = 45;
+            // 
+            // prevResvLabel
+            // 
+            this.prevResvLabel.AutoSize = true;
+            this.prevResvLabel.BackColor = System.Drawing.Color.Teal;
+            this.prevResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.prevResvLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.prevResvLabel.Location = new System.Drawing.Point(237, 381);
+            this.prevResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.prevResvLabel.Name = "prevResvLabel";
+            this.prevResvLabel.Size = new System.Drawing.Size(417, 35);
+            this.prevResvLabel.TabIndex = 44;
+            this.prevResvLabel.Text = "Ιστορικό παλαιότερων κρατήσεων";
+            // 
+            // noCurrResvLabel
+            // 
+            this.noCurrResvLabel.AutoSize = true;
+            this.noCurrResvLabel.BackColor = System.Drawing.Color.Teal;
+            this.noCurrResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.noCurrResvLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.noCurrResvLabel.Location = new System.Drawing.Point(223, 154);
+            this.noCurrResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noCurrResvLabel.Name = "noCurrResvLabel";
+            this.noCurrResvLabel.Size = new System.Drawing.Size(445, 35);
+            this.noCurrResvLabel.TabIndex = 43;
+            this.noCurrResvLabel.Text = "Δεν βρέθηκαν κρατήσεις σε αναμονή";
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView5.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dataGridView5.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView5.Location = new System.Drawing.Point(23, 79);
+            this.dataGridView5.MultiSelect = false;
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView5.ShowCellErrors = false;
+            this.dataGridView5.ShowCellToolTips = false;
+            this.dataGridView5.ShowEditingIcon = false;
+            this.dataGridView5.ShowRowErrors = false;
+            this.dataGridView5.Size = new System.Drawing.Size(844, 174);
+            this.dataGridView5.TabIndex = 42;
+            // 
+            // currResvLabel
+            // 
+            this.currResvLabel.AutoSize = true;
+            this.currResvLabel.BackColor = System.Drawing.Color.Teal;
+            this.currResvLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
+            this.currResvLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.currResvLabel.Location = new System.Drawing.Point(272, 30);
+            this.currResvLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.currResvLabel.Name = "currResvLabel";
+            this.currResvLabel.Size = new System.Drawing.Size(346, 35);
+            this.currResvLabel.TabIndex = 41;
+            this.currResvLabel.Text = "Οι τρέχουσες κρατήσεις μου";
+            // 
+            // cancelBooking
+            // 
+            this.cancelBooking.BackColor = System.Drawing.Color.White;
+            this.cancelBooking.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
+            this.cancelBooking.Location = new System.Drawing.Point(503, 282);
+            this.cancelBooking.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelBooking.Name = "cancelBooking";
+            this.cancelBooking.Size = new System.Drawing.Size(215, 45);
+            this.cancelBooking.TabIndex = 15;
+            this.cancelBooking.Text = "Ακύρωση Κράτησης";
+            this.cancelBooking.UseVisualStyleBackColor = false;
+            this.cancelBooking.Click += new System.EventHandler(this.cancelBooking_Click);
+            // 
             // searchRoomDatePanel
             // 
             this.searchRoomDatePanel.AutoScroll = true;
@@ -1459,35 +1381,35 @@ namespace HotelManagement
             this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView4.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataGridView4.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle88.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle88.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle88.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle88.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle88.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle88.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle88.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle88;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle89.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle89.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle89.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle89.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle89.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle89.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle89.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle89;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView4.Location = new System.Drawing.Point(151, 256);
             this.dataGridView4.MultiSelect = false;
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
-            dataGridViewCellStyle90.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle90.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle90.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
-            dataGridViewCellStyle90.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle90.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle90.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle90.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle90;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Yu Gothic UI", 8.25F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView4.ShowCellErrors = false;
             this.dataGridView4.ShowCellToolTips = false;
@@ -1909,177 +1831,272 @@ namespace HotelManagement
             this.label21.TabIndex = 42;
             this.label21.Text = "Καλωσορίσατε στην πλατφόρμα κρατήσεων του Aqua Suites";
             // 
-            // payBookingBtn
+            // custDetailsPanel
             // 
-            this.payBookingBtn.BackColor = System.Drawing.Color.White;
-            this.payBookingBtn.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.payBookingBtn.Location = new System.Drawing.Point(151, 283);
-            this.payBookingBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.payBookingBtn.Name = "payBookingBtn";
-            this.payBookingBtn.Size = new System.Drawing.Size(212, 45);
-            this.payBookingBtn.TabIndex = 47;
-            this.payBookingBtn.Text = "Πληρωμή Κράτησης";
-            this.payBookingBtn.UseVisualStyleBackColor = false;
-            this.payBookingBtn.Click += new System.EventHandler(this.payBookingBtn_Click);
+            this.custDetailsPanel.AutoScroll = true;
+            this.custDetailsPanel.Controls.Add(this.surnameBox);
+            this.custDetailsPanel.Controls.Add(this.emailBox);
+            this.custDetailsPanel.Controls.Add(this.addressBox);
+            this.custDetailsPanel.Controls.Add(this.regionBox);
+            this.custDetailsPanel.Controls.Add(this.phoneBox);
+            this.custDetailsPanel.Controls.Add(this.countryBox);
+            this.custDetailsPanel.Controls.Add(this.numberBox);
+            this.custDetailsPanel.Controls.Add(this.passBox);
+            this.custDetailsPanel.Controls.Add(this.usernameBox);
+            this.custDetailsPanel.Controls.Add(this.nameBox);
+            this.custDetailsPanel.Controls.Add(this.surnameLabel);
+            this.custDetailsPanel.Controls.Add(this.usernameLabel);
+            this.custDetailsPanel.Controls.Add(this.emailLabel);
+            this.custDetailsPanel.Controls.Add(this.passLabel);
+            this.custDetailsPanel.Controls.Add(this.addressLabel);
+            this.custDetailsPanel.Controls.Add(this.phoneLabel);
+            this.custDetailsPanel.Controls.Add(this.numberLabel);
+            this.custDetailsPanel.Controls.Add(this.regionLabel);
+            this.custDetailsPanel.Controls.Add(this.countryLabel);
+            this.custDetailsPanel.Controls.Add(this.nameLabel);
+            this.custDetailsPanel.Controls.Add(this.saveChanges);
+            this.custDetailsPanel.Location = new System.Drawing.Point(231, 54);
+            this.custDetailsPanel.Name = "custDetailsPanel";
+            this.custDetailsPanel.Size = new System.Drawing.Size(891, 665);
+            this.custDetailsPanel.TabIndex = 47;
             // 
-            // panel1
+            // surnameBox
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.label29);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label27);
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.bookingPaymentLabel);
-            this.panel1.Controls.Add(this.paymentLabel);
-            this.panel1.Location = new System.Drawing.Point(231, 53);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(891, 665);
-            this.panel1.TabIndex = 48;
+            this.surnameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.surnameBox.Location = new System.Drawing.Point(643, 61);
+            this.surnameBox.Name = "surnameBox";
+            this.surnameBox.Size = new System.Drawing.Size(124, 25);
+            this.surnameBox.TabIndex = 57;
             // 
-            // paymentLabel
+            // emailBox
             // 
-            this.paymentLabel.AutoSize = true;
-            this.paymentLabel.BackColor = System.Drawing.Color.Teal;
-            this.paymentLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.paymentLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.paymentLabel.Location = new System.Drawing.Point(321, 30);
-            this.paymentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.paymentLabel.Name = "paymentLabel";
-            this.paymentLabel.Size = new System.Drawing.Size(248, 35);
-            this.paymentLabel.TabIndex = 41;
-            this.paymentLabel.Text = "Πληρωμή κράτησης";
+            this.emailBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.emailBox.Location = new System.Drawing.Point(643, 133);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(124, 25);
+            this.emailBox.TabIndex = 56;
             // 
-            // bookingPaymentLabel
+            // addressBox
             // 
-            this.bookingPaymentLabel.AutoSize = true;
-            this.bookingPaymentLabel.BackColor = System.Drawing.Color.Teal;
-            this.bookingPaymentLabel.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.bookingPaymentLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.bookingPaymentLabel.Location = new System.Drawing.Point(180, 123);
-            this.bookingPaymentLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bookingPaymentLabel.Name = "bookingPaymentLabel";
-            this.bookingPaymentLabel.Size = new System.Drawing.Size(471, 35);
-            this.bookingPaymentLabel.TabIndex = 42;
-            this.bookingPaymentLabel.Text = "Πληρωμή για την κράτηση με αριθμό:  ";
+            this.addressBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.addressBox.Location = new System.Drawing.Point(643, 219);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(124, 25);
+            this.addressBox.TabIndex = 55;
             // 
-            // textBox1
+            // regionBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.textBox1.Location = new System.Drawing.Point(532, 198);
-            this.textBox1.MaxLength = 16;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 25);
-            this.textBox1.TabIndex = 51;
+            this.regionBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.regionBox.Location = new System.Drawing.Point(643, 297);
+            this.regionBox.Name = "regionBox";
+            this.regionBox.Size = new System.Drawing.Size(124, 25);
+            this.regionBox.TabIndex = 54;
             // 
-            // label25
+            // phoneBox
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Teal;
-            this.label25.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label25.ForeColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(135, 189);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(211, 35);
-            this.label25.TabIndex = 52;
-            this.label25.Text = "Αριθμός Κάρτας:";
+            this.phoneBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.phoneBox.Location = new System.Drawing.Point(643, 373);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(124, 25);
+            this.phoneBox.TabIndex = 53;
             // 
-            // label26
+            // countryBox
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Teal;
-            this.label26.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label26.ForeColor = System.Drawing.Color.Transparent;
-            this.label26.Location = new System.Drawing.Point(135, 268);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(289, 35);
-            this.label26.TabIndex = 53;
-            this.label26.Text = "Κωδικός Ασφαλείας CV:";
+            this.countryBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.countryBox.Location = new System.Drawing.Point(218, 373);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(124, 25);
+            this.countryBox.TabIndex = 52;
             // 
-            // label27
+            // numberBox
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Teal;
-            this.label27.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label27.ForeColor = System.Drawing.Color.Transparent;
-            this.label27.Location = new System.Drawing.Point(135, 348);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(237, 35);
-            this.label27.TabIndex = 54;
-            this.label27.Text = "Ημερομηνία Λήξης:";
+            this.numberBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.numberBox.Location = new System.Drawing.Point(218, 294);
+            this.numberBox.Name = "numberBox";
+            this.numberBox.Size = new System.Drawing.Size(124, 25);
+            this.numberBox.TabIndex = 51;
             // 
-            // textBox2
+            // passBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.textBox2.Location = new System.Drawing.Point(532, 285);
-            this.textBox2.MaxLength = 4;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 25);
-            this.textBox2.TabIndex = 55;
+            this.passBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.passBox.Location = new System.Drawing.Point(218, 217);
+            this.passBox.Name = "passBox";
+            this.passBox.PasswordChar = '•';
+            this.passBox.ReadOnly = true;
+            this.passBox.Size = new System.Drawing.Size(124, 25);
+            this.passBox.TabIndex = 50;
             // 
-            // textBox3
+            // usernameBox
             // 
-            this.textBox3.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.textBox3.Location = new System.Drawing.Point(532, 357);
-            this.textBox3.MaxLength = 5;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 25);
-            this.textBox3.TabIndex = 56;
+            this.usernameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.usernameBox.Location = new System.Drawing.Point(218, 139);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(124, 25);
+            this.usernameBox.TabIndex = 49;
             // 
-            // label28
+            // nameBox
             // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Teal;
-            this.label28.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label28.ForeColor = System.Drawing.Color.Transparent;
-            this.label28.Location = new System.Drawing.Point(135, 430);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(359, 35);
-            this.label28.TabIndex = 57;
-            this.label28.Text = "Ονοματεπώνυμο Δικαιούχου:";
+            this.nameBox.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.nameBox.Location = new System.Drawing.Point(218, 61);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(124, 25);
+            this.nameBox.TabIndex = 48;
             // 
-            // textBox4
+            // surnameLabel
             // 
-            this.textBox4.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.textBox4.Location = new System.Drawing.Point(532, 439);
-            this.textBox4.MaxLength = 50;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(171, 25);
-            this.textBox4.TabIndex = 58;
+            this.surnameLabel.AutoSize = true;
+            this.surnameLabel.BackColor = System.Drawing.Color.Teal;
+            this.surnameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.surnameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.surnameLabel.Location = new System.Drawing.Point(423, 54);
+            this.surnameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.surnameLabel.Name = "surnameLabel";
+            this.surnameLabel.Size = new System.Drawing.Size(112, 30);
+            this.surnameLabel.TabIndex = 47;
+            this.surnameLabel.Text = "Επώνυμο:";
             // 
-            // button1
+            // usernameLabel
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(337, 558);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 45);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Πληρωμή Κράτησης";
-            this.button1.UseVisualStyleBackColor = false;
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.BackColor = System.Drawing.Color.Teal;
+            this.usernameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.usernameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.usernameLabel.Location = new System.Drawing.Point(73, 132);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(117, 30);
+            this.usernameLabel.TabIndex = 46;
+            this.usernameLabel.Text = "Username:";
             // 
-            // label29
+            // emailLabel
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Teal;
-            this.label29.Font = new System.Drawing.Font("Yu Gothic UI", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label29.ForeColor = System.Drawing.Color.Transparent;
-            this.label29.Location = new System.Drawing.Point(145, 494);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(323, 35);
-            this.label29.TabIndex = 59;
-            this.label29.Text = "Συνολικό ποσό πληρωμής:";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.Teal;
+            this.emailLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.emailLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Location = new System.Drawing.Point(423, 133);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(71, 30);
+            this.emailLabel.TabIndex = 45;
+            this.emailLabel.Text = "Email:";
+            // 
+            // passLabel
+            // 
+            this.passLabel.AutoSize = true;
+            this.passLabel.BackColor = System.Drawing.Color.Teal;
+            this.passLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.passLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.passLabel.Location = new System.Drawing.Point(73, 212);
+            this.passLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passLabel.Name = "passLabel";
+            this.passLabel.Size = new System.Drawing.Size(103, 30);
+            this.passLabel.TabIndex = 44;
+            this.passLabel.Text = "Κωδικός:";
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.BackColor = System.Drawing.Color.Teal;
+            this.addressLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.addressLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.addressLabel.Location = new System.Drawing.Point(423, 212);
+            this.addressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(126, 30);
+            this.addressLabel.TabIndex = 42;
+            this.addressLabel.Text = "Διεύθυνση:";
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.BackColor = System.Drawing.Color.Teal;
+            this.phoneLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.phoneLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.phoneLabel.Location = new System.Drawing.Point(423, 370);
+            this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(199, 30);
+            this.phoneLabel.TabIndex = 41;
+            this.phoneLabel.Text = "Τηλ. Επικοινωνίας:";
+            // 
+            // numberLabel
+            // 
+            this.numberLabel.AutoSize = true;
+            this.numberLabel.BackColor = System.Drawing.Color.Teal;
+            this.numberLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.numberLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.numberLabel.Location = new System.Drawing.Point(73, 290);
+            this.numberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.numberLabel.Name = "numberLabel";
+            this.numberLabel.Size = new System.Drawing.Size(101, 30);
+            this.numberLabel.TabIndex = 40;
+            this.numberLabel.Text = "Αριθμός:";
+            // 
+            // regionLabel
+            // 
+            this.regionLabel.AutoSize = true;
+            this.regionLabel.BackColor = System.Drawing.Color.Teal;
+            this.regionLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.regionLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.regionLabel.Location = new System.Drawing.Point(423, 291);
+            this.regionLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.regionLabel.Name = "regionLabel";
+            this.regionLabel.Size = new System.Drawing.Size(101, 30);
+            this.regionLabel.TabIndex = 39;
+            this.regionLabel.Text = "Περιοχή:";
+            // 
+            // countryLabel
+            // 
+            this.countryLabel.AutoSize = true;
+            this.countryLabel.BackColor = System.Drawing.Color.Teal;
+            this.countryLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.countryLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.countryLabel.Location = new System.Drawing.Point(73, 370);
+            this.countryLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.countryLabel.Name = "countryLabel";
+            this.countryLabel.Size = new System.Drawing.Size(77, 30);
+            this.countryLabel.TabIndex = 38;
+            this.countryLabel.Text = "Χώρα:";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.Teal;
+            this.nameLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.nameLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.nameLabel.Location = new System.Drawing.Point(73, 54);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(88, 30);
+            this.nameLabel.TabIndex = 37;
+            this.nameLabel.Text = "Όνομα:";
+            // 
+            // saveChanges
+            // 
+            this.saveChanges.BackColor = System.Drawing.Color.White;
+            this.saveChanges.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
+            this.saveChanges.Location = new System.Drawing.Point(315, 471);
+            this.saveChanges.Margin = new System.Windows.Forms.Padding(4);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Size = new System.Drawing.Size(247, 45);
+            this.saveChanges.TabIndex = 15;
+            this.saveChanges.Text = "Αποθήκευση Αλλαγών";
+            this.saveChanges.UseVisualStyleBackColor = false;
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
+            // 
+            // backBookingsBtn
+            // 
+            this.backBookingsBtn.BackColor = System.Drawing.Color.White;
+            this.backBookingsBtn.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
+            this.backBookingsBtn.Location = new System.Drawing.Point(248, 563);
+            this.backBookingsBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.backBookingsBtn.Name = "backBookingsBtn";
+            this.backBookingsBtn.Size = new System.Drawing.Size(120, 60);
+            this.backBookingsBtn.TabIndex = 60;
+            this.backBookingsBtn.Text = "Πίσω";
+            this.backBookingsBtn.UseVisualStyleBackColor = false;
+            this.backBookingsBtn.Click += new System.EventHandler(this.backBookingsBtn_Click);
             // 
             // MainMenu
             // 
@@ -2109,16 +2126,16 @@ namespace HotelManagement
             this.resultsPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.customerPanel.ResumeLayout(false);
-            this.custDetailsPanel.ResumeLayout(false);
-            this.custDetailsPanel.PerformLayout();
-            this.custBookingsPanel.ResumeLayout(false);
-            this.custBookingsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.paymentPanel.ResumeLayout(false);
+            this.paymentPanel.PerformLayout();
+            this.custBookingsPanel.ResumeLayout(false);
+            this.custBookingsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.searchRoomDatePanel.ResumeLayout(false);
             this.searchRoomDatePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -2127,8 +2144,8 @@ namespace HotelManagement
             ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).EndInit();
             this.custHomePanel.ResumeLayout(false);
             this.custHomePanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.custDetailsPanel.ResumeLayout(false);
+            this.custDetailsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2259,7 +2276,7 @@ namespace HotelManagement
         private System.Windows.Forms.TextBox usernameBox;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button payBookingBtn;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel paymentPanel;
         private System.Windows.Forms.Label bookingPaymentLabel;
         private System.Windows.Forms.Label paymentLabel;
         private System.Windows.Forms.Label label27;
@@ -2270,7 +2287,8 @@ namespace HotelManagement
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button payBtn;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button backBookingsBtn;
     }
 }
