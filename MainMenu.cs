@@ -1,19 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Crypto.Tls;
 using System;
 using System.IO;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Google.Protobuf;
-using System.Runtime.InteropServices.ComTypes;
+using System.Text.RegularExpressions;
+
 
 namespace HotelManagement
 {
@@ -973,6 +966,7 @@ namespace HotelManagement
                 else
                 {
                     bookingPaymentLabel.Text = bookingPaymentLabel.Text + booking_ID;
+                    ammountLabel.Text = ammountLabel.Text + cost;
                     custBookingsPanel.Hide();
                     paymentPanel.Show();
                 }
@@ -984,11 +978,44 @@ namespace HotelManagement
             paymentPanel.Hide();
             custBookingsPanel.Show();
             bookingPaymentLabel.Text = "Πληρωμή για την κράτηση με αριθμό: ";
+            ammountLabel.Text = "Συνολικό ποσό πληρωμής: ";
         }
 
         private void payBtn_Click(object sender, EventArgs e)
         {
+            string creditNumRegex = @"^\d{16}$";
+            string CVRegex = @"^\d{3,4}$";
+            string expiryRegex = @"^(0[1-9]|1[0-2])\/\d{2}$";
+            string nameRegex  = @"^\S+\s+\S+$";
+            if (Regex.IsMatch(creditNumBox.Text, creditNumRegex))
+            {
+                if (Regex.IsMatch(CVBox.Text, CVRegex))
+                {
+                    if (Regex.IsMatch(expireBox.Text, expiryRegex))
+                    {
+                        if (Regex.IsMatch(beneficiaryBox.Text, nameRegex))
+                        {
 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Το ονοματεπώνυμο που δώσατε δεν είναι έγκυρο. Πρέπει να δοθεί τουλάχιστον το όνομα και το επίθετο του κατόχου της κάρτας.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Η ημερομηνία λήξης θα πρέπει να είναι της μορφής '12/25' (μμ/εε).", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ο κωδικός ασφαλείας CV θα πρέπει να αποτελείται από 3 με 4 ψηφία.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ο αριθμός της κάρτας σας θα πρέπει να εμπεριέχει αυστηρά 16 ψηφία.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     } 
 }
