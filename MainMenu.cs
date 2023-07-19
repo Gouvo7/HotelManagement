@@ -188,15 +188,23 @@ namespace HotelManagement
                 MySqlCommand comm = con.CreateCommand();
                 string input = monthBox.Text;
                 string monthNumber = input.Substring(0, 2);
-                string checkinDate = yearBox.Text + "-" + monthNumber + "-" + dateBox.Text;
+                string givenDate = yearBox.Text + "-" + monthNumber + "-" + dateBox.Text;
                 string grFormatDate = dateBox.Text + "-" + monthNumber + "-" + yearBox.Text;
                 comm.CommandText = "SELECT booking_ID,concat(usr_fname,' ',usr_lname) as usr_ID,room_ID," +
-                    "booking_Date, checkin_Date, usrID_Phone FROM hot_bookings " +
+                    "cast(booking_Date as date), checkin_Date, usrID_Phone FROM hot_bookings " +
                     "INNER JOIN hot_usr ON hot_bookings.usr_ID = hot_usr.usr_ID " +
-                    "INNER JOIN hot_usr_det on hot_usr.usr_ID = hot_usr_det.usr_ID " +
-                    "where checkin_Date = @checkinDate";
-                comm.Parameters.AddWithValue("@checkinDate", checkinDate);
-                Console.WriteLine(checkinDate);
+                    "INNER JOIN hot_usr_det on hot_usr.usr_ID = hot_usr_det.usr_ID where ";
+
+                if (typeCombo.SelectedIndex == 0)
+                {
+                    comm.CommandText = comm.CommandText + " cast(booking_Date as date) = @givenDate";
+                }
+                else
+                {
+                    comm.CommandText = comm.CommandText + "cast(checkin_Date as date) = @givenDate";
+                }
+                comm.Parameters.AddWithValue("@givenDate", givenDate);
+                Console.WriteLine(comm.CommandText);
                 using (MySqlDataReader reader = comm.ExecuteReader())
                 {
                     DataTable dataTable = new DataTable();
@@ -205,7 +213,7 @@ namespace HotelManagement
                     dataTable.Columns["booking_ID"].ColumnName = "Αρ. Κράτησης";
                     dataTable.Columns["usr_ID"].ColumnName = "Όνομα Κράτησης";
                     dataTable.Columns["room_ID"].ColumnName = "Αρ. Δωματίου";
-                    dataTable.Columns["booking_Date"].ColumnName = "Ημ/νία Κράτησης";
+                    dataTable.Columns["cast(booking_Date as date)"].ColumnName = "Ημ/νία Κράτησης";
                     dataTable.Columns["checkin_Date"].ColumnName = "Ημ/νία Check-in";
                     dataTable.Columns["usrID_Phone"].ColumnName = "Τηλέφωνο Επικοινωνίας";
                 }
