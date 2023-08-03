@@ -21,7 +21,6 @@ namespace HotelManagement
             searchPanel.Hide();
             resultsPanel.Hide();
             homePanel.Show();
-            roomPanel.Hide();
             resultsLabelCust.Hide();
             dataGridView4.Hide();
             custDetailsPanel.Hide();
@@ -51,7 +50,7 @@ namespace HotelManagement
                 {
                     string userName = reader["usr_username"].ToString();
                     userType = reader["usr_Type"].ToString();
-                    welcomeLabel.Text = welcomeLabel.Text + " " + userName;
+                    //welcomeLabel.Text = welcomeLabel.Text + " " + userName;
                     welcomeLabelCust.Text = welcomeLabelCust.Text + " " + userName;
                 }
                 con.Close();
@@ -96,7 +95,7 @@ namespace HotelManagement
                 MySqlCommand comm1 = con.CreateCommand();
                 string currDate = DateTime.Now.ToString("yyyy-MM-dd");
                 comm1.CommandText = "SELECT booking_ID , concat(usr_FName,' ',usr_LName) as 'Name', " +
-                    "checkout_Date,hot_bookings.room_ID,room_TypeN,booking_Comments,usr_Email,usrID_Phone FROM hot_bookings " +
+                    "checkout_Date,hot_bookings.room_ID,room_TypeN,booking_Comments,usr_Email,usrID_Phone, booking_cost, booking_hasPaid FROM hot_bookings " +
                     "INNER JOIN hot_usr ON hot_usr.usr_ID = hot_bookings.usr_ID " +
                     "INNER JOIN hot_usr_det ON hot_usr_det.usr_ID = hot_bookings.usr_ID " +
                     "INNER JOIN hot_rooms ON hot_bookings.room_ID = hot_rooms.room_ID " +
@@ -116,6 +115,8 @@ namespace HotelManagement
                     dataTable1.Columns["booking_Comments"].ColumnName = "Σχόλια Κράτησης";
                     dataTable1.Columns["usrID_Phone"].ColumnName = "Τηλέφωνο Επικοινωνίας";
                     dataTable1.Columns["usr_Email"].ColumnName = "Email Επικοινωνίας";
+                    dataTable1.Columns["booking_cost"].ColumnName = "Κόστος"; 
+                    dataTable1.Columns["booking_hasPaid"].ColumnName = "Πληρωμένο";
 
                     hasResults1 = dataTable1.Rows.Count > 0;
                 }
@@ -191,9 +192,9 @@ namespace HotelManagement
                 string givenDate = yearBox.Text + "-" + monthNumber + "-" + dateBox.Text;
                 string grFormatDate = dateBox.Text + "-" + monthNumber + "-" + yearBox.Text;
                 comm.CommandText = "SELECT booking_ID,concat(usr_fname,' ',usr_lname) as usr_ID,room_ID," +
-                    "cast(booking_Date as date), checkin_Date, usrID_Phone FROM hot_bookings " +
+                    "cast(booking_Date as date), checkin_Date, usrID_Phone, booking_Comments FROM hot_bookings " +
                     "INNER JOIN hot_usr ON hot_bookings.usr_ID = hot_usr.usr_ID " +
-                    "INNER JOIN hot_usr_det on hot_usr.usr_ID = hot_usr_det.usr_ID where ";
+                    "LEFT JOIN hot_usr_det on hot_usr.usr_ID = hot_usr_det.usr_ID where ";
 
                 if (typeCombo.SelectedIndex == 0)
                 {
@@ -216,6 +217,7 @@ namespace HotelManagement
                     dataTable.Columns["cast(booking_Date as date)"].ColumnName = "Ημ/νία Κράτησης";
                     dataTable.Columns["checkin_Date"].ColumnName = "Ημ/νία Check-in";
                     dataTable.Columns["usrID_Phone"].ColumnName = "Τηλέφωνο Επικοινωνίας";
+                    dataTable.Columns["booking_Comments"].ColumnName = "Σχόλια Κράτησης";
                 }
                 searchPanel.Hide();
                 resultsPanel.Show();
@@ -297,7 +299,6 @@ namespace HotelManagement
             homePanel.Show();
             resultsPanel.Hide();
             searchPanel.Hide();
-            roomPanel.Hide();
             updateHome();
         }
 
@@ -311,7 +312,6 @@ namespace HotelManagement
             homePanel.Hide();
             resultsPanel.Hide();
             searchPanel.Show();
-            roomPanel.Hide();
         }
 
         private void markArrivalClick(object sender, EventArgs e)
@@ -322,24 +322,53 @@ namespace HotelManagement
                 if (selectedRow != null)
                 {
                     DataGridViewCell cell1 = selectedRow.Cells[0];
-                    // Retrieve the value from the cell
                     object value1 = cell1.Value;
-                    // Check if the value is not null
                     if (value1 != null)
                     {
-                        // Convert the value to the desired data type
                         string stringValue1 = value1.ToString();
-                        DialogResult result = MessageBox.Show("Είστε σίγουροι πως η κράτηση με αριθμό: " + stringValue1 + " έχει πραγματοποιήσει check-in;", "Ενημέρωση δεδομένων εφαρμογής", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        DialogResult result = MessageBox.Show("Είστε σίγουροι για την πραγματοποίηση του Check-in της κράτησης με αριθμό: " + stringValue1 + ";", "Ενημέρωση δεδομένων εφαρμογής", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                         if (result == DialogResult.Yes)
                         {
+                            bool prePaid = false;
+                            DataGridViewCell cell2 = selectedRow.Cells[8];
+                            DataGridViewCell cell3 = selectedRow.Cells[9];
+                            object value2 = cell2.Value;
+                            object value3 = cell3.Value;
+                            if (value2 != null && value3 != null)
+                            {
+                                string stringValue2 = value2.ToString();
+                                string stringValue3 = value3.ToString();
+                                Console.WriteLine(stringValue3);
+                                if (stringValue3 == "0") {
+                                    MessageBox.Show("Ο πελάτης δεν έχει πληρώσει. Βεβαιωθείτε ότι λάβατε το ποσό πληρωμής: " +
+                                        "" + stringValue2 + "€ κατά την διαδικασία του Check-in.", "Ενημέρωση δεδομένων εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    prePaid = true;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                Application.Exit();
+                            }
                             DB db = new DB();
                             try
                             {
                                 MySqlConnection con = new MySqlConnection(db.getConnString());
                                 con.Open();
                                 MySqlCommand update1 = con.CreateCommand();
-                                update1.CommandText = "UPDATE hot_bookings " +
+                                if (prePaid)
+                                {
+                                    update1.CommandText = "UPDATE hot_bookings " +
                                     "SET hasArrived = 1 WHERE booking_ID = @bookingID";
+                                }
+                                else
+                                {
+                                    update1.CommandText = "UPDATE hot_bookings " +
+                                    "SET hasArrived = 1, booking_hasPaid = 1 WHERE booking_ID = @bookingID";
+                                }
                                 update1.Parameters.AddWithValue("@bookingID", stringValue1);
                                 update1.ExecuteNonQuery();
                                 con.Close();
@@ -410,7 +439,6 @@ namespace HotelManagement
 
         private void roomSearch_Click(object sender, EventArgs e)
         {
-            roomPanel.Show();
             homePanel.Hide();
             resultsPanel.Hide();
             searchPanel.Hide();
@@ -1024,6 +1052,17 @@ namespace HotelManagement
             {
                 MessageBox.Show("Ο αριθμός της κάρτας σας θα πρέπει να εμπεριέχει αυστηρά 16 ψηφία.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void logoutBtnAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBackBtn_Click(object sender, EventArgs e)
+        {
+            resultsPanel.Hide();
+            homePanel.Show();
         }
     } 
 }
