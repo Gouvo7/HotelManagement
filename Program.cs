@@ -11,7 +11,7 @@ namespace HotelManagement
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        [STAThread] 
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -19,24 +19,29 @@ namespace HotelManagement
             //Application.Run(new Login());
 
             /*
+            var z;
             while (true)
             {
+                Login loginForm = new Login();
+                DialogResult loginResult = new DialogResult();
+                z = loginForm.ShowDialog();
+                if (z == DialogResult.OK)
+                {
 
-            
+                    int userID = loginForm.getID();
+                    MainMenu anotherForm = new MainMenu(userID);
+                    //Application.Run(anotherForm);
+                }
+                z = null;
+            }
+            */
             Login loginForm = new Login();
             DialogResult loginResult = loginForm.ShowDialog();
             if (loginResult == DialogResult.OK)
             {
-
-                int userID = loginForm.getID();
-                MainMenu anotherForm = new MainMenu(userID);
-                Application.Run(anotherForm);
+                MainMenu anotherForm = new MainMenu(1);
             }
-            }
-            */
-            MainMenu anotherForm = new MainMenu(1);
-            Application.Run(anotherForm);
-
+            //Application.Run(anotherForm);
         }
     }
 }
