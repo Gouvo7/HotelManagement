@@ -46,15 +46,15 @@ namespace HotelManagement
             this.s = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.addressBox = new System.Windows.Forms.TextBox();
-            this.regionBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.countryBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.phoneBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.countryBox = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.regionBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addressBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -278,53 +278,37 @@ namespace HotelManagement
             this.panel1.Size = new System.Drawing.Size(545, 263);
             this.panel1.TabIndex = 37;
             // 
-            // label3
+            // countryBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(11, 300);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 25);
-            this.label3.TabIndex = 37;
-            this.label3.Text = "Διεύθυνση";
+            this.countryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.countryBox.FormattingEnabled = true;
+            this.countryBox.Items.AddRange(new object[] {
+            "Ελλάδα",
+            "Κύπρος"});
+            this.countryBox.Location = new System.Drawing.Point(21, 436);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(121, 28);
+            this.countryBox.TabIndex = 9;
             // 
-            // addressBox
+            // label4
             // 
-            this.addressBox.BackColor = System.Drawing.Color.SeaShell;
-            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.addressBox.Location = new System.Drawing.Point(11, 341);
-            this.addressBox.Margin = new System.Windows.Forms.Padding(4);
-            this.addressBox.MaxLength = 40;
-            this.addressBox.Name = "addressBox";
-            this.addressBox.PasswordChar = '•';
-            this.addressBox.Size = new System.Drawing.Size(186, 26);
-            this.addressBox.TabIndex = 7;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(16, 396);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 25);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Χώρα";
             // 
-            // regionBox
+            // label7
             // 
-            this.regionBox.BackColor = System.Drawing.Color.SeaShell;
-            this.regionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.regionBox.Location = new System.Drawing.Point(321, 341);
-            this.regionBox.Margin = new System.Windows.Forms.Padding(4);
-            this.regionBox.MaxLength = 40;
-            this.regionBox.Name = "regionBox";
-            this.regionBox.PasswordChar = '•';
-            this.regionBox.Size = new System.Drawing.Size(186, 26);
-            this.regionBox.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(316, 300);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 25);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Περιοχή";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(244, 526);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 16);
+            this.label7.TabIndex = 44;
             // 
             // label6
             // 
@@ -346,41 +330,54 @@ namespace HotelManagement
             this.phoneBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneBox.MaxLength = 40;
             this.phoneBox.Name = "phoneBox";
-            this.phoneBox.PasswordChar = '•';
             this.phoneBox.Size = new System.Drawing.Size(186, 26);
             this.phoneBox.TabIndex = 10;
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(244, 526);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 16);
-            this.label7.TabIndex = 44;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(316, 300);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 25);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Περιοχή";
             // 
-            // label4
+            // regionBox
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(16, 396);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 25);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "Χώρα";
+            this.regionBox.BackColor = System.Drawing.Color.SeaShell;
+            this.regionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.regionBox.Location = new System.Drawing.Point(321, 341);
+            this.regionBox.Margin = new System.Windows.Forms.Padding(4);
+            this.regionBox.MaxLength = 40;
+            this.regionBox.Name = "regionBox";
+            this.regionBox.Size = new System.Drawing.Size(186, 26);
+            this.regionBox.TabIndex = 8;
             // 
-            // countryBox
+            // label3
             // 
-            this.countryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.countryBox.FormattingEnabled = true;
-            this.countryBox.Items.AddRange(new object[] {
-            "Ελλάδα",
-            "Κύπρος"});
-            this.countryBox.Location = new System.Drawing.Point(21, 436);
-            this.countryBox.Name = "countryBox";
-            this.countryBox.Size = new System.Drawing.Size(121, 28);
-            this.countryBox.TabIndex = 9;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(11, 300);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 25);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Διεύθυνση";
+            // 
+            // addressBox
+            // 
+            this.addressBox.BackColor = System.Drawing.Color.SeaShell;
+            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.addressBox.Location = new System.Drawing.Point(11, 341);
+            this.addressBox.Margin = new System.Windows.Forms.Padding(4);
+            this.addressBox.MaxLength = 40;
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(186, 26);
+            this.addressBox.TabIndex = 7;
             // 
             // Signup
             // 

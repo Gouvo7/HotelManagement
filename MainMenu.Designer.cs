@@ -44,7 +44,7 @@ namespace HotelManagement
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.homeButton = new System.Windows.Forms.Button();
             this.searchBookingsButton = new System.Windows.Forms.Button();
-            this.roomSearch = new System.Windows.Forms.Button();
+            this.logoutBtnAdmin = new System.Windows.Forms.Button();
             this.topRightPanel = new System.Windows.Forms.Panel();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -70,10 +70,6 @@ namespace HotelManagement
             this.label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.employeePanel = new System.Windows.Forms.Panel();
-            this.roomPanel = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.searchRoomLabel = new System.Windows.Forms.Label();
             this.homePanel = new System.Windows.Forms.Panel();
             this.markDepartureButton = new System.Windows.Forms.Button();
             this.noDeparturesLabel = new System.Windows.Forms.Label();
@@ -88,6 +84,7 @@ namespace HotelManagement
             this.resultsPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.resultsLabel = new System.Windows.Forms.Label();
+            this.searchBackBtn = new System.Windows.Forms.Button();
             this.customerPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.welcomeLabelCust = new System.Windows.Forms.Label();
@@ -183,7 +180,6 @@ namespace HotelManagement
             this.topRightPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.employeePanel.SuspendLayout();
-            this.roomPanel.SuspendLayout();
             this.homePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -214,16 +210,16 @@ namespace HotelManagement
             this.welcomeLabel.Location = new System.Drawing.Point(4, 2);
             this.welcomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(144, 30);
+            this.welcomeLabel.Size = new System.Drawing.Size(250, 30);
             this.welcomeLabel.TabIndex = 36;
-            this.welcomeLabel.Text = "Καλώς ήρθες";
+            this.welcomeLabel.Text = "Σύνδεση ως υπεύθυνος";
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Controls.Add(this.homeButton);
             this.flowLayoutPanel1.Controls.Add(this.searchBookingsButton);
-            this.flowLayoutPanel1.Controls.Add(this.roomSearch);
+            this.flowLayoutPanel1.Controls.Add(this.logoutBtnAdmin);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -267,18 +263,18 @@ namespace HotelManagement
             this.searchBookingsButton.UseVisualStyleBackColor = false;
             this.searchBookingsButton.Click += new System.EventHandler(this.searchBookingsClick);
             // 
-            // roomSearch
+            // logoutBtnAdmin
             // 
-            this.roomSearch.BackColor = System.Drawing.Color.White;
-            this.roomSearch.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
-            this.roomSearch.Location = new System.Drawing.Point(9, 248);
-            this.roomSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.roomSearch.Name = "roomSearch";
-            this.roomSearch.Size = new System.Drawing.Size(196, 45);
-            this.roomSearch.TabIndex = 11;
-            this.roomSearch.Text = "Αναζήτηση Δωματίων";
-            this.roomSearch.UseVisualStyleBackColor = false;
-            this.roomSearch.Click += new System.EventHandler(this.roomSearch_Click);
+            this.logoutBtnAdmin.BackColor = System.Drawing.Color.White;
+            this.logoutBtnAdmin.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.logoutBtnAdmin.Location = new System.Drawing.Point(9, 248);
+            this.logoutBtnAdmin.Margin = new System.Windows.Forms.Padding(4);
+            this.logoutBtnAdmin.Name = "logoutBtnAdmin";
+            this.logoutBtnAdmin.Size = new System.Drawing.Size(196, 45);
+            this.logoutBtnAdmin.TabIndex = 16;
+            this.logoutBtnAdmin.Text = "Αποσύνδεση";
+            this.logoutBtnAdmin.UseVisualStyleBackColor = false;
+            this.logoutBtnAdmin.Click += new System.EventHandler(this.logoutBtnAdmin_Click);
             // 
             // topRightPanel
             // 
@@ -618,62 +614,12 @@ namespace HotelManagement
             this.employeePanel.Controls.Add(this.flowLayoutPanel1);
             this.employeePanel.Controls.Add(this.searchPanel);
             this.employeePanel.Controls.Add(this.resultsPanel);
-            this.employeePanel.Controls.Add(this.roomPanel);
             this.employeePanel.Controls.Add(this.homePanel);
             this.employeePanel.Location = new System.Drawing.Point(12, 3);
             this.employeePanel.Name = "employeePanel";
             this.employeePanel.Size = new System.Drawing.Size(1129, 735);
             this.employeePanel.TabIndex = 40;
             this.employeePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // roomPanel
-            // 
-            this.roomPanel.Controls.Add(this.label15);
-            this.roomPanel.Controls.Add(this.radioButton1);
-            this.roomPanel.Controls.Add(this.searchRoomLabel);
-            this.roomPanel.Location = new System.Drawing.Point(227, 45);
-            this.roomPanel.Name = "roomPanel";
-            this.roomPanel.Size = new System.Drawing.Size(880, 682);
-            this.roomPanel.TabIndex = 59;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Teal;
-            this.label15.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(115, 90);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(102, 25);
-            this.label15.TabIndex = 39;
-            this.label15.Text = "Διαθέσιμο";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Yu Gothic UI", 14.75F, System.Drawing.FontStyle.Bold);
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(73, 132);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(146, 32);
-            this.radioButton1.TabIndex = 38;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // searchRoomLabel
-            // 
-            this.searchRoomLabel.AutoSize = true;
-            this.searchRoomLabel.BackColor = System.Drawing.Color.Teal;
-            this.searchRoomLabel.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.searchRoomLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.searchRoomLabel.Location = new System.Drawing.Point(324, 14);
-            this.searchRoomLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.searchRoomLabel.Name = "searchRoomLabel";
-            this.searchRoomLabel.Size = new System.Drawing.Size(240, 30);
-            this.searchRoomLabel.TabIndex = 37;
-            this.searchRoomLabel.Text = "Αναζήτηση Δωματίων";
             // 
             // homePanel
             // 
@@ -827,6 +773,7 @@ namespace HotelManagement
             // 
             this.resultsPanel.Controls.Add(this.dataGridView1);
             this.resultsPanel.Controls.Add(this.resultsLabel);
+            this.resultsPanel.Controls.Add(this.searchBackBtn);
             this.resultsPanel.Location = new System.Drawing.Point(226, 47);
             this.resultsPanel.Name = "resultsPanel";
             this.resultsPanel.Size = new System.Drawing.Size(901, 685);
@@ -861,6 +808,19 @@ namespace HotelManagement
             this.resultsLabel.TabIndex = 37;
             this.resultsLabel.Text = "Αποτελέσματα για:";
             // 
+            // searchBackBtn
+            // 
+            this.searchBackBtn.BackColor = System.Drawing.Color.White;
+            this.searchBackBtn.Font = new System.Drawing.Font("Yu Gothic UI", 10.75F, System.Drawing.FontStyle.Bold);
+            this.searchBackBtn.Location = new System.Drawing.Point(387, 435);
+            this.searchBackBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.searchBackBtn.Name = "searchBackBtn";
+            this.searchBackBtn.Size = new System.Drawing.Size(126, 45);
+            this.searchBackBtn.TabIndex = 17;
+            this.searchBackBtn.Text = "Πίσω";
+            this.searchBackBtn.UseVisualStyleBackColor = false;
+            this.searchBackBtn.Click += new System.EventHandler(this.searchBackBtn_Click);
+            // 
             // customerPanel
             // 
             this.customerPanel.Controls.Add(this.panel3);
@@ -893,9 +853,9 @@ namespace HotelManagement
             this.welcomeLabelCust.Location = new System.Drawing.Point(4, 2);
             this.welcomeLabelCust.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.welcomeLabelCust.Name = "welcomeLabelCust";
-            this.welcomeLabelCust.Size = new System.Drawing.Size(138, 30);
+            this.welcomeLabelCust.Size = new System.Drawing.Size(141, 30);
             this.welcomeLabelCust.TabIndex = 36;
-            this.welcomeLabelCust.Text = "Σύνδεση ως:";
+            this.welcomeLabelCust.Text = "Καλωσήρθες";
             // 
             // flowLayoutPanel2
             // 
@@ -2116,8 +2076,6 @@ namespace HotelManagement
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
             this.employeePanel.ResumeLayout(false);
-            this.roomPanel.ResumeLayout(false);
-            this.roomPanel.PerformLayout();
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -2155,7 +2113,6 @@ namespace HotelManagement
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button searchBookingsButton;
-        private System.Windows.Forms.Button roomSearch;
         private System.Windows.Forms.Panel topRightPanel;
         private System.Windows.Forms.Panel searchPanel;
         private System.Windows.Forms.ComboBox dateBox;
@@ -2196,10 +2153,6 @@ namespace HotelManagement
         private System.Windows.Forms.Label noDeparturesLabel;
         private System.Windows.Forms.Button markDepartureButton;
         private System.Windows.Forms.Button markArrivalButton;
-        private System.Windows.Forms.Panel roomPanel;
-        private System.Windows.Forms.Label searchRoomLabel;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Panel customerPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label welcomeLabelCust;
@@ -2290,5 +2243,7 @@ namespace HotelManagement
         private System.Windows.Forms.Button payBtn;
         private System.Windows.Forms.Label ammountLabel;
         private System.Windows.Forms.Button backBookingsBtn;
+        private System.Windows.Forms.Button logoutBtnAdmin;
+        private System.Windows.Forms.Button searchBackBtn;
     }
 }

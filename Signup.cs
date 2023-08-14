@@ -40,10 +40,22 @@ namespace HotelManagement
                     break;
                 case -1: case -2:
                     MessageBox.Show("Το όνομα και το επώνυμο πρέπει να αποτελούνται αποκλειστικά από χαρακτήρες του ελληνικού ή του αγγλικού" +
-                        "αλφάβητου.", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        " αλφάβητου.", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case -3:
                     MessageBox.Show("Το email δεν βρίσκεται στον σωστό μορφότυπο.", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case -4:
+                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case -5:
+                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case -6:
+                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;
+                case -7:
+                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 1:
                     MySqlConnection con = new MySqlConnection(cs.getConnString());
@@ -58,13 +70,21 @@ namespace HotelManagement
                         comm.Parameters.AddWithValue("@pass", email);
                         comm.Parameters.AddWithValue("@email", pass1);
                         comm.ExecuteNonQuery();
+                        MySqlCommand comm1 = con.CreateCommand();
+                        comm1.CommandText = "insert into hot_usr_det (usr_ID, usrID_Street, usrID_Region, usrID_Country, usrID_Phone) " +
+                            "values ((select max(usr_ID) from hot_usr), @street, @reg, @country, @phone)";
+                        comm1.Parameters.AddWithValue("@street", addressBox.Text);
+                        comm1.Parameters.AddWithValue("@reg", regionBox.Text);
+                        comm1.Parameters.AddWithValue("@country", countryBox.SelectedItem.ToString());
+                        comm1.Parameters.AddWithValue("@phone", phoneBox.Text);
+                        comm1.ExecuteNonQuery();
                         con.Close();
                         MessageBox.Show("Η εγγραφή του νέου χρήστη ολοκληρώθηκε επιτυχώς!", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Close();
                     }
-                    catch (MySqlException)
+                    catch (MySqlException a)
                     {
-                        MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί." + a, "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Application.Exit();
                     }
                     break;
@@ -73,13 +93,13 @@ namespace HotelManagement
         }
         int checkValidity(string name, string surname, string username, string email, string pass1, string pass2)
         {
-            Regex real_name_reg = new Regex(@"^[A-z]([A-z])+[A-z]$");
+            Regex only_letter_reg = new Regex(@"^[a-zA-ZΑ-Ωα-ωΆΈΉΊΌΎΏάέήίόύώ]+$");
             Regex email_reg = new Regex(@"(^\w|^\d)(\d|\w)*@(\d|\w)*\.(\d|\w)+");
-            if (!real_name_reg.IsMatch(name))
+            if (!only_letter_reg.IsMatch(name))
             {
                 return -1;
             }
-            if (!real_name_reg.IsMatch(surname))
+            if (!only_letter_reg.IsMatch(surname))
             {
                 return -2;
             }
@@ -87,6 +107,23 @@ namespace HotelManagement
             {
                 return -3;
             }
+            if (!(addressBox.Text != null && addressBox.Text != ""))
+            {
+                return -4;
+            }
+            if (!(regionBox.Text != null && regionBox.Text != "")) 
+            {
+                return -5; 
+            }
+            if (!(countryBox.SelectedIndex >= 0))
+            {
+                return -6;
+            }
+            if (!(phoneBox.Text != null && phoneBox.Text != ""))
+            {
+                return -7;
+            }
+
             if (pass1.Equals(pass2))
                 return 1;
             else
