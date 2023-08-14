@@ -18,7 +18,7 @@ namespace HotelManagement
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
 
-            /*
+            
             while (true)
             {
 
@@ -33,9 +33,9 @@ namespace HotelManagement
                 Application.Run(anotherForm);
             }
             }
-            */
-            MainMenu anotherForm = new MainMenu(1);
-            Application.Run(anotherForm);
+            
+            //MainMenu anotherForm = new MainMenu(1);
+           // Application.Run(anotherForm);
 
         }
     }
