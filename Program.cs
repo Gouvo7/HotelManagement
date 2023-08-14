@@ -36,7 +36,7 @@ namespace HotelManagement
             }
             */
             MainMenu anotherForm = new MainMenu(1);
-            Application.Run(anotherForm);
+            //Application.Run(anotherForm);
 
         }
     }

@@ -43,19 +43,19 @@ namespace HotelManagement
                         " αλφάβητου.", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case -3:
-                    MessageBox.Show("Το email δεν βρίσκεται στον σωστό μορφότυπο.", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Το email δεν βρίσκεται στον σωστό μορφότυπο!", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case -4:
-                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Το πειδίο της διεύθυνσης δεν μπορεί να είναι κενό!", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case -5:
-                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Το πειδίο της περιοχής δεν μπορεί να είναι κενό!", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case -6:
-                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Το πειδίο της χώρας δεν μπορεί να είναι κενό!", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case -7:
-                    MessageBox.Show("ΓΑΜΙΕΣΤΕ", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Το πειδίο του κινητού τηλεφώνου δεν μπορεί να είναι κενό!", "Λανθασμένα Στοιχεία", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
                 case 1:
                     MySqlConnection con = new MySqlConnection(cs.getConnString());
@@ -63,12 +63,12 @@ namespace HotelManagement
                     {
                         con.Open();
                         MySqlCommand comm = con.CreateCommand();
-                        comm.CommandText = "INSERT INTO hot_usr (usr_FName, usr_LName, usr_username, usr_password, usr_Email) VALUES (@name, @surname, @username, @pass, @email)";
+                        comm.CommandText = "INSERT INTO hot_usr (usr_FName, usr_LName, usr_username, usr_password, usr_Email, usr_Type) VALUES (@name, @surname, @username, @pass, @email, 2)";
                         comm.Parameters.AddWithValue("@name", name);
                         comm.Parameters.AddWithValue("@surname", surname);
                         comm.Parameters.AddWithValue("@username", username);
-                        comm.Parameters.AddWithValue("@pass", email);
-                        comm.Parameters.AddWithValue("@email", pass1);
+                        comm.Parameters.AddWithValue("@pass", pass1);
+                        comm.Parameters.AddWithValue("@email", email);
                         comm.ExecuteNonQuery();
                         MySqlCommand comm1 = con.CreateCommand();
                         comm1.CommandText = "insert into hot_usr_det (usr_ID, usrID_Street, usrID_Region, usrID_Country, usrID_Phone) " +

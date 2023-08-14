@@ -318,7 +318,42 @@ namespace HotelManagement
         {
             homePanel.Hide();
             resultsPanel.Hide();
+            nextBookings();
             searchPanel.Show();
+        }
+
+        private void nextBookings()
+        {
+            try
+            {
+
+
+                DB db = new DB();
+                MySqlConnection con = new MySqlConnection(db.getConnString());
+                con.Open();
+                MySqlCommand comm = con.CreateCommand();
+                comm.CommandText = "select booking_ID,room_ID, concat(usr_FName,' ',usr_LName) as name,booking_Date,checkin_Date,checkout_Date,booking_comments," +
+                    "CASE WHEN booking_hasPaid = 0 THEN \"Όχι\"\r\n WHEN booking_hasPaid = 1 THEN \"Ναι\"\r\n END as test " +
+                    "from hot_bookings\r\ninner join hot_usr on hot_bookings.usr_ID = hot_usr.usr_ID\r\nwhere checkin_Date >= curdate()\r\nlimit 10";
+                using (MySqlDataReader reader = comm.ExecuteReader())
+                {
+                    DataTable dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    dataGridView7.DataSource = dataTable;
+                    dataTable.Columns["booking_ID"].ColumnName = "Αρ. Κράτησης";
+                    dataTable.Columns["name"].ColumnName = "Όνομα Κράτησης";
+                    dataTable.Columns["room_ID"].ColumnName = "Αρ. Δωματίου";
+                    dataTable.Columns["booking_Date"].ColumnName = "Ημ/νία Κράτησης";
+                    dataTable.Columns["checkin_Date"].ColumnName = "Ημ/νία Check-in";
+                    dataTable.Columns["checkout_Date"].ColumnName = "Ημ/νία Check-out";
+                    dataTable.Columns["test"].ColumnName = "Πληρωμένη";
+                    dataTable.Columns["booking_Comments"].ColumnName = "Σχόλια Κράτησης";
+                }
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων. Η εφαρμογή θα τερματιστεί.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void markArrivalClick(object sender, EventArgs e)
@@ -501,10 +536,9 @@ namespace HotelManagement
                             emailBox.Text = reader.GetString(5);
                             passBox.Text = reader.GetString(4);
                             addressBox.Text = reader.GetString(9);
-                            numberBox.Text = reader.GetString(10);
-                            regionBox.Text = reader.GetString(11);
-                            countryBox.Text = reader.GetString(12);
-                            phoneBox.Text = reader.GetString(13);
+                            regionBox.Text = reader.GetString(10);
+                            countryBox.Text = reader.GetString(11);
+                            phoneBox.Text = reader.GetString(12);
                         }
                     }
                     else

@@ -44,7 +44,6 @@ namespace HotelManagement
             this.pass2L = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.s = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.countryBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -235,19 +234,6 @@ namespace HotelManagement
             this.s.TabIndex = 34;
             this.s.Text = "____________________________________________________________________________";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Teal;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(176, 88);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(334, 23);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "Χρησιμοποιείστε Λατινικούς χαρακτήρες";
-            // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
@@ -364,9 +350,9 @@ namespace HotelManagement
             this.label3.Location = new System.Drawing.Point(11, 300);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 25);
+            this.label3.Size = new System.Drawing.Size(176, 25);
             this.label3.TabIndex = 37;
-            this.label3.Text = "Διεύθυνση";
+            this.label3.Text = "Πλήρης Διεύθυνση";
             // 
             // addressBox
             // 
@@ -389,7 +375,6 @@ namespace HotelManagement
             this.Controls.Add(this.s);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Signup";
@@ -418,7 +403,6 @@ namespace HotelManagement
         private System.Windows.Forms.Label pass2L;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label s;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox phoneBox;
