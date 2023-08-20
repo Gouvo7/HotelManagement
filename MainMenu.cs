@@ -6,13 +6,16 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using System.Transactions;
 
 namespace HotelManagement
 {
     public partial class MainMenu : Form
     {
+
+        public event EventHandler Disconnected;
         private int userID;
+        public event EventHandler LoggedOut;
         public MainMenu(int x)
         {
             InitializeComponent();
@@ -35,12 +38,6 @@ namespace HotelManagement
             {
                 updateHome();
             }
-            Application.Run(this);
-        }
-
-        void hideInfoCust()
-        {
-
         }
 
         int updateUserPanel()
@@ -63,6 +60,7 @@ namespace HotelManagement
                     welcomeLabelCust.Text = welcomeLabelCust.Text + " " + userName;
                 }
                 con.Close();
+                Console.WriteLine(userType + " is:");
                 if (userType.Equals("1"))
                 {
                     employeePanel.Show();
@@ -1011,7 +1009,6 @@ namespace HotelManagement
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
             this.Close();
 
         }
@@ -1092,8 +1089,10 @@ namespace HotelManagement
 
         private void logoutBtnAdmin_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+            
         }
+
 
         private void searchBackBtn_Click(object sender, EventArgs e)
         {

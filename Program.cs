@@ -8,36 +8,27 @@ namespace HotelManagement
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread] 
+        static int userID = -1; // Initialize with an invalid value
+        static Login loginForm;
+
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
 
-            /*
-            var z;
-            while (true)
+            loginForm = new Login();
+            DialogResult loginResult = loginForm.ShowDialog();
+            if (loginResult == DialogResult.OK)
             {
-                Login loginForm = new Login();
-                DialogResult loginResult = new DialogResult();
-                z = loginForm.ShowDialog();
-                if (z == DialogResult.OK)
-                {
-
-                    int userID = loginForm.getID();
-                    MainMenu anotherForm = new MainMenu(userID);
-                    //Application.Run(anotherForm);
-                }
-                z = null;
+                userID = loginForm.getID();
+                MainMenu m = new MainMenu(userID);
+                Application.Run(m);
             }
-            */
-            MainMenu anotherForm = new MainMenu(1);
-            //Application.Run(anotherForm);
-
+            else
+            {
+                // Exit the application if the user cancels login
+                return;
+            }
         }
     }
 }

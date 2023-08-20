@@ -29,6 +29,7 @@ namespace HotelManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.userL = new System.Windows.Forms.Label();
             this.passL = new System.Windows.Forms.Label();
             this.userTB = new System.Windows.Forms.TextBox();
@@ -171,9 +172,10 @@ namespace HotelManagement
             this.Controls.Add(this.userTB);
             this.Controls.Add(this.passL);
             this.Controls.Add(this.userL);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Είσοδος";
+            this.Text = "Aqua Suites Login";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Login_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

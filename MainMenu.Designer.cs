@@ -47,6 +47,8 @@ namespace HotelManagement
             this.logoutBtnAdmin = new System.Windows.Forms.Button();
             this.topRightPanel = new System.Windows.Forms.Panel();
             this.searchPanel = new System.Windows.Forms.Panel();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.searchCustDetails = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
@@ -175,12 +177,11 @@ namespace HotelManagement
             this.countryLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.saveChanges = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.topRightPanel.SuspendLayout();
             this.searchPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.employeePanel.SuspendLayout();
             this.resultsPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -201,7 +202,6 @@ namespace HotelManagement
             ((System.ComponentModel.ISupportInitialize)(this.roomPicBox)).BeginInit();
             this.custHomePanel.SuspendLayout();
             this.custDetailsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.SuspendLayout();
             // 
             // welcomeLabel
@@ -316,6 +316,35 @@ namespace HotelManagement
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Size = new System.Drawing.Size(901, 681);
             this.searchPanel.TabIndex = 39;
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.AllowUserToAddRows = false;
+            this.dataGridView7.AllowUserToDeleteRows = false;
+            this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView7.BackgroundColor = System.Drawing.Color.Azure;
+            this.dataGridView7.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView7.Location = new System.Drawing.Point(60, 395);
+            this.dataGridView7.MultiSelect = false;
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.ReadOnly = true;
+            this.dataGridView7.RowHeadersVisible = false;
+            this.dataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView7.Size = new System.Drawing.Size(780, 207);
+            this.dataGridView7.TabIndex = 60;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Teal;
+            this.label15.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(61, 356);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(215, 30);
+            this.label15.TabIndex = 59;
+            this.label15.Text = "Επόμενες Κρατήσεις";
             // 
             // label13
             // 
@@ -2063,35 +2092,6 @@ namespace HotelManagement
             this.saveChanges.UseVisualStyleBackColor = false;
             this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Teal;
-            this.label15.Font = new System.Drawing.Font("Yu Gothic UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(61, 356);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(215, 30);
-            this.label15.TabIndex = 59;
-            this.label15.Text = "Επόμενες Κρατήσεις";
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.AllowUserToAddRows = false;
-            this.dataGridView7.AllowUserToDeleteRows = false;
-            this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.Azure;
-            this.dataGridView7.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView7.Location = new System.Drawing.Point(60, 395);
-            this.dataGridView7.MultiSelect = false;
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.ReadOnly = true;
-            this.dataGridView7.RowHeadersVisible = false;
-            this.dataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView7.Size = new System.Drawing.Size(780, 207);
-            this.dataGridView7.TabIndex = 60;
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2100,8 +2100,9 @@ namespace HotelManagement
             this.ClientSize = new System.Drawing.Size(1153, 750);
             this.Controls.Add(this.employeePanel);
             this.Controls.Add(this.customerPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainMenu";
-            this.Text = "MainMenu";
+            this.Text = "Aqua Suites";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -2109,6 +2110,7 @@ namespace HotelManagement
             this.topRightPanel.PerformLayout();
             this.searchPanel.ResumeLayout(false);
             this.searchPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.employeePanel.ResumeLayout(false);
             this.resultsPanel.ResumeLayout(false);
             this.resultsPanel.PerformLayout();
@@ -2138,7 +2140,6 @@ namespace HotelManagement
             this.custHomePanel.PerformLayout();
             this.custDetailsPanel.ResumeLayout(false);
             this.custDetailsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.ResumeLayout(false);
 
         }
