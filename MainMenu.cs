@@ -590,8 +590,9 @@ namespace HotelManagement
                 MySqlConnection con = new MySqlConnection(db.getConnString());
                 con.Open();
                 MySqlCommand comm = con.CreateCommand();
-                comm.CommandText = "select distinct hot_rooms.room_ID, room_TypeN, room_Price from hot_rooms left join hot_bookings on hot_rooms.room_ID = hot_bookings.room_ID " +
-                "WHERE (@wantin >= checkout_Date OR @wantout < checkin_Date) OR (hot_rooms.room_ID not in (select distinct room_ID from hot_bookings)) order by hot_rooms.room_ID";
+                comm.CommandText = "SELECT hot_rooms.room_ID, room_TypeN, room_Price FROM hot_rooms" +
+                    " LEFT JOIN hot_bookings hb ON hot_rooms.room_ID = hb.room_ID AND(@wantin BETWEEN hb.checkin_Date AND hb.checkout_Date OR" +
+                    " @wantout BETWEEN hb.checkin_Date AND hb.checkout_Date) WHERE hb.room_ID IS NULL order by hot_rooms.room_ID; ";
                 comm.Parameters.AddWithValue("@wantin", date1);
                 comm.Parameters.AddWithValue("@wantout", date2);
                 MySqlDataReader reader = comm.ExecuteReader();
@@ -985,7 +986,7 @@ namespace HotelManagement
                 MySqlCommand comm = con.CreateCommand();
                 comm.CommandText = "UPDATE hot_usr INNER JOIN hot_usr_det ON hot_usr.usr_ID = hot_usr_det.usr_ID SET hot_usr.usr_ID = @user_ID" +
                     ", usr_FName = @fname, usr_LName = @lname, usr_username = @username, usr_Email = @email, usrID_Street = @street, " +
-                    "usrID_StreetNum = @streetNum, usrID_Region = @region, usrID_Country = @country, usrID_Phone = @phone where hot_usr.usr_ID = @user_ID";
+                    " usrID_Region = @region, usrID_Country = @country, usrID_Phone = @phone where hot_usr.usr_ID = @user_ID";
 
 
                 comm.Parameters.AddWithValue("@user_ID", userID);
@@ -994,7 +995,6 @@ namespace HotelManagement
                 comm.Parameters.AddWithValue("@username", usernameBox.Text);
                 comm.Parameters.AddWithValue("@email", emailBox.Text);
                 comm.Parameters.AddWithValue("@street", addressBox.Text);
-                comm.Parameters.AddWithValue("@streetNum", numberBox.Text);
                 comm.Parameters.AddWithValue("@region", regionBox.Text);
                 comm.Parameters.AddWithValue("@country", countryBox.Text);
                 comm.Parameters.AddWithValue("@phone", phoneBox.Text);
@@ -1064,7 +1064,36 @@ namespace HotelManagement
                     {
                         if (Regex.IsMatch(beneficiaryBox.Text, nameRegex))
                         {
+                            string booking_ID;
+                            string pattern = @"\d+"; // Regular expression pattern to match digits
+                            Match match = Regex.Match(bookingPaymentLabel.Text, pattern);
 
+                            if (match.Success)
+                            {
+                                booking_ID = match.Value; // Returns the matched digits as a string
+                            }
+                            else
+                            {
+                                return; // No digits found
+                            }
+                            DB db = new DB();
+                            try
+                            {
+                                MySqlConnection con = new MySqlConnection(db.getConnString());
+                                con.Open();
+                                MySqlCommand comm = con.CreateCommand();
+                                comm.CommandText = "UPDATE hot_bookings set booking_hasPaid = 1 where booking_ID = @bookID";
+                                comm.Parameters.AddWithValue("@bookID", booking_ID);
+                                comm.ExecuteNonQuery();
+                                MessageBox.Show("Η πληρωμή της κράτησης έχει πραγματοποιηθεί επιτυχώς!.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                paymentPanel.Hide();
+                                bookingsCustBtn_Click_1(this,EventArgs.Empty);
+                                con.Close();
+                            }
+                            catch (MySqlException)
+                            {
+                                MessageBox.Show("Πρόβλημα επικοινωνίας με την βάση δεδομένων.", "Μήνυμα εφαρμογής", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                         else
                         {
@@ -1100,6 +1129,7 @@ namespace HotelManagement
             homePanel.Hide();
             searchPanel.Show();
         }
+
     } 
 }
 
