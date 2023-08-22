@@ -148,19 +148,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon.png" />
+    <None Include="Resources\Icons\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon2.png" />
+    <None Include="Resources\Icons\icon2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon4.png" />
+    <None Include="Resources\Icons\icon4.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="hotel.sql" />
+    <None Include="Resources\Icons\icon3.png" />
     <Content Include="Resources\MySQL\Dump20230703.sql" />
     <Content Include="Resources\MySQL\hotel_hot_bookings.sql" />
     <Content Include="Resources\MySQL\hotel_hot_type.sql" />

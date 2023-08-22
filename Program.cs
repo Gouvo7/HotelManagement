@@ -26,7 +26,6 @@ namespace HotelManagement
             }
             else
             {
-                // Exit the application if the user cancels login
                 return;
             }
         }

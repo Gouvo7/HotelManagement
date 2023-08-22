@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Class that stores the credentials of the database.
+
 namespace HotelManagement
 {
     public class DB{
@@ -20,7 +22,6 @@ namespace HotelManagement
             dbuser = "root";
             pass = "1234";
             database = "hotel";
-            //charset = "utf8mb4_unicode_ci";
             charset = "utf8mb4";
         }
 

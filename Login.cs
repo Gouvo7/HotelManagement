@@ -18,8 +18,7 @@ namespace HotelManagement
         public Login()
         {
             InitializeComponent();
-            userTB.Text = "kostas";
-            passTB.Text = "1234";
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -27,7 +26,7 @@ namespace HotelManagement
             string username = userTB.Text;
             string password = passTB.Text;
             DB cs = new DB();
-            MySqlConnection con = new MySqlConnection(cs.getConnString()); //open connection
+            MySqlConnection con = new MySqlConnection(cs.getConnString());
             try
             {
                 con.Open();

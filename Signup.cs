@@ -19,6 +19,7 @@ namespace HotelManagement
         {
             InitializeComponent();
             this.CenterToScreen();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             countryBox.SelectedIndex = 0;
         }
 
